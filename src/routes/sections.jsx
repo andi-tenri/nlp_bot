@@ -4,6 +4,7 @@ import { Navigate, Outlet, useLocation, useRoutes } from 'react-router-dom';
 import DashboardLayout from 'src/layouts/dashboard';
 import { verifyToken } from 'src/services/auth-service';
 
+export const LoadingPage = lazy(() => import('src/pages/loading'));
 export const IndexPage = lazy(() => import('src/pages/app'));
 export const BlogPage = lazy(() => import('src/pages/blog'));
 export const UserPage = lazy(() => import('src/pages/user'));
@@ -13,14 +14,12 @@ export const Page404 = lazy(() => import('src/pages/page-not-found'));
 
 // ----------------------------------------------------------------------
 
-const AuthFallback = () => <Navigate to="/login" />;
-
-export default function Router() {
-  const [isAuth, setIsAuth] = useState(false);
+const AuthenticatedRoute = ({ children }) => {
+  const [isAuth, setIsAuth] = useState(null);
 
   const location = useLocation();
 
-  const checkAuthentication = async () => {
+  const checkAuthentication = async (props) => {
     const authenticated = await verifyToken();
 
     if (!authenticated) {
@@ -35,17 +34,28 @@ export default function Router() {
     checkAuthentication();
   }, [location]);
 
+  if (isAuth === null) {
+    return <LoadingPage />;
+  }
+
+  if (!isAuth && !props.reverse) {
+    return <Navigate to="/login" />;
+  }
+
+  return children;
+};
+
+export default function Router() {
   const routes = useRoutes([
     {
-      action: () => {
-        console.log("SUUUUU")
-      },
       element: (
-        <DashboardLayout>
-          <Suspense>
-            <Outlet />
-          </Suspense>
-        </DashboardLayout>
+        <AuthenticatedRoute>
+          <DashboardLayout>
+            <Suspense>
+              <Outlet />
+            </Suspense>
+          </DashboardLayout>
+        </AuthenticatedRoute>
       ),
       children: [
         { element: <IndexPage />, index: true },
@@ -56,7 +66,11 @@ export default function Router() {
     },
     {
       path: 'login',
-      element: isAuth ? <Navigate to="/" /> : <LoginPage />,
+      element: (
+        <AuthenticatedRoute reverse={true}>
+          <LoginPage />
+        </AuthenticatedRoute>
+      ),
     },
     {
       path: '404',
