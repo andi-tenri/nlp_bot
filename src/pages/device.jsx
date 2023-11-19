@@ -1,17 +1,17 @@
 import { Helmet } from 'react-helmet-async';
 
-import { AppView } from 'src/sections/overview/view';
+import { DeviceView } from 'src/sections/device/view';
 
 // ----------------------------------------------------------------------
 
-export default function AppPage() {
+export default function DevicePage() {
   return (
     <>
       <Helmet>
-        <title> Dashboard | NLP Bot </title>
+        <title> Device | NLP Bot </title>
       </Helmet>
 
-      <AppView />
+      <DeviceView />
     </>
   );
 }

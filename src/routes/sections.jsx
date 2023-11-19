@@ -1,49 +1,19 @@
-import { lazy, Suspense, useEffect, useState } from 'react';
-import { Navigate, Outlet, useLocation, useRoutes } from 'react-router-dom';
+import { lazy, Suspense } from 'react';
+import { Navigate, Outlet, useRoutes } from 'react-router-dom';
 
 import DashboardLayout from 'src/layouts/dashboard';
-import { verifyToken } from 'src/services/auth-service';
+import AuthenticatedRoute from './components/authenticated-route';
+import DeviceDetailPage from 'src/sections/device/view/device-detail-view';
 
 export const LoadingPage = lazy(() => import('src/pages/loading'));
 export const IndexPage = lazy(() => import('src/pages/app'));
 export const BlogPage = lazy(() => import('src/pages/blog'));
-export const UserPage = lazy(() => import('src/pages/user'));
+export const DevicePage = lazy(() => import('src/pages/device'));
 export const LoginPage = lazy(() => import('src/pages/login'));
 export const ProductsPage = lazy(() => import('src/pages/products'));
 export const Page404 = lazy(() => import('src/pages/page-not-found'));
 
 // ----------------------------------------------------------------------
-
-const AuthenticatedRoute = ({ children }) => {
-  const [isAuth, setIsAuth] = useState(null);
-
-  const location = useLocation();
-
-  const checkAuthentication = async (props) => {
-    const authenticated = await verifyToken();
-
-    if (!authenticated) {
-      setIsAuth(false);
-      return;
-    }
-
-    setIsAuth(true);
-  };
-
-  useEffect(() => {
-    checkAuthentication();
-  }, [location]);
-
-  if (isAuth === null) {
-    return <LoadingPage />;
-  }
-
-  if (!isAuth && !props.reverse) {
-    return <Navigate to="/login" />;
-  }
-
-  return children;
-};
 
 export default function Router() {
   const routes = useRoutes([
@@ -59,9 +29,8 @@ export default function Router() {
       ),
       children: [
         { element: <IndexPage />, index: true },
-        { path: 'user', element: <UserPage /> },
-        { path: 'products', element: <ProductsPage /> },
-        { path: 'blog', element: <BlogPage /> },
+        { path: 'device', element: <DevicePage /> },
+        { path: 'device/:id', element: <DeviceDetailPage /> },
       ],
     },
     {

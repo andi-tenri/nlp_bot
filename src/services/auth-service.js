@@ -8,11 +8,15 @@ export const login = async (email, password) => {
         });
 
         if (response.data.data) {
-            const token = response.data.data.token;
+            const data = response.data.data;
 
-            localStorage.setItem('token', token);
+            localStorage.setItem('token', data.token);
+
+            localStorage.setItem('user', JSON.stringify(data.user));
             
             setToken(token);
+
+            window.location.reload();
         }
 
         return response.data;

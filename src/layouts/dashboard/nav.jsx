@@ -15,8 +15,6 @@ import { RouterLink } from 'src/routes/components';
 
 import { useResponsive } from 'src/hooks/use-responsive';
 
-import { account } from 'src/_mock/account';
-
 import Logo from 'src/components/logo';
 import Scrollbar from 'src/components/scrollbar';
 
@@ -27,6 +25,14 @@ import navConfig from './config-navigation';
 
 export default function Nav({ openNav, onCloseNav }) {
   const pathname = usePathname();
+
+  const user = localStorage.getItem('user');
+
+  const account = {
+    displayName: user.name,
+    photoURL: user.photoURL,
+    role: 'Admin',
+  }
 
   const upLg = useResponsive('up', 'lg');
 
@@ -118,7 +124,6 @@ export default function Nav({ openNav, onCloseNav }) {
 
       <Box sx={{ flexGrow: 1 }} />
 
-      {renderUpgrade}
     </Scrollbar>
   );
 
