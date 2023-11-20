@@ -39,5 +39,5 @@ yarn-error.log*
 *.log
 
 # Bot Sessions
-server/bot/sessions/
+server/bot/session/
 

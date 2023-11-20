@@ -18,7 +18,10 @@
     "jsonwebtoken": "^9.0.2",
     "morgan": "~1.9.1",
     "mysql2": "^3.6.3",
+    "node-nlp": "^4.27.0",
+    "papaparse": "^5.4.1",
     "pepesan": "^3.4.6",
+    "sastrawijs": "^1.0.4",
     "sequelize": "^6.35.0",
     "sequelize-cli": "^6.6.2",
     "winston": "^3.11.0"
