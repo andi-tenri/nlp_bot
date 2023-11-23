@@ -32,7 +32,9 @@
   "nodemonConfig": {
     "ignore": [
       "*.log",
-      "bot/session/*"
+      "node_modules",
+      "session",
+      "state"
     ]
   }
 }

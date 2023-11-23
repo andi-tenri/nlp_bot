@@ -41,3 +41,5 @@ yarn-error.log*
 # Bot Sessions
 server/bot/session/
 
+# Bot db config
+server/bot/config/

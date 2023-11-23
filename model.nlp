@@ -1,0 +1,2334 @@
+{
+  "settings": {
+    "languages": [
+      "id"
+    ],
+    "autoSave": true,
+    "threshold": 0.3,
+    "tag": "nlp",
+    "autoLoad": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "id"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "id": {
+        "settings": {
+          "locale": "id",
+          "trainByDomain": false,
+          "tag": "domain-manager-id",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "hi": {
+            "intent": "sapaan",
+            "domain": "default"
+          },
+          "hai": {
+            "intent": "sapaan",
+            "domain": "default"
+          },
+          "halo": {
+            "intent": "sapaan",
+            "domain": "default"
+          },
+          "hallo": {
+            "intent": "sapaan",
+            "domain": "default"
+          },
+          "assalamualaikum": {
+            "intent": "sapaan",
+            "domain": "default"
+          },
+          "p": {
+            "intent": "sapaan",
+            "domain": "default"
+          },
+          "pagi,selamat": {
+            "intent": "sapaan",
+            "domain": "default"
+          },
+          "selamat,siang": {
+            "intent": "sapaan",
+            "domain": "default"
+          },
+          "malam,selamat": {
+            "intent": "sapaan",
+            "domain": "default"
+          },
+          "misi": {
+            "intent": "sapaan",
+            "domain": "default"
+          },
+          "pagi": {
+            "intent": "sapaan",
+            "domain": "default"
+          },
+          "malam": {
+            "intent": "sapaan",
+            "domain": "default"
+          },
+          "sore": {
+            "intent": "sapaan",
+            "domain": "default"
+          },
+          "menu": {
+            "intent": "sapaan",
+            "domain": "default"
+          },
+          "alamat,mana,toko": {
+            "intent": "lokasi",
+            "domain": "default"
+          },
+          "ada,mana,toko": {
+            "intent": "lokasi",
+            "domain": "default"
+          },
+          "lokasi,mana,toko": {
+            "intent": "lokasi",
+            "domain": "default"
+          },
+          "alamat,ingin,lengkap,saya,tahu,toko": {
+            "intent": "lokasi",
+            "domain": "default"
+          },
+          "alamat,bisa,sharelock,toko": {
+            "intent": "lokasi",
+            "domain": "default"
+          },
+          "anda,bisa,itahu,lokasi,toko": {
+            "intent": "lokasi",
+            "domain": "default"
+          },
+          "apa,produk,sedia,yang": {
+            "intent": "produk",
+            "domain": "default"
+          },
+          "jenis,produk": {
+            "intent": "produk",
+            "domain": "default"
+          },
+          "ada,lihat,produk,yang": {
+            "intent": "produk",
+            "domain": "default"
+          },
+          "sedia,undang,yang": {
+            "intent": "produk",
+            "domain": "default"
+          },
+          "jenis,undang": {
+            "intent": "produk",
+            "domain": "default"
+          },
+          "bagaimana,cara,es,nikah,undang": {
+            "intent": "pemesanan",
+            "domain": "default"
+          },
+          "bagaimana,es,ingin,langkah,saya,undang": {
+            "intent": "pemesanan",
+            "domain": "default"
+          },
+          "bagaimana,mesan,proses,undang": {
+            "intent": "pemesanan",
+            "domain": "default"
+          },
+          "bagaimana,cara,pesan,undang": {
+            "intent": "pemesanan",
+            "domain": "default"
+          },
+          "informasi,kontak": {
+            "intent": "kontak",
+            "domain": "default"
+          },
+          "bagaimana,cara,hubung,layan": {
+            "intent": "kontak",
+            "domain": "default"
+          },
+          "anda,bagaimana,customer,hubung,service": {
+            "intent": "kontak",
+            "domain": "default"
+          },
+          "apa,minimal,order,undang,untuk": {
+            "intent": "minimal order",
+            "domain": "default"
+          },
+          "ada,apa,es,jumlah,minimal,untuk": {
+            "intent": "minimal order",
+            "domain": "default"
+          },
+          "apa,harus,jumlah,minimum,pesan,saya,undang,yang": {
+            "intent": "minimal order",
+            "domain": "default"
+          },
+          "ada,apa,batas,dapat,jumlah,pesan,saya,undang,yang": {
+            "intent": "minimal order",
+            "domain": "default"
+          },
+          "apa,erja,lama,waktu": {
+            "intent": "waktu pengerjaan",
+            "domain": "default"
+          },
+          "apa,butuh,erja,lama,undang,untuk,waktu,yang": {
+            "intent": "waktu pengerjaan",
+            "domain": "default"
+          },
+          "apa,biasa,erja,ingin,lama,saya,tahu,undang": {
+            "intent": "waktu pengerjaan",
+            "domain": "default"
+          },
+          "apa,cetak,nikah,perlu,undang,untuk,waktu,yang": {
+            "intent": "waktu pengerjaan",
+            "domain": "default"
+          },
+          "cetak,lama,waktu": {
+            "intent": "waktu pengerjaan",
+            "domain": "default"
+          },
+          "apa,bayar,dapat,guna,saja,tode,yang": {
+            "intent": "pembayaran",
+            "domain": "default"
+          },
+          "bagaimana,bayar,dapat,laku,saya": {
+            "intent": "pembayaran",
+            "domain": "default"
+          },
+          "ada,apa,bayar,opsi,sedia,yang": {
+            "intent": "pembayaran",
+            "domain": "default"
+          },
+          "custom,informasi": {
+            "intent": "informasi custom",
+            "domain": "default"
+          },
+          "apa,bisa,custom,laku,undang": {
+            "intent": "informasi custom",
+            "domain": "default"
+          },
+          "bisa,desain,kalau,sendir": {
+            "intent": "informasi custom",
+            "domain": "default"
+          },
+          "informasi,katalog": {
+            "intent": "informasi katalog",
+            "domain": "default"
+          },
+          "katalog,lihat": {
+            "intent": "informasi katalog",
+            "domain": "default"
+          },
+          "bagaimana,kirim": {
+            "intent": "pengiriman",
+            "domain": "default"
+          },
+          "bagaimana,kirim,proses": {
+            "intent": "pengiriman",
+            "domain": "default"
+          },
+          "apa,biaya,kirim": {
+            "intent": "pengiriman",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "sapaan": "default",
+          "lokasi": "default",
+          "produk": "default",
+          "pemesanan": "default",
+          "kontak": "default",
+          "minimal order": "default",
+          "waktu pengerjaan": "default",
+          "pembayaran": "default",
+          "informasi custom": "default",
+          "informasi katalog": "default",
+          "pengiriman": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "hi",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "hai",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "halo",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "hallo",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "assalamualaikum",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "p",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "selamat pagi",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "selamat siang",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "selamat malam",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "permisi",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "pagi",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "malam",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "sore",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "menu",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "mana alamat toko",
+            "intent": "lokasi"
+          },
+          {
+            "domain": "default",
+            "utterance": "toko ada mana",
+            "intent": "lokasi"
+          },
+          {
+            "domain": "default",
+            "utterance": "toko lokasi mana",
+            "intent": "lokasi"
+          },
+          {
+            "domain": "default",
+            "utterance": "saya ingin tahu alamat lengkap toko",
+            "intent": "lokasi"
+          },
+          {
+            "domain": "default",
+            "utterance": "bisa sharelock alamat toko",
+            "intent": "lokasi"
+          },
+          {
+            "domain": "default",
+            "utterance": "bisa beritahu lokasi toko anda",
+            "intent": "lokasi"
+          },
+          {
+            "domain": "default",
+            "utterance": "apa produk yang tersedia",
+            "intent": "produk"
+          },
+          {
+            "domain": "default",
+            "utterance": "jenis produk",
+            "intent": "produk"
+          },
+          {
+            "domain": "default",
+            "utterance": "lihat produk yang ada",
+            "intent": "produk"
+          },
+          {
+            "domain": "default",
+            "utterance": "undang yang tersedia",
+            "intent": "produk"
+          },
+          {
+            "domain": "default",
+            "utterance": "jenis undang",
+            "intent": "produk"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana cara es undang nikah",
+            "intent": "pemesanan"
+          },
+          {
+            "domain": "default",
+            "utterance": "saya ingin es undang bagaimana langkah",
+            "intent": "pemesanan"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana proses mesan undang",
+            "intent": "pemesanan"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana cara pesan undang",
+            "intent": "pemesanan"
+          },
+          {
+            "domain": "default",
+            "utterance": "informasi kontak",
+            "intent": "kontak"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana cara hubung layan",
+            "intent": "kontak"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana hubung customer service anda",
+            "intent": "kontak"
+          },
+          {
+            "domain": "default",
+            "utterance": "apa minimal order untuk undang",
+            "intent": "minimal order"
+          },
+          {
+            "domain": "default",
+            "utterance": "apakah ada jumlah minimal untuk es",
+            "intent": "minimal order"
+          },
+          {
+            "domain": "default",
+            "utterance": "berapa jumlah minimum undang yang harus saya pesan",
+            "intent": "minimal order"
+          },
+          {
+            "domain": "default",
+            "utterance": "apakah ada batas jumlah undang yang dapat saya pesan",
+            "intent": "minimal order"
+          },
+          {
+            "domain": "default",
+            "utterance": "berapa jumlah minimum undang yang harus saya pesan",
+            "intent": "minimal order"
+          },
+          {
+            "domain": "default",
+            "utterance": "berapa lama waktu pengerjaan",
+            "intent": "waktu pengerjaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "berapa lama waktu yang butuh untuk pengerjaan undang",
+            "intent": "waktu pengerjaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "saya ingin tahu berapa lama pengerjaan undang biasa",
+            "intent": "waktu pengerjaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "berapa waktu yang perlu untuk cetak undang nikah",
+            "intent": "waktu pengerjaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "lama waktu cetak",
+            "intent": "waktu pengerjaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "apa saja metode bayar yang dapat guna",
+            "intent": "pembayaran"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana saya dapat laku bayar",
+            "intent": "pembayaran"
+          },
+          {
+            "domain": "default",
+            "utterance": "apakah ada opsi bayar yang tersedia",
+            "intent": "pembayaran"
+          },
+          {
+            "domain": "default",
+            "utterance": "apa saja metode bayar yang dapat guna",
+            "intent": "pembayaran"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana saya dapat laku bayar",
+            "intent": "pembayaran"
+          },
+          {
+            "domain": "default",
+            "utterance": "apakah ada opsi bayar yang tersedia",
+            "intent": "pembayaran"
+          },
+          {
+            "domain": "default",
+            "utterance": "informasi custom",
+            "intent": "informasi custom"
+          },
+          {
+            "domain": "default",
+            "utterance": "apakah bisa laku custom undang",
+            "intent": "informasi custom"
+          },
+          {
+            "domain": "default",
+            "utterance": "kalau desain sendiri bisa",
+            "intent": "informasi custom"
+          },
+          {
+            "domain": "default",
+            "utterance": "informasi katalog",
+            "intent": "informasi katalog"
+          },
+          {
+            "domain": "default",
+            "utterance": "lihat katalog",
+            "intent": "informasi katalog"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana kirim",
+            "intent": "pengiriman"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana proses kirim",
+            "intent": "pengiriman"
+          },
+          {
+            "domain": "default",
+            "utterance": "berapa biaya kirim",
+            "intent": "pengiriman"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "id",
+              "tag": "nlu-id",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "hi": 1,
+              "hai": 1,
+              "halo": 1,
+              "hallo": 1,
+              "assalamualaikum": 1,
+              "p": 1,
+              "selamat": 1,
+              "pagi": 1,
+              "siang": 1,
+              "malam": 1,
+              "misi": 1,
+              "sore": 1,
+              "menu": 1,
+              "mana": 1,
+              "alamat": 1,
+              "toko": 1,
+              "ada": 1,
+              "lokasi": 1,
+              "saya": 1,
+              "ingin": 1,
+              "tahu": 1,
+              "lengkap": 1,
+              "bisa": 1,
+              "sharelock": 1,
+              "itahu": 1,
+              "anda": 1,
+              "apa": 1,
+              "produk": 1,
+              "yang": 1,
+              "sedia": 1,
+              "jenis": 1,
+              "lihat": 1,
+              "undang": 1,
+              "bagaimana": 1,
+              "cara": 1,
+              "es": 1,
+              "nikah": 1,
+              "langkah": 1,
+              "proses": 1,
+              "mesan": 1,
+              "pesan": 1,
+              "informasi": 1,
+              "kontak": 1,
+              "hubung": 1,
+              "layan": 1,
+              "customer": 1,
+              "service": 1,
+              "minimal": 1,
+              "order": 1,
+              "untuk": 1,
+              "jumlah": 1,
+              "minimum": 1,
+              "harus": 1,
+              "batas": 1,
+              "dapat": 1,
+              "lama": 1,
+              "waktu": 1,
+              "erja": 1,
+              "butuh": 1,
+              "biasa": 1,
+              "perlu": 1,
+              "cetak": 1,
+              "saja": 1,
+              "tode": 1,
+              "bayar": 1,
+              "guna": 1,
+              "laku": 1,
+              "opsi": 1,
+              "custom": 1,
+              "kalau": 1,
+              "desain": 1,
+              "sendir": 1,
+              "katalog": 1,
+              "kirim": 1,
+              "biaya": 1
+            },
+            "intents": {
+              "sapaan": 1,
+              "lokasi": 1,
+              "produk": 1,
+              "pemesanan": 1,
+              "kontak": 1,
+              "minimal order": 1,
+              "waktu pengerjaan": 1,
+              "pembayaran": 1,
+              "informasi custom": 1,
+              "informasi katalog": 1,
+              "pengiriman": 1
+            },
+            "intentFeatures": {
+              "sapaan": {
+                "hi": 1,
+                "hai": 1,
+                "halo": 1,
+                "hallo": 1,
+                "assalamualaikum": 1,
+                "p": 1,
+                "selamat": 1,
+                "pagi": 1,
+                "siang": 1,
+                "malam": 1,
+                "misi": 1,
+                "sore": 1,
+                "menu": 1
+              },
+              "lokasi": {
+                "mana": 1,
+                "alamat": 1,
+                "toko": 1,
+                "ada": 1,
+                "lokasi": 1,
+                "saya": 1,
+                "ingin": 1,
+                "tahu": 1,
+                "lengkap": 1,
+                "bisa": 1,
+                "sharelock": 1,
+                "itahu": 1,
+                "anda": 1
+              },
+              "produk": {
+                "apa": 1,
+                "produk": 1,
+                "yang": 1,
+                "sedia": 1,
+                "jenis": 1,
+                "lihat": 1,
+                "ada": 1,
+                "undang": 1
+              },
+              "pemesanan": {
+                "bagaimana": 1,
+                "cara": 1,
+                "es": 1,
+                "undang": 1,
+                "nikah": 1,
+                "saya": 1,
+                "ingin": 1,
+                "langkah": 1,
+                "proses": 1,
+                "mesan": 1,
+                "pesan": 1
+              },
+              "kontak": {
+                "informasi": 1,
+                "kontak": 1,
+                "bagaimana": 1,
+                "cara": 1,
+                "hubung": 1,
+                "layan": 1,
+                "customer": 1,
+                "service": 1,
+                "anda": 1
+              },
+              "minimal order": {
+                "apa": 1,
+                "minimal": 1,
+                "order": 1,
+                "untuk": 1,
+                "undang": 1,
+                "ada": 1,
+                "jumlah": 1,
+                "es": 1,
+                "minimum": 1,
+                "yang": 1,
+                "harus": 1,
+                "saya": 1,
+                "pesan": 1,
+                "batas": 1,
+                "dapat": 1
+              },
+              "waktu pengerjaan": {
+                "apa": 1,
+                "lama": 1,
+                "waktu": 1,
+                "erja": 1,
+                "yang": 1,
+                "butuh": 1,
+                "untuk": 1,
+                "undang": 1,
+                "saya": 1,
+                "ingin": 1,
+                "tahu": 1,
+                "biasa": 1,
+                "perlu": 1,
+                "cetak": 1,
+                "nikah": 1
+              },
+              "pembayaran": {
+                "apa": 1,
+                "saja": 1,
+                "tode": 1,
+                "bayar": 1,
+                "yang": 1,
+                "dapat": 1,
+                "guna": 1,
+                "bagaimana": 1,
+                "saya": 1,
+                "laku": 1,
+                "ada": 1,
+                "opsi": 1,
+                "sedia": 1
+              },
+              "informasi custom": {
+                "informasi": 1,
+                "custom": 1,
+                "apa": 1,
+                "bisa": 1,
+                "laku": 1,
+                "undang": 1,
+                "kalau": 1,
+                "desain": 1,
+                "sendir": 1
+              },
+              "informasi katalog": {
+                "informasi": 1,
+                "katalog": 1,
+                "lihat": 1
+              },
+              "pengiriman": {
+                "bagaimana": 1,
+                "kirim": 1,
+                "proses": 1,
+                "apa": 1,
+                "biaya": 1
+              }
+            },
+            "featuresToIntent": {
+              "hi": [
+                "sapaan"
+              ],
+              "hai": [
+                "sapaan"
+              ],
+              "halo": [
+                "sapaan"
+              ],
+              "hallo": [
+                "sapaan"
+              ],
+              "assalamualaikum": [
+                "sapaan"
+              ],
+              "p": [
+                "sapaan"
+              ],
+              "selamat": [
+                "sapaan"
+              ],
+              "pagi": [
+                "sapaan"
+              ],
+              "siang": [
+                "sapaan"
+              ],
+              "malam": [
+                "sapaan"
+              ],
+              "misi": [
+                "sapaan"
+              ],
+              "sore": [
+                "sapaan"
+              ],
+              "menu": [
+                "sapaan"
+              ],
+              "mana": [
+                "lokasi"
+              ],
+              "alamat": [
+                "lokasi"
+              ],
+              "toko": [
+                "lokasi"
+              ],
+              "ada": [
+                "lokasi",
+                "produk",
+                "minimal order",
+                "pembayaran"
+              ],
+              "lokasi": [
+                "lokasi"
+              ],
+              "saya": [
+                "lokasi",
+                "pemesanan",
+                "minimal order",
+                "waktu pengerjaan",
+                "pembayaran"
+              ],
+              "ingin": [
+                "lokasi",
+                "pemesanan",
+                "waktu pengerjaan"
+              ],
+              "tahu": [
+                "lokasi",
+                "waktu pengerjaan"
+              ],
+              "lengkap": [
+                "lokasi"
+              ],
+              "bisa": [
+                "lokasi",
+                "informasi custom"
+              ],
+              "sharelock": [
+                "lokasi"
+              ],
+              "itahu": [
+                "lokasi"
+              ],
+              "anda": [
+                "lokasi",
+                "kontak"
+              ],
+              "apa": [
+                "produk",
+                "minimal order",
+                "waktu pengerjaan",
+                "pembayaran",
+                "informasi custom",
+                "pengiriman"
+              ],
+              "produk": [
+                "produk"
+              ],
+              "yang": [
+                "produk",
+                "minimal order",
+                "waktu pengerjaan",
+                "pembayaran"
+              ],
+              "sedia": [
+                "produk",
+                "pembayaran"
+              ],
+              "jenis": [
+                "produk"
+              ],
+              "lihat": [
+                "produk",
+                "informasi katalog"
+              ],
+              "undang": [
+                "produk",
+                "pemesanan",
+                "minimal order",
+                "waktu pengerjaan",
+                "informasi custom"
+              ],
+              "bagaimana": [
+                "pemesanan",
+                "kontak",
+                "pembayaran",
+                "pengiriman"
+              ],
+              "cara": [
+                "pemesanan",
+                "kontak"
+              ],
+              "es": [
+                "pemesanan",
+                "minimal order"
+              ],
+              "nikah": [
+                "pemesanan",
+                "waktu pengerjaan"
+              ],
+              "langkah": [
+                "pemesanan"
+              ],
+              "proses": [
+                "pemesanan",
+                "pengiriman"
+              ],
+              "mesan": [
+                "pemesanan"
+              ],
+              "pesan": [
+                "pemesanan",
+                "minimal order"
+              ],
+              "informasi": [
+                "kontak",
+                "informasi custom",
+                "informasi katalog"
+              ],
+              "kontak": [
+                "kontak"
+              ],
+              "hubung": [
+                "kontak"
+              ],
+              "layan": [
+                "kontak"
+              ],
+              "customer": [
+                "kontak"
+              ],
+              "service": [
+                "kontak"
+              ],
+              "minimal": [
+                "minimal order"
+              ],
+              "order": [
+                "minimal order"
+              ],
+              "untuk": [
+                "minimal order",
+                "waktu pengerjaan"
+              ],
+              "jumlah": [
+                "minimal order"
+              ],
+              "minimum": [
+                "minimal order"
+              ],
+              "harus": [
+                "minimal order"
+              ],
+              "batas": [
+                "minimal order"
+              ],
+              "dapat": [
+                "minimal order",
+                "pembayaran"
+              ],
+              "lama": [
+                "waktu pengerjaan"
+              ],
+              "waktu": [
+                "waktu pengerjaan"
+              ],
+              "erja": [
+                "waktu pengerjaan"
+              ],
+              "butuh": [
+                "waktu pengerjaan"
+              ],
+              "biasa": [
+                "waktu pengerjaan"
+              ],
+              "perlu": [
+                "waktu pengerjaan"
+              ],
+              "cetak": [
+                "waktu pengerjaan"
+              ],
+              "saja": [
+                "pembayaran"
+              ],
+              "tode": [
+                "pembayaran"
+              ],
+              "bayar": [
+                "pembayaran"
+              ],
+              "guna": [
+                "pembayaran"
+              ],
+              "laku": [
+                "pembayaran",
+                "informasi custom"
+              ],
+              "opsi": [
+                "pembayaran"
+              ],
+              "custom": [
+                "informasi custom"
+              ],
+              "kalau": [
+                "informasi custom"
+              ],
+              "desain": [
+                "informasi custom"
+              ],
+              "sendir": [
+                "informasi custom"
+              ],
+              "katalog": [
+                "informasi katalog"
+              ],
+              "kirim": [
+                "pengiriman"
+              ],
+              "biaya": [
+                "pengiriman"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "id",
+                "tag": "nlu-id",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "hi",
+                "hai",
+                "halo",
+                "hallo",
+                "assalamualaikum",
+                "p",
+                "selamat",
+                "pagi",
+                "siang",
+                "malam",
+                "misi",
+                "sore",
+                "menu",
+                "mana",
+                "alamat",
+                "toko",
+                "ada",
+                "lokasi",
+                "saya",
+                "ingin",
+                "tahu",
+                "lengkap",
+                "bisa",
+                "sharelock",
+                "itahu",
+                "anda",
+                "apa",
+                "produk",
+                "yang",
+                "sedia",
+                "jenis",
+                "lihat",
+                "undang",
+                "bagaimana",
+                "cara",
+                "es",
+                "nikah",
+                "langkah",
+                "proses",
+                "mesan",
+                "pesan",
+                "informasi",
+                "kontak",
+                "hubung",
+                "layan",
+                "customer",
+                "service",
+                "minimal",
+                "order",
+                "untuk",
+                "jumlah",
+                "minimum",
+                "harus",
+                "batas",
+                "dapat",
+                "lama",
+                "waktu",
+                "erja",
+                "butuh",
+                "biasa",
+                "perlu",
+                "cetak",
+                "saja",
+                "tode",
+                "bayar",
+                "guna",
+                "laku",
+                "opsi",
+                "custom",
+                "kalau",
+                "desain",
+                "sendir",
+                "katalog",
+                "kirim",
+                "biaya"
+              ],
+              "intents": [
+                "sapaan",
+                "lokasi",
+                "produk",
+                "pemesanan",
+                "kontak",
+                "minimal order",
+                "waktu pengerjaan",
+                "pembayaran",
+                "informasi custom",
+                "informasi katalog",
+                "pengiriman"
+              ],
+              "perceptrons": [
+                [
+                  4.870132923126221,
+                  4.903080463409424,
+                  4.895444869995117,
+                  4.886598110198975,
+                  4.876556396484375,
+                  4.865337371826172,
+                  1.0256577730178833,
+                  4.237991809844971,
+                  3.342585802078247,
+                  4.234208583831787,
+                  4.87556266784668,
+                  4.784013271331787,
+                  4.767721652984619,
+                  -3.106875419616699,
+                  -1.953747034072876,
+                  -4.5893425941467285,
+                  -1.970091700553894,
+                  -1.7917203903198242,
+                  -1.3739408254623413,
+                  -0.6983460783958435,
+                  -0.4675767421722412,
+                  -0.4675767421722412,
+                  -3.1170971393585205,
+                  -0.4878380000591278,
+                  -0.3723216652870178,
+                  -1.1196120977401733,
+                  -4.211601734161377,
+                  -4.523561000823975,
+                  -2.8545427322387695,
+                  -2.0004477500915527,
+                  -4.948342323303223,
+                  -4.445973873138428,
+                  -4.629718780517578,
+                  -5.709222793579102,
+                  -1.5215598344802856,
+                  -1.1619930267333984,
+                  -0.28343692421913147,
+                  -0.16530878841876984,
+                  -0.860794723033905,
+                  -0.37930169701576233,
+                  -0.20639750361442566,
+                  -6.716088771820068,
+                  -2.7952263355255127,
+                  -1.522106409072876,
+                  -0.8532319664955139,
+                  -0.645954430103302,
+                  -0.645954430103302,
+                  -0.8109591603279114,
+                  -0.25143927335739136,
+                  -0.8109591603279114,
+                  -0.5269761681556702,
+                  0,
+                  0,
+                  0,
+                  -0.9172871708869934,
+                  -3.4417548179626465,
+                  -3.4417548179626465,
+                  -0.7385739684104919,
+                  0,
+                  0,
+                  0,
+                  -2.599970817565918,
+                  -0.22824226319789886,
+                  -0.22824226319789886,
+                  -0.9172871708869934,
+                  -0.22824226319789886,
+                  -0.663772463798523,
+                  0,
+                  -2.7499496936798096,
+                  -2.1228606700897217,
+                  -2.1228606700897217,
+                  -2.1228606700897217,
+                  -5.015285015106201,
+                  -3.748110055923462,
+                  -1.5457905530929565,
+                  9.48989794505969
+                ],
+                [
+                  -0.2619287669658661,
+                  -0.25402209162712097,
+                  -0.24968990683555603,
+                  -0.2447323203086853,
+                  -0.23975655436515808,
+                  -0.23507732152938843,
+                  -0.3372301757335663,
+                  -0.26813241839408875,
+                  -0.1080002635717392,
+                  -0.2531476616859436,
+                  -0.22638866305351257,
+                  -0.21995116770267487,
+                  -0.2176584154367447,
+                  3.852827310562134,
+                  2.5057930946350098,
+                  7.88618803024292,
+                  2.2597529888153076,
+                  2.328179359436035,
+                  0.5028597116470337,
+                  0.8251734375953674,
+                  1.0582693815231323,
+                  1.300032615661621,
+                  1.970839500427246,
+                  1.6709798574447632,
+                  1.0563790798187256,
+                  0.8620911240577698,
+                  -1.0143178701400757,
+                  -0.9068892002105713,
+                  -0.9559844732284546,
+                  -0.3680689334869385,
+                  -0.3719812035560608,
+                  -0.5769277215003967,
+                  -1.2713252305984497,
+                  -1.0305379629135132,
+                  -0.2645011246204376,
+                  -0.5873948335647583,
+                  -0.07360775023698807,
+                  -0.16641157865524292,
+                  -0.06836380064487457,
+                  -0.04510381817817688,
+                  -0.12228237837553024,
+                  -0.5421680808067322,
+                  -0.20880648493766785,
+                  -0.2638351023197174,
+                  -0.0739692896604538,
+                  -0.1580992490053177,
+                  -0.1580992490053177,
+                  -0.2669142782688141,
+                  -0.02999016083776951,
+                  -0.2669142782688141,
+                  -0.32868799567222595,
+                  -0.019144287332892418,
+                  -0.019144287332892418,
+                  -0.04104863852262497,
+                  -0.25294309854507446,
+                  -0.4655269384384155,
+                  -0.218559131026268,
+                  -0.282732754945755,
+                  0,
+                  -0.195120707154274,
+                  0,
+                  -0.1335582137107849,
+                  0,
+                  0,
+                  -0.2313934862613678,
+                  0,
+                  -0.21359162032604218,
+                  -0.037185363471508026,
+                  -0.18413840234279633,
+                  -0.7222375273704529,
+                  -0.7222375273704529,
+                  -0.7222375273704529,
+                  -0.2354019582271576,
+                  -0.0207375381141901,
+                  -0.008466750383377075,
+                  0.20140729351448733
+                ],
+                [
+                  -0.4819171726703644,
+                  -0.4744216799736023,
+                  -0.4625281095504761,
+                  -0.45483875274658203,
+                  -0.4442300498485565,
+                  -0.43699806928634644,
+                  -0.4922950267791748,
+                  -0.4670692980289459,
+                  -0.1751149743795395,
+                  -0.447035551071167,
+                  -0.4214571416378021,
+                  -0.4056106507778168,
+                  -0.39838168025016785,
+                  -0.27028772234916687,
+                  -0.10994382947683334,
+                  -0.31511446833610535,
+                  -0.12389490753412247,
+                  -0.06278533488512039,
+                  -1.7735422849655151,
+                  -0.2323385626077652,
+                  0,
+                  0,
+                  -0.8032254576683044,
+                  -0.023775985464453697,
+                  -0.009080654010176659,
+                  -0.09526219964027405,
+                  -3.3690991401672363,
+                  7.278233051300049,
+                  4.802450656890869,
+                  4.638790130615234,
+                  7.793556213378906,
+                  1.8214956521987915,
+                  5.209510803222656,
+                  -2.6954729557037354,
+                  -0.90203857421875,
+                  -0.7733853459358215,
+                  -1.186008095741272,
+                  -0.2323385626077652,
+                  -1.371450424194336,
+                  -1.371450424194336,
+                  -1.9274524450302124,
+                  -0.8057281970977783,
+                  -0.41793137788772583,
+                  -0.09557629376649857,
+                  -0.020595306530594826,
+                  -0.059534505009651184,
+                  -0.059534505009651184,
+                  -0.34317082166671753,
+                  -0.22928644716739655,
+                  -2.177675247192383,
+                  -1.5580863952636719,
+                  -0.8427936434745789,
+                  -0.8427936434745789,
+                  -0.5988485813140869,
+                  -0.9203441143035889,
+                  -1.033753752708435,
+                  -1.8444563150405884,
+                  -0.9534496665000916,
+                  -0.9111400842666626,
+                  0,
+                  -0.8066822290420532,
+                  -0.8869860172271729,
+                  -0.24316009879112244,
+                  -0.24316009879112244,
+                  -3.2538747787475586,
+                  -0.24316009879112244,
+                  -0.48931798338890076,
+                  -2.932379722595215,
+                  -0.7159048914909363,
+                  -0.23552797734737396,
+                  -0.23552797734737396,
+                  -0.23552797734737396,
+                  -1.9587115049362183,
+                  0,
+                  0,
+                  0.2334616991530752
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.05072328820824623,
+                  -0.05072328820824623,
+                  -0.33293551206588745,
+                  0,
+                  -0.32092615962028503,
+                  1.5646814107894897,
+                  -0.7140820622444153,
+                  -0.05072328820824623,
+                  -0.2071506232023239,
+                  0,
+                  0,
+                  -0.6222845911979675,
+                  -2.7271409034729004,
+                  0,
+                  -2.422844648361206,
+                  -1.2149146795272827,
+                  -3.391281843185425,
+                  -0.015537474304437637,
+                  5.204113006591797,
+                  4.244259357452393,
+                  2.958962917327881,
+                  3.013611316680908,
+                  0.6419705748558044,
+                  2.332395076751709,
+                  1.749375581741333,
+                  4.795834541320801,
+                  3.5959510803222656,
+                  -0.20457065105438232,
+                  -0.17767031490802765,
+                  -3.0814852714538574,
+                  -2.374725580215454,
+                  -0.6222845911979675,
+                  -0.6222845911979675,
+                  -0.5781622529029846,
+                  -0.4711509346961975,
+                  -0.8600012063980103,
+                  -0.998567521572113,
+                  -0.5424755215644836,
+                  -0.5424755215644836,
+                  -0.24160432815551758,
+                  -1.2273184061050415,
+                  -0.7604490518569946,
+                  -0.2369546741247177,
+                  -0.7397178411483765,
+                  -0.07517524063587189,
+                  -0.6256352066993713,
+                  -0.10939157754182816,
+                  -0.12729519605636597,
+                  0,
+                  0,
+                  -0.8902317881584167,
+                  0,
+                  -1.127082109451294,
+                  0,
+                  -0.198388934135437,
+                  -0.011456449516117573,
+                  -0.011456449516117573,
+                  -0.011456449516117573,
+                  -0.019817257300019264,
+                  -4.203575611114502,
+                  0,
+                  -1.7479430790641282
+                ],
+                [
+                  -0.2537977993488312,
+                  -0.2509646713733673,
+                  -0.24978280067443848,
+                  -0.24904797971248627,
+                  -0.2482539862394333,
+                  -0.24740196764469147,
+                  -0.24163205921649933,
+                  -0.24841620028018951,
+                  -0.08643598109483719,
+                  -0.24710889160633087,
+                  -0.24595896899700165,
+                  -0.24372272193431854,
+                  -0.24257344007492065,
+                  -0.058020222932100296,
+                  -0.04285310208797455,
+                  -0.5575686693191528,
+                  -0.12060245871543884,
+                  -0.5001896023750305,
+                  -0.854698121547699,
+                  -0.0628383457660675,
+                  -0.0081810737028718,
+                  0,
+                  -0.6404637694358826,
+                  -0.00602601608261466,
+                  -0.482159286737442,
+                  1.7162553071975708,
+                  -0.44285959005355835,
+                  -0.12442750483751297,
+                  -0.16793596744537354,
+                  -0.0025262096896767616,
+                  -0.12442750483751297,
+                  -0.1155974343419075,
+                  -2.5182793140411377,
+                  1.5537251234054565,
+                  2.0589051246643066,
+                  -0.9356149435043335,
+                  -0.7870768308639526,
+                  -0.04852147027850151,
+                  -0.7319843769073486,
+                  -0.12445785105228424,
+                  -1.337640643119812,
+                  3.4070940017700195,
+                  10.309405326843262,
+                  6.3116044998168945,
+                  4.090890407562256,
+                  2.2199766635894775,
+                  2.2199766635894775,
+                  -0.11370647698640823,
+                  -0.0487557016313076,
+                  -0.17312727868556976,
+                  -0.17832167446613312,
+                  -0.061876144260168076,
+                  -0.061876144260168076,
+                  -0.020832741633057594,
+                  -0.7012141346931458,
+                  -0.2739247977733612,
+                  -0.25963351130485535,
+                  -0.09452708065509796,
+                  -0.006466863676905632,
+                  -0.0081810737028718,
+                  -0.0010074174497276545,
+                  -0.16853465139865875,
+                  -0.016173280775547028,
+                  -0.016173280775547028,
+                  -0.6662157773971558,
+                  -0.016173280775547028,
+                  -0.6276174783706665,
+                  -0.0025262096896767616,
+                  -3.5365123748779297,
+                  -0.12120942771434784,
+                  -0.12120942771434784,
+                  -0.12120942771434784,
+                  -3.5158019065856934,
+                  -1.7987991571426392,
+                  0,
+                  0.24985666086472064
+                ],
+                [
+                  -0.004022185690701008,
+                  -0.0038550712633877993,
+                  -0.003694899845868349,
+                  -0.00354138296097517,
+                  -0.003394243773072958,
+                  -0.003253217553719878,
+                  -0.011394212022423744,
+                  -0.0068609341979026794,
+                  -0.002751816064119339,
+                  -0.00597960501909256,
+                  -0.002779139205813408,
+                  -0.0024601046461611986,
+                  -0.0023578826803714037,
+                  -0.4022614657878876,
+                  -0.031565919518470764,
+                  -0.4640507400035858,
+                  0.9493580460548401,
+                  0,
+                  1.777672529220581,
+                  -1.2135014533996582,
+                  -0.6081395149230957,
+                  -0.030920427292585373,
+                  -0.8652899265289307,
+                  0,
+                  0,
+                  0,
+                  2.1568667888641357,
+                  -0.3495211601257324,
+                  -0.22080321609973907,
+                  -0.9102455973625183,
+                  -0.7063923478126526,
+                  -0.2429170310497284,
+                  1.3932883739471436,
+                  -1.9263036251068115,
+                  -1.1035633087158203,
+                  0.17358160018920898,
+                  -1.1593260765075684,
+                  -0.5226536989212036,
+                  0,
+                  0,
+                  2.308931827545166,
+                  -0.026845809072256088,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  4.716245174407959,
+                  3.8614470958709717,
+                  2.8266761302948,
+                  4.142910003662109,
+                  1.7014901638031006,
+                  1.7014901638031006,
+                  1.5873425006866455,
+                  0.864409327507019,
+                  -1.7137566804885864,
+                  -2.249694585800171,
+                  -1.7137566804885864,
+                  -0.5817969441413879,
+                  -0.525600016117096,
+                  -1.0356957912445068,
+                  -1.0356957912445068,
+                  -0.3674255907535553,
+                  -0.3674255907535553,
+                  -1.4639811515808105,
+                  -0.3674255907535553,
+                  -1.1308201551437378,
+                  -0.7358409762382507,
+                  -0.8885817527770996,
+                  0,
+                  0,
+                  0,
+                  -0.015959950163960457,
+                  -0.7414306402206421,
+                  -0.7414306402206421,
+                  -0.6754951709441962
+                ],
+                [
+                  -0.049787331372499466,
+                  -0.04774824157357216,
+                  -0.04579262062907219,
+                  -0.043917056173086166,
+                  -0.042118269950151443,
+                  -0.04039312154054642,
+                  -0.1213814988732338,
+                  -0.07782085239887238,
+                  -0.031832221895456314,
+                  -0.06796547025442123,
+                  -0.034935224801301956,
+                  -0.031056124716997147,
+                  -0.02978331595659256,
+                  -0.035599496215581894,
+                  -0.8250595331192017,
+                  -0.8512765169143677,
+                  -0.7007562518119812,
+                  -0.013108516111969948,
+                  0.3737986087799072,
+                  1.0185256004333496,
+                  1.3347653150558472,
+                  -0.7950716018676758,
+                  -0.6002575755119324,
+                  0,
+                  0,
+                  0,
+                  0.9792011380195618,
+                  -0.21561311185359955,
+                  -0.5959264636039734,
+                  -1.0446827411651611,
+                  -0.3288579285144806,
+                  -0.07756078988313675,
+                  0.3404254615306854,
+                  -0.9722536206245422,
+                  -0.28261664509773254,
+                  -0.6890347003936768,
+                  1.8181393146514893,
+                  -0.21518462896347046,
+                  -0.1161561831831932,
+                  -0.074222132563591,
+                  -0.4993715286254883,
+                  -0.15707319974899292,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1.1335424184799194,
+                  -0.9767869710922241,
+                  0.5865368247032166,
+                  -0.5963596701622009,
+                  -0.44516757130622864,
+                  -0.44516757130622864,
+                  0,
+                  -0.733152449131012,
+                  5.226656436920166,
+                  5.1807122230529785,
+                  3.152592182159424,
+                  -0.3092975616455078,
+                  2.130171775817871,
+                  2.0837643146514893,
+                  4.158306121826172,
+                  -0.4584842026233673,
+                  -0.4584842026233673,
+                  -1.2886559963226318,
+                  -0.4584842026233673,
+                  -0.6719897389411926,
+                  -0.4107929468154907,
+                  -0.6470287442207336,
+                  -0.028574710711836815,
+                  -0.028574710711836815,
+                  -0.028574710711836815,
+                  -0.13478875160217285,
+                  -0.43371596932411194,
+                  -0.3313772678375244,
+                  -0.27023102557310164
+                ],
+                [
+                  -0.08036644756793976,
+                  -0.07708928734064102,
+                  -0.07394566386938095,
+                  -0.0709301307797432,
+                  -0.0680374875664711,
+                  -0.06526271998882294,
+                  -0.15878689289093018,
+                  -0.09288612008094788,
+                  -0.03689781576395035,
+                  -0.10520192980766296,
+                  -0.05586984008550644,
+                  -0.04966910555958748,
+                  -0.047642532736063004,
+                  -0.33664822578430176,
+                  -0.172879159450531,
+                  -0.5153027772903442,
+                  1.4504791498184204,
+                  -0.015457123517990112,
+                  1.0502327680587769,
+                  -0.3094843327999115,
+                  -0.12230286002159119,
+                  -0.12230286002159119,
+                  -0.5202175974845886,
+                  0,
+                  0,
+                  -0.17557086050510406,
+                  0.4013708531856537,
+                  -2.0657570362091064,
+                  0.8231527209281921,
+                  1.4402594566345215,
+                  -0.0030879720579832792,
+                  -0.461675763130188,
+                  -2.489741325378418,
+                  1.407049536705017,
+                  -0.30508995056152344,
+                  -0.43360960483551025,
+                  -0.04055650904774666,
+                  -0.12933680415153503,
+                  -0.24477621912956238,
+                  -0.010420157574117184,
+                  -1.2874265909194946,
+                  -0.20132312178611755,
+                  0,
+                  -0.410676509141922,
+                  -0.21139146387577057,
+                  -0.17557086050510406,
+                  -0.17557086050510406,
+                  -0.2071867734193802,
+                  -0.021151678636670113,
+                  -0.2071867734193802,
+                  -1.525746464729309,
+                  -0.21013744175434113,
+                  -0.21013744175434113,
+                  -0.9778773188591003,
+                  2.8506081104278564,
+                  -0.03242665156722069,
+                  -0.03242665156722069,
+                  -0.03242665156722069,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1.155485987663269,
+                  1.155485987663269,
+                  7.342502593994141,
+                  1.155485987663269,
+                  2.233710289001465,
+                  3.426135540008545,
+                  -0.5219306349754333,
+                  -0.06692760437726974,
+                  -0.06692760437726974,
+                  -0.06692760437726974,
+                  -0.17080196738243103,
+                  -0.9525198340415955,
+                  -0.21824070811271667,
+                  -0.5983273166420758
+                ],
+                [
+                  -0.24014781415462494,
+                  -0.24011550843715668,
+                  -0.23232893645763397,
+                  -0.22478196024894714,
+                  -0.21746782958507538,
+                  -0.21037991344928741,
+                  -0.32912176847457886,
+                  -0.26128825545310974,
+                  -0.1060192808508873,
+                  -0.2380596101284027,
+                  -0.19875673949718475,
+                  -0.18393026292324066,
+                  -0.17824961245059967,
+                  -0.09891588240861893,
+                  -1.1121439933776855,
+                  -2.0101163387298584,
+                  -0.13511766493320465,
+                  -0.7833701968193054,
+                  -0.7747042775154114,
+                  -0.21472467482089996,
+                  -0.1395236998796463,
+                  -0.015109882690012455,
+                  3.2542645931243896,
+                  -1.0366240739822388,
+                  -0.7520077228546143,
+                  -0.7520077228546143,
+                  -0.2729548513889313,
+                  -0.1832149773836136,
+                  -0.6634534597396851,
+                  -0.29268109798431396,
+                  -0.5242854356765747,
+                  -0.14780442416667938,
+                  -0.4912419021129608,
+                  -0.9042702317237854,
+                  -0.15801988542079926,
+                  -0.2156718373298645,
+                  -0.14254380762577057,
+                  -0.054667238146066666,
+                  -0.19126003980636597,
+                  -0.09245605766773224,
+                  -0.28741708397865295,
+                  3.1805577278137207,
+                  -3.0162882804870605,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.48998650908470154,
+                  -0.44394341111183167,
+                  -0.6068708896636963,
+                  -0.2616227865219116,
+                  -0.12836883962154388,
+                  -0.12836883962154388,
+                  -0.05431218072772026,
+                  -0.3760463297367096,
+                  -0.33128243684768677,
+                  -0.2420191466808319,
+                  -0.33128243684768677,
+                  -0.04248518496751785,
+                  -0.11024829745292664,
+                  -0.029371188953518867,
+                  -0.029371188953518867,
+                  -0.0036181260365992785,
+                  -0.0036181260365992785,
+                  -0.2967836558818817,
+                  -0.0036181260365992785,
+                  1.1962381601333618,
+                  0,
+                  10.612218856811523,
+                  3.645615816116333,
+                  3.645615816116333,
+                  3.645615816116333,
+                  -3.0750732421875,
+                  -0.6373313069343567,
+                  -0.40632569789886475,
+                  0.06012103818169898
+                ],
+                [
+                  -0.37414032220840454,
+                  -0.3628726303577423,
+                  -0.3580808937549591,
+                  -0.34805214405059814,
+                  -0.33826732635498047,
+                  -0.33282098174095154,
+                  -0.41898003220558167,
+                  -0.3726007044315338,
+                  -0.14242620766162872,
+                  -0.3517942428588867,
+                  -0.3142695426940918,
+                  -0.29845452308654785,
+                  -0.293695330619812,
+                  -0.17929424345493317,
+                  -0.1525009721517563,
+                  -0.31386980414390564,
+                  -1.2718371152877808,
+                  -0.09737225621938705,
+                  -0.04976987838745117,
+                  -0.04096338897943497,
+                  -0.03619832918047905,
+                  -0.03619832918047905,
+                  -0.1308469921350479,
+                  -0.030694473534822464,
+                  -0.03617999330163002,
+                  -0.04524504765868187,
+                  -0.24089807271957397,
+                  -1.3447718620300293,
+                  -1.284347653388977,
+                  -0.06073650345206261,
+                  -0.1911870539188385,
+                  3.022651195526123,
+                  -0.18037179112434387,
+                  -0.3650040328502655,
+                  -0.0316498801112175,
+                  -0.018855534493923187,
+                  -0.01089469250291586,
+                  -0.0020736781880259514,
+                  -0.11675965040922165,
+                  -0.0017203486058861017,
+                  -0.0034860624000430107,
+                  2.4255499839782715,
+                  -2.357719659805298,
+                  -0.017124218866229057,
+                  -0.009400401264429092,
+                  -0.004850999917834997,
+                  -0.004850999917834997,
+                  -0.018464921042323112,
+                  -0.014989780262112617,
+                  -0.018464921042323112,
+                  -0.0017374858725816011,
+                  0,
+                  0,
+                  0,
+                  -0.0031636462081223726,
+                  -0.1144440621137619,
+                  -0.1144440621137619,
+                  -0.02222549170255661,
+                  0,
+                  0,
+                  0,
+                  -0.08323521912097931,
+                  -0.0002343900123378262,
+                  -0.0002343900123378262,
+                  -0.0031636462081223726,
+                  -0.0002343900123378262,
+                  -0.0027095156256109476,
+                  0,
+                  -2.343362808227539,
+                  -0.04621577262878418,
+                  -0.04621577262878418,
+                  -0.04621577262878418,
+                  11.398032188415527,
+                  -0.4628722667694092,
+                  -0.1308150738477707,
+                  0.07343952182054081
+                ],
+                [
+                  -0.2902316451072693,
+                  -0.28019392490386963,
+                  -0.28006547689437866,
+                  -0.27101564407348633,
+                  -0.26224279403686523,
+                  -0.25373920798301697,
+                  -0.39349791407585144,
+                  -0.3081362545490265,
+                  -0.11319634318351746,
+                  -0.28788286447525024,
+                  -0.23949429392814636,
+                  -0.22585253417491913,
+                  -0.22166958451271057,
+                  -0.18194206058979034,
+                  -0.14429670572280884,
+                  -0.31618642807006836,
+                  -0.31986385583877563,
+                  -0.08378151804208755,
+                  -1.01559317111969,
+                  -0.2274809330701828,
+                  -0.018978815525770187,
+                  -0.018978815525770187,
+                  -0.11890944093465805,
+                  -0.032061297446489334,
+                  -0.028433870524168015,
+                  -0.6978949308395386,
+                  1.0912251472473145,
+                  -0.5488819479942322,
+                  -0.6966592073440552,
+                  -0.5088137984275818,
+                  -0.09428032487630844,
+                  -0.10327469557523727,
+                  -2.644989252090454,
+                  3.2446200847625732,
+                  -1.2486664056777954,
+                  -0.7012636661529541,
+                  -0.19237853586673737,
+                  -0.19189566373825073,
+                  0.618023693561554,
+                  -1.7495754957199097,
+                  -0.2280420958995819,
+                  -0.14505770802497864,
+                  -0.08814555406570435,
+                  -1.4127873182296753,
+                  -0.7554982900619507,
+                  -0.6552073359489441,
+                  -0.6552073359489441,
+                  -0.2483225017786026,
+                  -0.04003133624792099,
+                  -0.24885134398937225,
+                  -0.21596558392047882,
+                  -0.017833760008215904,
+                  -0.017833760008215904,
+                  0,
+                  -0.8336168527603149,
+                  -0.5569459795951843,
+                  -0.5569459795951843,
+                  -0.5569459795951843,
+                  -0.00009645514364819974,
+                  0,
+                  0,
+                  0,
+                  -0.11040762811899185,
+                  -0.11040762811899185,
+                  -0.8722454309463501,
+                  -0.11040762811899185,
+                  -0.70079505443573,
+                  -0.028987077996134758,
+                  -0.046057332307100296,
+                  -0.024860255420207977,
+                  -0.024860255420207977,
+                  -0.024860255420207977,
+                  -0.08746925741434097,
+                  10.44715404510498,
+                  2.59040904045105,
+                  0.19848610341069556
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "id",
+        "hi"
+      ],
+      [
+        "id",
+        "hai"
+      ],
+      [
+        "id",
+        "halo"
+      ],
+      [
+        "id",
+        "hallo"
+      ],
+      [
+        "id",
+        "assalamualaikum"
+      ],
+      [
+        "id",
+        "p"
+      ],
+      [
+        "id",
+        "selamat pagi"
+      ],
+      [
+        "id",
+        "selamat siang"
+      ],
+      [
+        "id",
+        "selamat malam"
+      ],
+      [
+        "id",
+        "permisi"
+      ],
+      [
+        "id",
+        "pagi"
+      ],
+      [
+        "id",
+        "malam"
+      ],
+      [
+        "id",
+        "sore"
+      ],
+      [
+        "id",
+        "menu"
+      ],
+      [
+        "id",
+        "mana alamat toko"
+      ],
+      [
+        "id",
+        "toko ada mana"
+      ],
+      [
+        "id",
+        "toko lokasi mana"
+      ],
+      [
+        "id",
+        "saya ingin tahu alamat lengkap toko"
+      ],
+      [
+        "id",
+        "bisa sharelock alamat toko"
+      ],
+      [
+        "id",
+        "bisa beritahu lokasi toko anda"
+      ],
+      [
+        "id",
+        "apa produk yang tersedia"
+      ],
+      [
+        "id",
+        "jenis produk"
+      ],
+      [
+        "id",
+        "lihat produk yang ada"
+      ],
+      [
+        "id",
+        "undang yang tersedia"
+      ],
+      [
+        "id",
+        "jenis undang"
+      ],
+      [
+        "id",
+        "bagaimana cara es undang nikah"
+      ],
+      [
+        "id",
+        "saya ingin es undang bagaimana langkah"
+      ],
+      [
+        "id",
+        "bagaimana proses mesan undang"
+      ],
+      [
+        "id",
+        "bagaimana cara pesan undang"
+      ],
+      [
+        "id",
+        "informasi kontak"
+      ],
+      [
+        "id",
+        "bagaimana cara hubung layan"
+      ],
+      [
+        "id",
+        "bagaimana hubung customer service anda"
+      ],
+      [
+        "id",
+        "apa minimal order untuk undang"
+      ],
+      [
+        "id",
+        "apakah ada jumlah minimal untuk es"
+      ],
+      [
+        "id",
+        "berapa jumlah minimum undang yang harus saya pesan"
+      ],
+      [
+        "id",
+        "apakah ada batas jumlah undang yang dapat saya pesan"
+      ],
+      [
+        "id",
+        "berapa jumlah minimum undang yang harus saya pesan"
+      ],
+      [
+        "id",
+        "berapa lama waktu pengerjaan"
+      ],
+      [
+        "id",
+        "berapa lama waktu yang butuh untuk pengerjaan undang"
+      ],
+      [
+        "id",
+        "saya ingin tahu berapa lama pengerjaan undang biasa"
+      ],
+      [
+        "id",
+        "berapa waktu yang perlu untuk cetak undang nikah"
+      ],
+      [
+        "id",
+        "lama waktu cetak"
+      ],
+      [
+        "id",
+        "apa saja metode bayar yang dapat guna"
+      ],
+      [
+        "id",
+        "bagaimana saya dapat laku bayar"
+      ],
+      [
+        "id",
+        "apakah ada opsi bayar yang tersedia"
+      ],
+      [
+        "id",
+        "apa saja metode bayar yang dapat guna"
+      ],
+      [
+        "id",
+        "bagaimana saya dapat laku bayar"
+      ],
+      [
+        "id",
+        "apakah ada opsi bayar yang tersedia"
+      ],
+      [
+        "id",
+        "informasi custom"
+      ],
+      [
+        "id",
+        "apakah bisa laku custom undang"
+      ],
+      [
+        "id",
+        "kalau desain sendiri bisa"
+      ],
+      [
+        "id",
+        "informasi katalog"
+      ],
+      [
+        "id",
+        "lihat katalog"
+      ],
+      [
+        "id",
+        "bagaimana kirim"
+      ],
+      [
+        "id",
+        "bagaimana proses kirim"
+      ],
+      [
+        "id",
+        "berapa biaya kirim"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "id": {
+        "sapaan": [
+          {
+            "answer": "Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :\r\n\r\n[1] Lokasi dan jam buka\r\n[2] Menu Produk\r\n[3] Cara Pemesanan\r\n[4] Minimal Order\r\n[5] Lama Proses Cetak\r\n[6] Pembayaran\r\n[7] Pengiriman\r\n[8] Informasi Kontak\r\n\r\nSilahkan beritahu s"
+          }
+        ],
+        "lokasi": [
+          {
+            "answer": "Adhitya Card memiliki dua alamat kantor\n\nJl Bakti No.11a, Pettarani\n[ https://goo.gl/maps/n8mfu7fk7W3vm8vC8 ]\n\nJln.Muh.Yunus Bulurokeng Samping Tol Makassar\n[ https://goo.gl/maps/swmvi9t1kMM4X3nW8 ]\n\nAdhitya Card buka setiap hari\nJam Operasional:\nSenin : "
+          }
+        ],
+        "produk": [
+          {
+            "answer": "Terdapat dua yaitu katalog produk dan custom produk.\r\n\r\n1. Informasi Katalog Produk\r\n2. Informasi Custom Produk"
+          }
+        ],
+        "pemesanan": [
+          {
+            "answer": "Pemesanan undangan sangat mudah! Berikut langkah-langkahnya:\n\n1. Pilih desain undangan yang Anda sukai dari koleksi kami.\n2. Hubungi tim kami melalui nomor telepon atau email yang tertera di situs kami.\n3. Sampaikan pilihan desain, jumlah undangan, serta "
+          }
+        ],
+        "kontak": [
+          {
+            "answer": "Untuk menghubungi layanan kami, anda dapat melakukan dengan beberapa cara yaitu:\r\n\r\n*Melalui Whatsapp (WA)*\r\n- Workshop : 082196676646\r\n(Jln. Muh. Yunus Bulurokeng Samping Tol Makassar)\r\n\r\n- Kantor Cabang : 081913121900 \r\n(Jln. Bakti Raya No 11A, Pettaran"
+          }
+        ],
+        "minimal order": [
+          {
+            "answer": "Tidak ada minimal order untuk undangan kami. Anda dapat melakukan pemesanan sesuai dengan kebutuhan Anda, mulai dari jumlah kecil hingga besar."
+          },
+          {
+            "answer": "Tidak, kami tidak memiliki jumlah minimal untuk pemesanan. Anda dapat memesan undangan sebanyak yang Anda butuhkan tanpa batasan."
+          },
+          {
+            "answer": "Kami tidak menetapkan jumlah minimum untuk pesanan undangan. Silakan pesan sesuai dengan kebutuhan acara Anda."
+          },
+          {
+            "answer": "Tidak ada batasan jumlah undangan yang dapat Anda pesan. Kami melayani pesanan dalam berbagai jumlah sesuai dengan keinginan Anda."
+          },
+          {
+            "answer": "Kami memberikan fleksibilitas tanpa jumlah minimum pesanan. Anda dapat memesan undangan sesuai dengan kebutuhan acara Anda."
+          }
+        ],
+        "waktu pengerjaan": [
+          {
+            "answer": "Waktu pengerjaan undangan dapat bervariasi tergantung pada faktor-faktor seperti desain yang dipilih, jumlah undangan, dan kompleksitasnya. Pada umumnya, pengerjaan undangan memakan waktu antara 1-3 minggu setelah desain disetujui. Namun, kami juga dapat "
+          }
+        ],
+        "pembayaran": [
+          {
+            "answer": "Kami menyediakan beberapa metode pembayaran yang dapat Anda pilih:\n\n1. Bayar langsung ke toko\n 2. bisa melakukan pembayaran ke rekening berikut:\n\n - xxxxxxxxx\n A.n Adithya Card (BRI)"
+          }
+        ],
+        "informasi custom": [
+          {
+            "answer": "Untuk melakukan custom desain, silahkan lihat contoh desain kami melalui katalog \r\n📸 [ Instagram: @undangan_adhityacard ]\r\n\r\nUntuk desainnya bisa dilakukan sesukanya dengan konsultasi pada admin kami."
+          }
+        ],
+        "informasi katalog": [
+          {
+            "answer": "Berikut informasi katalog kami, untuk lebih jelas ketik salah satu kode produk yang ingin dilihat"
+          }
+        ],
+        "pengiriman": [
+          {
+            "answer": "Untuk pengiriman ke daerah menggunakan expedisi, untuk biaya pengiriman bisa dibayarkan ditujuan sementara untuk pengiriman ke Makassar Gratis Ongkir"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

@@ -2,7 +2,7 @@
 const { NlpManager } = require('node-nlp');
 const Sastrawi = require('sastrawijs');
 const fs = require('fs');
-const database = require('./database');
+const db = require("../models");
 
 const manager = new NlpManager({ languages: ['id'], autoSave: true, threshold: 0.3 });
 const stemmer = new Sastrawi.Stemmer();
@@ -21,16 +21,18 @@ function processUserInput(text) {
 // Fetch data from the database for training
 async function fetchDataFromDatabase() {
     try {
-        const intentsData = await database.getIntentsData();
+        const intentsData = await db.Dataset.findAll();
         if (intentsData && intentsData.length > 0) {
             intentsData.forEach((item) => {
                 const { intent, utterance, answer } = item;
                 manager.addDocument('id', processUserInput(utterance), intent);
                 manager.addAnswer('id', intent, answer);
             });
+            console.log('Training model ...');
             await manager.train();
-            console.log('Pelatihan selesai. Menyimpan model...');
+            console.log("Saving model...");
             await manager.save(modelPath);
+            console.log('Model saved to:', modelPath);
         } else {
             console.error('Tidak ada data yang dikembalikan dari database atau data kosong.');
         }
@@ -38,14 +40,13 @@ async function fetchDataFromDatabase() {
         console.error('Error mengambil data dari database:', error);
     }
 }
-fetchDataFromDatabase();
 
 // Ekspor fungsi processMessage
 function processMessage(userMessage) {
     const processedQuestion = processUserInput(userMessage);
     return manager.process('id', processedQuestion)
         .then(response => {
-            return response.answer;
+            return response;
         })
         .catch(error => {
             console.error(error);
@@ -54,6 +55,7 @@ function processMessage(userMessage) {
 }
 
 module.exports = {
+    fetchDataFromDatabase,
     processMessage,
     modelPath,
 };

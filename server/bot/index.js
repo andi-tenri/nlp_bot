@@ -1,7 +1,9 @@
+global.__basedir = __dirname;
+
 const Pepesan = require('pepesan');
 const router = require('./router');
+const { fetchDataFromDatabase } = require('../nlp');
 
-global.__basedir = __dirname;
 
 const { ALLOWED_NUMBERS, BLOCKED_NUMBERS, DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT } = process.env;
 
@@ -22,10 +24,13 @@ const config = {
     },
     enableHttpServer: false,
     stateType: 'file',
+    statePath: `${__basedir}/states`,
     readBeforeReply: true,
     typingBeforeReply: true,
     reusableMenu: false,
 }
+
+fetchDataFromDatabase()
 
 const app = Pepesan.init(router, config)
 

@@ -9,9 +9,7 @@ import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import Typography from '@mui/material/Typography';
 
-import {
-  useConfirmationDialog
-} from 'src/components/dialog/confirm-dialog';
+import { useConfirmationDialog } from 'src/components/dialog/confirm-dialog';
 import Iconify from 'src/components/iconify';
 import Label from 'src/components/label';
 import { deleteDevice } from 'src/services/bot-service';
@@ -56,7 +54,7 @@ export default function DeviceTableRow({
   };
 
   const handleQR = () => {
-    navigate(`/device/${id}`); 
+    navigate(`/device/${id}`);
   };
 
   return (
@@ -100,8 +98,11 @@ export default function DeviceTableRow({
         }}
       >
         <MenuItem onClick={handleQR}>
-          <Iconify icon="solar:qr-code-linear" sx={{ mr: 2 }} />
-          Scan QR
+          <Iconify
+            icon={connectionStatus == 'Disconnected' ? 'solar:qr-code-linear' : 'solar:eye-linear'}
+            sx={{ mr: 2 }}
+          />
+          {connectionStatus == 'Disconnected' ? 'QR Code' : 'View'}
         </MenuItem>
 
         <MenuItem onClick={handleDelete} sx={{ color: 'error.main' }}>
