@@ -1,5 +1,5 @@
 "id","intent","utterance","answer"
-"1","sapaan","hi","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
+1,"sapaan","hi","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
 
 [1] Lokasi dan jam buka
 [2] Menu Produk
@@ -11,7 +11,7 @@
 [8] Informasi Kontak
 
 Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
-"2","sapaan","hai","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
+2,"sapaan","hai","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
 
 [1] Lokasi dan jam buka
 [2] Menu Produk
@@ -23,7 +23,7 @@ Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
 [8] Informasi Kontak
 
 Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
-"3","sapaan","halo","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
+3,"sapaan","halo","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
 
 [1] Lokasi dan jam buka
 [2] Menu Produk
@@ -35,7 +35,7 @@ Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
 [8] Informasi Kontak
 
 Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
-"4","sapaan","hallo","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
+4,"sapaan","hallo","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
 
 [1] Lokasi dan jam buka
 [2] Menu Produk
@@ -47,7 +47,7 @@ Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
 [8] Informasi Kontak
 
 Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
-"5","sapaan","assalamualaikum","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
+5,"sapaan","assalamualaikum","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
 
 [1] Lokasi dan jam buka
 [2] Menu Produk
@@ -59,7 +59,7 @@ Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
 [8] Informasi Kontak
 
 Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
-"6","sapaan","p","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
+6,"sapaan","p","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
 
 [1] Lokasi dan jam buka
 [2] Menu Produk
@@ -71,7 +71,7 @@ Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
 [8] Informasi Kontak
 
 Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
-"7","sapaan","selamat pagi","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
+7,"sapaan","selamat pagi","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
 
 [1] Lokasi dan jam buka
 [2] Menu Produk
@@ -83,7 +83,7 @@ Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
 [8] Informasi Kontak
 
 Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
-"8","sapaan","selamat siang","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
+8,"sapaan","selamat siang","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
 
 [1] Lokasi dan jam buka
 [2] Menu Produk
@@ -95,7 +95,7 @@ Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
 [8] Informasi Kontak
 
 Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
-"9","sapaan","selamat malam","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
+9,"sapaan","selamat malam","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
 
 [1] Lokasi dan jam buka
 [2] Menu Produk
@@ -107,7 +107,7 @@ Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
 [8] Informasi Kontak
 
 Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
-"10","sapaan","permisi","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
+10,"sapaan","permisi","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
 
 [1] Lokasi dan jam buka
 [2] Menu Produk
@@ -119,7 +119,7 @@ Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
 [8] Informasi Kontak
 
 Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
-"11","sapaan","pagi","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
+11,"sapaan","pagi","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
 
 [1] Lokasi dan jam buka
 [2] Menu Produk
@@ -131,7 +131,7 @@ Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
 [8] Informasi Kontak
 
 Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
-"12","sapaan","malam","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
+12,"sapaan","malam","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
 
 [1] Lokasi dan jam buka
 [2] Menu Produk
@@ -143,7 +143,7 @@ Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
 [8] Informasi Kontak
 
 Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
-"13","sapaan","sore","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
+13,"sapaan","sore","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
 
 [1] Lokasi dan jam buka
 [2] Menu Produk
@@ -155,7 +155,7 @@ Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
 [8] Informasi Kontak
 
 Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
-"14","sapaan","menu","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
+14,"sapaan","menu","Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :
 
 [1] Lokasi dan jam buka
 [2] Menu Produk
@@ -167,7 +167,7 @@ Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
 [8] Informasi Kontak
 
 Silahkan beritahu saya pertanyaan dengan mengetikan pertanyaan anda."
-"17","lokasi","dimana alamat toko?","Adhitya Card memiliki dua alamat kantor
+17,"lokasi","dimana alamat toko?","Adhitya Card memiliki dua alamat kantor
 
 Jl Bakti No.11a, Pettarani
 [ https://goo.gl/maps/n8mfu7fk7W3vm8vC8 ]
@@ -186,7 +186,7 @@ Sabtu : 09.00-22.00
 Minggu : Tutup
 
 Jika anda membutuhkan bantuan atau informasi lebih lanjut silahkan hubungi kami melalui pesan chat. Terima kasih😁"
-"18","lokasi","tokonya berada dimana?","Adhitya Card memiliki dua alamat kantor
+18,"lokasi","tokonya berada dimana?","Adhitya Card memiliki dua alamat kantor
 
 Jl Bakti No.11a, Pettarani
 [ https://goo.gl/maps/n8mfu7fk7W3vm8vC8 ]
@@ -205,7 +205,7 @@ Sabtu : 09.00-22.00
 Minggu : Tutup
 
 Jika anda membutuhkan bantuan atau informasi lebih lanjut silahkan hubungi kami melalui pesan chat. Terima kasih😁"
-"19","lokasi","tokonya berlokasi dimana","Adhitya Card memiliki dua alamat kantor
+19,"lokasi","tokonya berlokasi dimana","Adhitya Card memiliki dua alamat kantor
 
 Jl Bakti No.11a, Pettarani
 [ https://goo.gl/maps/n8mfu7fk7W3vm8vC8 ]
@@ -224,7 +224,7 @@ Sabtu : 09.00-22.00
 Minggu : Tutup
 
 Jika anda membutuhkan bantuan atau informasi lebih lanjut silahkan hubungi kami melalui pesan chat. Terima kasih😁"
-"20","lokasi","saya ingin tahu alamat lengkap toko","Adhitya Card memiliki dua alamat kantor
+20,"lokasi","saya ingin tahu alamat lengkap toko","Adhitya Card memiliki dua alamat kantor
 
 Jl Bakti No.11a, Pettarani
 [ https://goo.gl/maps/n8mfu7fk7W3vm8vC8 ]
@@ -243,7 +243,7 @@ Sabtu : 09.00-22.00
 Minggu : Tutup
 
 Jika anda membutuhkan bantuan atau informasi lebih lanjut silahkan hubungi kami melalui pesan chat. Terima kasih😁"
-"21","lokasi","bisa sharelock alamat tokonya","Adhitya Card memiliki dua alamat kantor
+21,"lokasi","bisa sharelock alamat tokonya","Adhitya Card memiliki dua alamat kantor
 
 Jl Bakti No.11a, Pettarani
 [ https://goo.gl/maps/n8mfu7fk7W3vm8vC8 ]
@@ -262,7 +262,7 @@ Sabtu : 09.00-22.00
 Minggu : Tutup
 
 Jika anda membutuhkan bantuan atau informasi lebih lanjut silahkan hubungi kami melalui pesan chat. Terima kasih😁"
-"22","lokasi","bisa beritahu lokasi toko anda?","Adhitya Card memiliki dua alamat kantor
+22,"lokasi","bisa beritahu lokasi toko anda?","Adhitya Card memiliki dua alamat kantor
 
 Jl Bakti No.11a, Pettarani
 [ https://goo.gl/maps/n8mfu7fk7W3vm8vC8 ]
@@ -281,27 +281,27 @@ Sabtu : 09.00-22.00
 Minggu : Tutup
 
 Jika anda membutuhkan bantuan atau informasi lebih lanjut silahkan hubungi kami melalui pesan chat. Terima kasih😁"
-"23","produk","apa produk yang tersedia?","Terdapat dua yaitu katalog produk dan custom produk.
+23,"produk","apa produk yang tersedia?","Terdapat dua yaitu katalog produk dan custom produk.
 
 1. Informasi Katalog Produk
 2. Informasi Custom Produk"
-"24","produk","jenis produk","Terdapat dua yaitu katalog produk dan custom produk.
+24,"produk","jenis produk","Terdapat dua yaitu katalog produk dan custom produk.
 
 1. Informasi Katalog Produk
 2. Informasi Custom Produk"
-"25","produk","lihat produk yang ada","Terdapat dua yaitu katalog produk dan custom produk.
+25,"produk","lihat produk yang ada","Terdapat dua yaitu katalog produk dan custom produk.
 
 1. Informasi Katalog Produk
 2. Informasi Custom Produk"
-"26","produk","undangan yang tersedia","Terdapat dua yaitu katalog produk dan custom produk.
+26,"produk","undangan yang tersedia","Terdapat dua yaitu katalog produk dan custom produk.
 
 1. Informasi Katalog Produk
 2. Informasi Custom Produk"
-"27","produk","jenis undangan","Terdapat dua yaitu katalog produk dan custom produk.
+27,"produk","jenis undangan","Terdapat dua yaitu katalog produk dan custom produk.
 
 1. Informasi Katalog Produk
 2. Informasi Custom Produk"
-"28","pemesanan","Bagaimana cara memesan undangan pernikahan?","Pemesanan undangan sangat mudah! Berikut langkah-langkahnya:
+28,"pemesanan","Bagaimana cara memesan undangan pernikahan?","Pemesanan undangan sangat mudah! Berikut langkah-langkahnya:
 
 1. Pilih desain undangan yang Anda sukai dari koleksi kami.
 2. Hubungi tim kami melalui nomor telepon atau email yang tertera di situs kami.
@@ -311,7 +311,7 @@ Jika anda membutuhkan bantuan atau informasi lebih lanjut silahkan hubungi kami 
 6. Setelah undangan selesai dicetak, kami akan mengatur pengiriman atau pengambilan.
 
 Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan lebih lanjut atau ingin memulai proses pemesanan."
-"29","pemesanan","Saya ingin memesan undangan, bagaimana langkahnya?","Pemesanan undangan sangat mudah! Berikut langkah-langkahnya:
+29,"pemesanan","Saya ingin memesan undangan, bagaimana langkahnya?","Pemesanan undangan sangat mudah! Berikut langkah-langkahnya:
 
 1. Pilih desain undangan yang Anda sukai dari koleksi kami.
 2. Hubungi tim kami melalui nomor telepon atau email yang tertera di situs kami.
@@ -321,7 +321,7 @@ Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan lebih lanjut at
 6. Setelah undangan selesai dicetak, kami akan mengatur pengiriman atau pengambilan.
 
 Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan lebih lanjut atau ingin memulai proses pemesanan."
-"30","pemesanan","Bagaimana proses pemesanan undangan?","Pemesanan undangan sangat mudah! Berikut langkah-langkahnya:
+30,"pemesanan","Bagaimana proses pemesanan undangan?","Pemesanan undangan sangat mudah! Berikut langkah-langkahnya:
 
 1. Pilih desain undangan yang Anda sukai dari koleksi kami.
 2. Hubungi tim kami melalui nomor telepon atau email yang tertera di situs kami.
@@ -331,7 +331,7 @@ Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan lebih lanjut at
 6. Setelah undangan selesai dicetak, kami akan mengatur pengiriman atau pengambilan.
 
 Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan lebih lanjut atau ingin memulai proses pemesanan."
-"31","pemesanan","Bagaimana cara pesan undangan?","Pemesanan undangan sangat mudah! Berikut langkah-langkahnya:
+31,"pemesanan","Bagaimana cara pesan undangan?","Pemesanan undangan sangat mudah! Berikut langkah-langkahnya:
 
 1. Pilih desain undangan yang Anda sukai dari koleksi kami.
 2. Hubungi tim kami melalui nomor telepon atau email yang tertera di situs kami.
@@ -341,7 +341,7 @@ Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan lebih lanjut at
 6. Setelah undangan selesai dicetak, kami akan mengatur pengiriman atau pengambilan.
 
 Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan lebih lanjut atau ingin memulai proses pemesanan."
-"32","kontak","informasi kontak","Untuk menghubungi layanan kami, anda dapat melakukan dengan beberapa cara yaitu:
+32,"kontak","informasi kontak","Untuk menghubungi layanan kami, anda dapat melakukan dengan beberapa cara yaitu:
 
 *Melalui Whatsapp (WA)*
 - Workshop : 082196676646
@@ -354,7 +354,7 @@ Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan lebih lanjut at
 - Facebook : Percetakan Adhityacard
 - Instagram : Percetakan Adhityacard
 - Tiktok : Percetakan Adhityacard"
-"33","kontak","bagaimana cara menghubungi layanan","Untuk menghubungi layanan kami, anda dapat melakukan dengan beberapa cara yaitu:
+33,"kontak","bagaimana cara menghubungi layanan","Untuk menghubungi layanan kami, anda dapat melakukan dengan beberapa cara yaitu:
 
 *Melalui Whatsapp (WA)*
 - Workshop : 082196676646
@@ -367,7 +367,7 @@ Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan lebih lanjut at
 - Facebook : Percetakan Adhityacard
 - Instagram : Percetakan Adhityacard
 - Tiktok : Percetakan Adhityacard"
-"34","kontak","Bagaimana menghubungi customer service anda?","Untuk menghubungi layanan kami, anda dapat melakukan dengan beberapa cara yaitu:
+34,"kontak","Bagaimana menghubungi customer service anda?","Untuk menghubungi layanan kami, anda dapat melakukan dengan beberapa cara yaitu:
 
 *Melalui Whatsapp (WA)*
 - Workshop : 082196676646
@@ -380,84 +380,84 @@ Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan lebih lanjut at
 - Facebook : Percetakan Adhityacard
 - Instagram : Percetakan Adhityacard
 - Tiktok : Percetakan Adhityacard"
-"35","minimal order","Apa minimal order untuk undangan?","Tidak ada minimal order untuk undangan kami. Anda dapat melakukan pemesanan sesuai dengan kebutuhan Anda, mulai dari jumlah kecil hingga besar."
-"36","minimal order","Apakah ada jumlah minimal untuk memesan?","Tidak, kami tidak memiliki jumlah minimal untuk pemesanan. Anda dapat memesan undangan sebanyak yang Anda butuhkan tanpa batasan."
-"37","minimal order","Berapa jumlah minimum undangan yang harus saya pesan?","Kami tidak menetapkan jumlah minimum untuk pesanan undangan. Silakan pesan sesuai dengan kebutuhan acara Anda."
-"38","minimal order","Apakah ada batasan jumlah undangan yang dapat saya pesan?","Tidak ada batasan jumlah undangan yang dapat Anda pesan. Kami melayani pesanan dalam berbagai jumlah sesuai dengan keinginan Anda."
-"39","minimal order","Berapa jumlah minimum undangan yang harus saya pesan?","Kami memberikan fleksibilitas tanpa jumlah minimum pesanan. Anda dapat memesan undangan sesuai dengan kebutuhan acara Anda."
-"40","waktu pengerjaan","berapa lama waktu pengerjaan","Waktu pengerjaan undangan dapat bervariasi tergantung pada faktor-faktor seperti desain yang dipilih, jumlah undangan, dan kompleksitasnya. Pada umumnya, pengerjaan undangan memakan waktu antara 1-3 minggu setelah desain disetujui. Namun, kami juga dapat membicarakan opsi percepatan pengerjaan jika Anda membutuhkannya. kami dapat memberikan estimasi waktu pengerjaan:
+35,"minimal order","Apa minimal order untuk undangan?","Tidak ada minimal order untuk undangan kami. Anda dapat melakukan pemesanan sesuai dengan kebutuhan Anda, mulai dari jumlah kecil hingga besar."
+36,"minimal order","Apakah ada jumlah minimal untuk memesan?","Tidak, kami tidak memiliki jumlah minimal untuk pemesanan. Anda dapat memesan undangan sebanyak yang Anda butuhkan tanpa batasan."
+37,"minimal order","Berapa jumlah minimum undangan yang harus saya pesan?","Kami tidak menetapkan jumlah minimum untuk pesanan undangan. Silakan pesan sesuai dengan kebutuhan acara Anda."
+38,"minimal order","Apakah ada batasan jumlah undangan yang dapat saya pesan?","Tidak ada batasan jumlah undangan yang dapat Anda pesan. Kami melayani pesanan dalam berbagai jumlah sesuai dengan keinginan Anda."
+39,"minimal order","Berapa jumlah minimum undangan yang harus saya pesan?","Kami memberikan fleksibilitas tanpa jumlah minimum pesanan. Anda dapat memesan undangan sesuai dengan kebutuhan acara Anda."
+40,"waktu pengerjaan","berapa lama waktu pengerjaan","Waktu pengerjaan undangan dapat bervariasi tergantung pada faktor-faktor seperti desain yang dipilih, jumlah undangan, dan kompleksitasnya. Pada umumnya, pengerjaan undangan memakan waktu antara 1-3 minggu setelah desain disetujui. Namun, kami juga dapat membicarakan opsi percepatan pengerjaan jika Anda membutuhkannya. kami dapat memberikan estimasi waktu pengerjaan:
  1.undangan blangko 3-4 hari
  2.undangan Custom 7 hari  setelah desain fix"
-"41","waktu pengerjaan","Berapa lama waktu yang dibutuhkan untuk pengerjaan undangan?","Waktu pengerjaan undangan dapat bervariasi tergantung pada faktor-faktor seperti desain yang dipilih, jumlah undangan, dan kompleksitasnya. Pada umumnya, pengerjaan undangan memakan waktu antara 1-3 minggu setelah desain disetujui. Namun, kami juga dapat membicarakan opsi percepatan pengerjaan jika Anda membutuhkannya. kami dapat memberikan estimasi waktu pengerjaan:
+ 41,"waktu pengerjaan","Berapa lama waktu yang dibutuhkan untuk pengerjaan undangan?","Waktu pengerjaan undangan dapat bervariasi tergantung pada faktor-faktor seperti desain yang dipilih, jumlah undangan, dan kompleksitasnya. Pada umumnya, pengerjaan undangan memakan waktu antara 1-3 minggu setelah desain disetujui. Namun, kami juga dapat membicarakan opsi percepatan pengerjaan jika Anda membutuhkannya. kami dapat memberikan estimasi waktu pengerjaan:
  1.undangan blangko 3-4 hari
  2.undangan Custom 7 hari  setelah desain fix"
-"42","waktu pengerjaan","Saya ingin tahu berapa lama pengerjaan undangan biasanya","Waktu pengerjaan undangan dapat bervariasi tergantung pada faktor-faktor seperti desain yang dipilih, jumlah undangan, dan kompleksitasnya. Pada umumnya, pengerjaan undangan memakan waktu antara 1-3 minggu setelah desain disetujui. Namun, kami juga dapat membicarakan opsi percepatan pengerjaan jika Anda membutuhkannya. kami dapat memberikan estimasi waktu pengerjaan:
+ 42,"waktu pengerjaan","Saya ingin tahu berapa lama pengerjaan undangan biasanya","Waktu pengerjaan undangan dapat bervariasi tergantung pada faktor-faktor seperti desain yang dipilih, jumlah undangan, dan kompleksitasnya. Pada umumnya, pengerjaan undangan memakan waktu antara 1-3 minggu setelah desain disetujui. Namun, kami juga dapat membicarakan opsi percepatan pengerjaan jika Anda membutuhkannya. kami dapat memberikan estimasi waktu pengerjaan:
  1.undangan blangko 3-4 hari
  2.undangan Custom 7 hari  setelah desain fix"
-"43","waktu pengerjaan","Berapa waktu yang diperlukan untuk mencetak undangan pernikahan?","Waktu pengerjaan undangan dapat bervariasi tergantung pada faktor-faktor seperti desain yang dipilih, jumlah undangan, dan kompleksitasnya. Pada umumnya, pengerjaan undangan memakan waktu antara 1-3 minggu setelah desain disetujui. Namun, kami juga dapat membicarakan opsi percepatan pengerjaan jika Anda membutuhkannya. kami dapat memberikan estimasi waktu pengerjaan:
+ 43,"waktu pengerjaan","Berapa waktu yang diperlukan untuk mencetak undangan pernikahan?","Waktu pengerjaan undangan dapat bervariasi tergantung pada faktor-faktor seperti desain yang dipilih, jumlah undangan, dan kompleksitasnya. Pada umumnya, pengerjaan undangan memakan waktu antara 1-3 minggu setelah desain disetujui. Namun, kami juga dapat membicarakan opsi percepatan pengerjaan jika Anda membutuhkannya. kami dapat memberikan estimasi waktu pengerjaan:
  1.undangan blangko 3-4 hari
  2.undangan Custom 7 hari  setelah desain fix"
-"44","waktu pengerjaan","lama waktu cetak","Waktu pengerjaan undangan dapat bervariasi tergantung pada faktor-faktor seperti desain yang dipilih, jumlah undangan, dan kompleksitasnya. Pada umumnya, pengerjaan undangan memakan waktu antara 1-3 minggu setelah desain disetujui. Namun, kami juga dapat membicarakan opsi percepatan pengerjaan jika Anda membutuhkannya. kami dapat memberikan estimasi waktu pengerjaan:
+ 44,"waktu pengerjaan","lama waktu cetak","Waktu pengerjaan undangan dapat bervariasi tergantung pada faktor-faktor seperti desain yang dipilih, jumlah undangan, dan kompleksitasnya. Pada umumnya, pengerjaan undangan memakan waktu antara 1-3 minggu setelah desain disetujui. Namun, kami juga dapat membicarakan opsi percepatan pengerjaan jika Anda membutuhkannya. kami dapat memberikan estimasi waktu pengerjaan:
  1.undangan blangko 3-4 hari
  2.undangan Custom 7 hari  setelah desain fix"
-"45","pembayaran","Apa saja metode pembayaran yang dapat digunakan?","Kami menyediakan beberapa metode pembayaran yang dapat Anda pilih:
+ 45,"pembayaran","Apa saja metode pembayaran yang dapat digunakan?","Kami menyediakan beberapa metode pembayaran yang dapat Anda pilih:
 
 1. Bayar langsung ke toko
  2. bisa melakukan pembayaran ke rekening berikut:
 
  - xxxxxxxxx
  A.n Adithya Card (BRI)"
-"46","pembayaran","Bagaimana saya dapat melakukan pembayaran?","Kami menyediakan beberapa metode pembayaran yang dapat Anda pilih:
+ 46,"pembayaran","Bagaimana saya dapat melakukan pembayaran?","Kami menyediakan beberapa metode pembayaran yang dapat Anda pilih:
 
 1. Bayar langsung ke toko
  2. bisa melakukan pembayaran ke rekening berikut:
 
  - xxxxxxxxx
  A.n Adithya Card (BRI)"
-"47","pembayaran","Apakah ada opsi pembayaran yang tersedia?","Kami menyediakan beberapa metode pembayaran yang dapat Anda pilih:
+ 47,"pembayaran","Apakah ada opsi pembayaran yang tersedia?","Kami menyediakan beberapa metode pembayaran yang dapat Anda pilih:
 
 1. Bayar langsung ke toko
  2. bisa melakukan pembayaran ke rekening berikut:
 
  - xxxxxxxxx
  A.n Adithya Card (BRI)"
-"48","pembayaran","Apa saja metode pembayaran yang dapat digunakan?","Kami menyediakan beberapa metode pembayaran yang dapat Anda pilih:
+ 48,"pembayaran","Apa saja metode pembayaran yang dapat digunakan?","Kami menyediakan beberapa metode pembayaran yang dapat Anda pilih:
 
 1. Bayar langsung ke toko
  2. bisa melakukan pembayaran ke rekening berikut:
 
  - xxxxxxxxx
  A.n Adithya Card (BRI)"
-"49","pembayaran","Bagaimana saya dapat melakukan pembayaran?","Kami menyediakan beberapa metode pembayaran yang dapat Anda pilih:
+ 49,"pembayaran","Bagaimana saya dapat melakukan pembayaran?","Kami menyediakan beberapa metode pembayaran yang dapat Anda pilih:
 
 1. Bayar langsung ke toko
  2. bisa melakukan pembayaran ke rekening berikut:
 
  - xxxxxxxxx
  A.n Adithya Card (BRI)"
-"50","pembayaran","Apakah ada opsi pembayaran yang tersedia?","Kami menyediakan beberapa metode pembayaran yang dapat Anda pilih:
+ 50,"pembayaran","Apakah ada opsi pembayaran yang tersedia?","Kami menyediakan beberapa metode pembayaran yang dapat Anda pilih:
 
 1. Bayar langsung ke toko
  2. bisa melakukan pembayaran ke rekening berikut:
 
  - xxxxxxxxx
  A.n Adithya Card (BRI)"
-"51","informasi custom","informasi custom","Untuk melakukan custom desain, silahkan lihat contoh desain kami melalui katalog 
+ 51,"informasi custom","informasi custom","Untuk melakukan custom desain, silahkan lihat contoh desain kami melalui katalog 
 📸 [ Instagram: @undangan_adhityacard ]
 
 Untuk desainnya bisa dilakukan sesukanya dengan konsultasi pada admin kami."
-"52","informasi custom","apakah bisa melakukan custom undangan","Untuk melakukan custom desain, silahkan lihat contoh desain kami melalui katalog 
+52,"informasi custom","apakah bisa melakukan custom undangan","Untuk melakukan custom desain, silahkan lihat contoh desain kami melalui katalog 
 📸 [ Instagram: @undangan_adhityacard ]
 
 Untuk desainnya bisa dilakukan sesukanya dengan konsultasi pada admin kami."
-"53","informasi custom","kalau desain sendiri bisa","Untuk melakukan custom desain, silahkan lihat contoh desain kami melalui katalog 
+53,"informasi custom","kalau desain sendiri bisa","Untuk melakukan custom desain, silahkan lihat contoh desain kami melalui katalog 
 📸 [ Instagram: @undangan_adhityacard ]
 
 Untuk desainnya bisa dilakukan sesukanya dengan konsultasi pada admin kami."
-"54","informasi katalog","informasi katalog","Berikut informasi katalog kami, untuk lebih jelas ketik salah satu kode produk yang ingin dilihat"
-"55","informasi katalog","lihat katalog","Berikut informasi katalog kami, untuk lebih jelas ketik salah satu kode produk yang ingin dilihat"
-"56","pengiriman","Bagaimana pengiriman?","Untuk pengiriman ke daerah menggunakan expedisi, untuk biaya pengiriman bisa dibayarkan ditujuan sementara untuk pengiriman ke Makassar Gratis Ongkir"
-"57","pengiriman","bagaimana proses kirim?","Untuk pengiriman ke daerah menggunakan expedisi, untuk biaya pengiriman bisa dibayarkan ditujuan sementara untuk pengiriman ke Makassar Gratis Ongkir"
-"58","pengiriman","berapa biaya pengiriman?","Untuk pengiriman ke daerah menggunakan expedisi, untuk biaya pengiriman bisa dibayarkan ditujuan sementara untuk pengiriman ke Makassar Gratis Ongkir"
-"59","produk termurah","produk termurah",""
-"60","produk terbaru","produk terbaru",""
+54,"informasi katalog","informasi katalog","Berikut informasi katalog kami, untuk lebih jelas ketik salah satu kode produk yang ingin dilihat"
+55,"informasi katalog","lihat katalog","Berikut informasi katalog kami, untuk lebih jelas ketik salah satu kode produk yang ingin dilihat"
+56,"pengiriman","Bagaimana pengiriman?","Untuk pengiriman ke daerah menggunakan expedisi, untuk biaya pengiriman bisa dibayarkan ditujuan sementara untuk pengiriman ke Makassar Gratis Ongkir"
+57,"pengiriman","bagaimana proses kirim?","Untuk pengiriman ke daerah menggunakan expedisi, untuk biaya pengiriman bisa dibayarkan ditujuan sementara untuk pengiriman ke Makassar Gratis Ongkir"
+58,"pengiriman","berapa biaya pengiriman?","Untuk pengiriman ke daerah menggunakan expedisi, untuk biaya pengiriman bisa dibayarkan ditujuan sementara untuk pengiriman ke Makassar Gratis Ongkir"
+59,"produk termurah","produk termurah",,"
+60,"produk terbaru","produk terbaru",,"
