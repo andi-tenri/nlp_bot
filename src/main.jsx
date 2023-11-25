@@ -11,10 +11,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <HelmetProvider>
-    <BrowserRouter>
+    {/* <BrowserRouter basename="/"> */}
       <Suspense>
         <App />
       </Suspense>
-    </BrowserRouter>
+    {/* </BrowserRouter> */}
   </HelmetProvider>
 );

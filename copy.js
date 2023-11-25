@@ -17,7 +17,7 @@ async function copyDir(src, dest) {
 }
 
 async function main() {
-  await copyDir("build", "server/build");
+  await copyDir("dist", "server/build");
 }
 
 main();

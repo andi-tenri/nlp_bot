@@ -27,7 +27,8 @@ const app = express();
   app.use("/api", indexRouter);
   app.use("/api/bot", bot.server.getRouter())
   app.get("*", (req, res) => {
-    res.sendFile("client/index.html", { root: global });
+    // res.status(200).json("OK");
+    res.sendFile(path.join(__dirname, "build/index.html"));
   });
 
   // catch 404 and forward to error handler

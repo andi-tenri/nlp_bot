@@ -113,13 +113,13 @@ export default function DeviceDetailPage() {
 
             <Box sx={{ flexGrow: 1 }} />
 
-            <Button
+            {/* <Button
               variant="contained"
               color="error"
               startIcon={<Iconify icon="eva:trash-2-outline" />}
             >
               Delete
-            </Button>
+            </Button> */}
 
             {statusInfo.text === 'Connected' && (
               <Button

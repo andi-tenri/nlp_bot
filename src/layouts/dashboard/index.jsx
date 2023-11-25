@@ -6,11 +6,13 @@ import Box from '@mui/material/Box';
 import Nav from './nav';
 import Main from './main';
 import Header from './header';
+import { useScrollToTop } from '../../hooks/use-scroll-to-top';
 
 // ----------------------------------------------------------------------
 
 export default function DashboardLayout({ children }) {
   const [openNav, setOpenNav] = useState(false);
+  useScrollToTop();
 
   return (
     <>

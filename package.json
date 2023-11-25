@@ -8,7 +8,7 @@
     "dev": "vite",
     "start": "vite preview",
     "server": "nodemon server/bin/www",
-    "build": "vite build",
+    "build": "vite build && node copy",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
     "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",

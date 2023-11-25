@@ -29,12 +29,18 @@ class MainControlller extends Controller {
             await this.reply(additionalMessage)
         }
 
+        if (!response.answer) {
+            return "Maaf, sepertinya saya kesulitan memahami pertanyaan Anda. Mohon coba lagi sampaikan pertanyaan Anda dengan lebih jelas. Jika ada yang bisa saya bantu, beri tahu saya. Terima kasih."
+        }
+
         return response.answer;
 
     }
 
     async getProductDetail(request) {
-        const productId = request.text;
+        let productId = request.text
+
+        productId = productId.toUpperCase()
 
         const response = `Berikut detail produk ${productId}`;
 

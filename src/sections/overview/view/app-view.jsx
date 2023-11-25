@@ -22,20 +22,21 @@ export default function AppView() {
   return (
     <Container maxWidth="xl">
       <Typography variant="h4" sx={{ mb: 5 }}>
-        Hi, Welcome back 👋
+        Dashboard
       </Typography>
 
       <Grid container spacing={3}>
-        <Grid xs={12} sm={6} md={3}>
-          <AppWidgetSummary
+        <Grid>
+          {/* <AppWidgetSummary
             title="Weekly Sales"
             total={714000}
             color="success"
             icon={<img alt="icon" src="/assets/icons/glass/ic_glass_bag.png" />}
-          />
+          /> */}
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia suscipit corrupti voluptas. Nobis ab itaque repellat amet explicabo quaerat et commodi consectetur officiis accusamus aperiam excepturi, eveniet voluptates nam doloribus! Perspiciatis, repellat? Quisquam, accusantium beatae voluptatibus eligendi odit eum, ea delectus inventore quasi libero porro minima, sit quod nihil ex.
         </Grid>
 
-        <Grid xs={12} sm={6} md={3}>
+        {/* <Grid xs={12} sm={6} md={3}>
           <AppWidgetSummary
             title="New Users"
             total={1352831}
@@ -223,7 +224,7 @@ export default function AppView() {
               { id: '5', name: 'Sprint Showcase' },
             ]}
           />
-        </Grid>
+        </Grid> */}
       </Grid>
     </Container>
   );

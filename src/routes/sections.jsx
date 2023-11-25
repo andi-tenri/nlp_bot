@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { Navigate, Outlet, useRoutes } from 'react-router-dom';
+import { Navigate, Outlet, createBrowserRouter } from 'react-router-dom';
 
 import DashboardLayout from 'src/layouts/dashboard';
 import AuthenticatedRoute from './components/authenticated-route';
@@ -15,41 +15,39 @@ export const Page404 = lazy(() => import('src/pages/page-not-found'));
 
 // ----------------------------------------------------------------------
 
-export default function Router() {
-  const routes = useRoutes([
-    {
-      element: (
-        <AuthenticatedRoute>
-          <DashboardLayout>
-            <Suspense>
-              <Outlet />
-            </Suspense>
-          </DashboardLayout>
-        </AuthenticatedRoute>
-      ),
-      children: [
-        { element: <IndexPage />, index: true },
-        { path: 'device', element: <DevicePage /> },
-        { path: 'device/:id', element: <DeviceDetailPage /> },
-      ],
-    },
-    {
-      path: 'login',
-      element: (
-        <AuthenticatedRoute reverse={true}>
-          <LoginPage />
-        </AuthenticatedRoute>
-      ),
-    },
-    {
-      path: '404',
-      element: <Page404 />,
-    },
-    {
-      path: '*',
-      element: <Navigate to="/404" replace />,
-    },
-  ]);
+const routes = createBrowserRouter([
+  {
+    element: (
+      <AuthenticatedRoute>
+        <DashboardLayout>
+          <Suspense>
+            <Outlet />
+          </Suspense>
+        </DashboardLayout>
+      </AuthenticatedRoute>
+    ),
+    children: [
+      { element: <IndexPage />, index: true },
+      { path: 'device', element: <DevicePage /> },
+      { path: 'device/:id', element: <DeviceDetailPage /> },
+    ],
+  },
+  {
+    path: 'login',
+    element: (
+      <AuthenticatedRoute reverse={true}>
+        <LoginPage />
+      </AuthenticatedRoute>
+    ),
+  },
+  {
+    path: '404',
+    element: <Page404 />,
+  },
+  {
+    path: '*',
+    element: <Navigate to="/404" replace />,
+  },
+]);
 
-  return routes;
-}
+export default routes;
