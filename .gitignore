@@ -43,3 +43,6 @@ server/bot/session/
 
 # Bot db config
 server/bot/config/
+
+# NLP
+*.nlp
