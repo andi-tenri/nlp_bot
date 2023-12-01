@@ -9,6 +9,7 @@ export const LoadingPage = lazy(() => import('src/pages/loading'));
 export const IndexPage = lazy(() => import('src/pages/app'));
 export const BlogPage = lazy(() => import('src/pages/blog'));
 export const DevicePage = lazy(() => import('src/pages/device'));
+export const DatasetPage = lazy(() => import('src/pages/dataset'));
 export const LoginPage = lazy(() => import('src/pages/login'));
 export const ProductsPage = lazy(() => import('src/pages/products'));
 export const Page404 = lazy(() => import('src/pages/page-not-found'));
@@ -30,6 +31,7 @@ const routes = createBrowserRouter([
       { element: <IndexPage />, index: true },
       { path: 'device', element: <DevicePage /> },
       { path: 'device/:id', element: <DeviceDetailPage /> },
+      { path: 'dataset', element: <DatasetPage /> },
     ],
   },
   {

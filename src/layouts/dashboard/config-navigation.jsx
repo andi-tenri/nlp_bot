@@ -17,6 +17,11 @@ const navConfig = [
     path: '/device',
     icon: icon('ic_device'),
   },
+  {
+    title: 'dataset',
+    path: '/dataset',
+    icon: icon('ic_dataset'),
+  }
 ];
 
 export default navConfig;

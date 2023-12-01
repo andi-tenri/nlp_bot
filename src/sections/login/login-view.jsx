@@ -29,6 +29,10 @@ export default function LoginView() {
 
   const [showPassword, setShowPassword] = useState(false);
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const [error, setError] = useState(null);
+
   const { control, handleSubmit } = useForm({
     defaultValues: {
       email: '',
@@ -38,10 +42,14 @@ export default function LoginView() {
 
   const onSubmit = async (data) => {
     try {
+      setIsSubmitting(true);
       await login(data.email, data.password);
       router.push('/');
     } catch (error) {
+      setError(error.message);
       console.error(error);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -104,9 +112,16 @@ export default function LoginView() {
         variant="contained"
         color="inherit"
         onClick={handleSubmit(onSubmit)}
+        loading={isSubmitting}
       >
         Login
       </LoadingButton>
+
+      {error && (
+        <Typography variant="body2" color="error" marginTop={2}>
+          {error}
+        </Typography>
+      )}
     </>
   );
 

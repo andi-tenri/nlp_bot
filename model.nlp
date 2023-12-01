@@ -238,8 +238,20 @@
             "intent": "pengiriman",
             "domain": "default"
           },
-          "apa,biaya,kirim": {
-            "intent": "pengiriman",
+          "salam": {
+            "intent": "sapaan",
+            "domain": "default"
+          },
+          "syalom": {
+            "intent": "sapaan",
+            "domain": "default"
+          },
+          "kontol": {
+            "intent": "sapaan",
+            "domain": "default"
+          },
+          "fasih": {
+            "intent": "sapaan",
             "domain": "default"
           }
         },
@@ -534,8 +546,583 @@
           },
           {
             "domain": "default",
-            "utterance": "berapa biaya kirim",
+            "utterance": "salam",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "syalom",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "hi",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "hai",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "halo",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "hallo",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "assalamualaikum",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "p",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "selamat pagi",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "selamat siang",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "selamat malam",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "permisi",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "pagi",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "malam",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "sore",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "menu",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "mana alamat toko",
+            "intent": "lokasi"
+          },
+          {
+            "domain": "default",
+            "utterance": "toko ada mana",
+            "intent": "lokasi"
+          },
+          {
+            "domain": "default",
+            "utterance": "toko lokasi mana",
+            "intent": "lokasi"
+          },
+          {
+            "domain": "default",
+            "utterance": "saya ingin tahu alamat lengkap toko",
+            "intent": "lokasi"
+          },
+          {
+            "domain": "default",
+            "utterance": "bisa sharelock alamat toko",
+            "intent": "lokasi"
+          },
+          {
+            "domain": "default",
+            "utterance": "bisa beritahu lokasi toko anda",
+            "intent": "lokasi"
+          },
+          {
+            "domain": "default",
+            "utterance": "apa produk yang tersedia",
+            "intent": "produk"
+          },
+          {
+            "domain": "default",
+            "utterance": "jenis produk",
+            "intent": "produk"
+          },
+          {
+            "domain": "default",
+            "utterance": "lihat produk yang ada",
+            "intent": "produk"
+          },
+          {
+            "domain": "default",
+            "utterance": "undang yang tersedia",
+            "intent": "produk"
+          },
+          {
+            "domain": "default",
+            "utterance": "jenis undang",
+            "intent": "produk"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana cara es undang nikah",
+            "intent": "pemesanan"
+          },
+          {
+            "domain": "default",
+            "utterance": "saya ingin es undang bagaimana langkah",
+            "intent": "pemesanan"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana proses mesan undang",
+            "intent": "pemesanan"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana cara pesan undang",
+            "intent": "pemesanan"
+          },
+          {
+            "domain": "default",
+            "utterance": "informasi kontak",
+            "intent": "kontak"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana cara hubung layan",
+            "intent": "kontak"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana hubung customer service anda",
+            "intent": "kontak"
+          },
+          {
+            "domain": "default",
+            "utterance": "apa minimal order untuk undang",
+            "intent": "minimal order"
+          },
+          {
+            "domain": "default",
+            "utterance": "apakah ada jumlah minimal untuk es",
+            "intent": "minimal order"
+          },
+          {
+            "domain": "default",
+            "utterance": "berapa jumlah minimum undang yang harus saya pesan",
+            "intent": "minimal order"
+          },
+          {
+            "domain": "default",
+            "utterance": "apakah ada batas jumlah undang yang dapat saya pesan",
+            "intent": "minimal order"
+          },
+          {
+            "domain": "default",
+            "utterance": "berapa jumlah minimum undang yang harus saya pesan",
+            "intent": "minimal order"
+          },
+          {
+            "domain": "default",
+            "utterance": "berapa lama waktu pengerjaan",
+            "intent": "waktu pengerjaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "berapa lama waktu yang butuh untuk pengerjaan undang",
+            "intent": "waktu pengerjaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "saya ingin tahu berapa lama pengerjaan undang biasa",
+            "intent": "waktu pengerjaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "berapa waktu yang perlu untuk cetak undang nikah",
+            "intent": "waktu pengerjaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "lama waktu cetak",
+            "intent": "waktu pengerjaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "apa saja metode bayar yang dapat guna",
+            "intent": "pembayaran"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana saya dapat laku bayar",
+            "intent": "pembayaran"
+          },
+          {
+            "domain": "default",
+            "utterance": "apakah ada opsi bayar yang tersedia",
+            "intent": "pembayaran"
+          },
+          {
+            "domain": "default",
+            "utterance": "apa saja metode bayar yang dapat guna",
+            "intent": "pembayaran"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana saya dapat laku bayar",
+            "intent": "pembayaran"
+          },
+          {
+            "domain": "default",
+            "utterance": "apakah ada opsi bayar yang tersedia",
+            "intent": "pembayaran"
+          },
+          {
+            "domain": "default",
+            "utterance": "informasi custom",
+            "intent": "informasi custom"
+          },
+          {
+            "domain": "default",
+            "utterance": "apakah bisa laku custom undang",
+            "intent": "informasi custom"
+          },
+          {
+            "domain": "default",
+            "utterance": "kalau desain sendiri bisa",
+            "intent": "informasi custom"
+          },
+          {
+            "domain": "default",
+            "utterance": "informasi katalog",
+            "intent": "informasi katalog"
+          },
+          {
+            "domain": "default",
+            "utterance": "lihat katalog",
+            "intent": "informasi katalog"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana kirim",
             "intent": "pengiriman"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana proses kirim",
+            "intent": "pengiriman"
+          },
+          {
+            "domain": "default",
+            "utterance": "salam",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "kontol",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "hi",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "hai",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "halo",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "hallo",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "assalamualaikum",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "p",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "selamat pagi",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "selamat siang",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "selamat malam",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "permisi",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "pagi",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "malam",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "sore",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "menu",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "mana alamat toko",
+            "intent": "lokasi"
+          },
+          {
+            "domain": "default",
+            "utterance": "toko ada mana",
+            "intent": "lokasi"
+          },
+          {
+            "domain": "default",
+            "utterance": "toko lokasi mana",
+            "intent": "lokasi"
+          },
+          {
+            "domain": "default",
+            "utterance": "saya ingin tahu alamat lengkap toko",
+            "intent": "lokasi"
+          },
+          {
+            "domain": "default",
+            "utterance": "bisa sharelock alamat toko",
+            "intent": "lokasi"
+          },
+          {
+            "domain": "default",
+            "utterance": "bisa beritahu lokasi toko anda",
+            "intent": "lokasi"
+          },
+          {
+            "domain": "default",
+            "utterance": "apa produk yang tersedia",
+            "intent": "produk"
+          },
+          {
+            "domain": "default",
+            "utterance": "jenis produk",
+            "intent": "produk"
+          },
+          {
+            "domain": "default",
+            "utterance": "lihat produk yang ada",
+            "intent": "produk"
+          },
+          {
+            "domain": "default",
+            "utterance": "undang yang tersedia",
+            "intent": "produk"
+          },
+          {
+            "domain": "default",
+            "utterance": "jenis undang",
+            "intent": "produk"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana cara es undang nikah",
+            "intent": "pemesanan"
+          },
+          {
+            "domain": "default",
+            "utterance": "saya ingin es undang bagaimana langkah",
+            "intent": "pemesanan"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana proses mesan undang",
+            "intent": "pemesanan"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana cara pesan undang",
+            "intent": "pemesanan"
+          },
+          {
+            "domain": "default",
+            "utterance": "informasi kontak",
+            "intent": "kontak"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana cara hubung layan",
+            "intent": "kontak"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana hubung customer service anda",
+            "intent": "kontak"
+          },
+          {
+            "domain": "default",
+            "utterance": "apa minimal order untuk undang",
+            "intent": "minimal order"
+          },
+          {
+            "domain": "default",
+            "utterance": "apakah ada jumlah minimal untuk es",
+            "intent": "minimal order"
+          },
+          {
+            "domain": "default",
+            "utterance": "berapa jumlah minimum undang yang harus saya pesan",
+            "intent": "minimal order"
+          },
+          {
+            "domain": "default",
+            "utterance": "apakah ada batas jumlah undang yang dapat saya pesan",
+            "intent": "minimal order"
+          },
+          {
+            "domain": "default",
+            "utterance": "berapa jumlah minimum undang yang harus saya pesan",
+            "intent": "minimal order"
+          },
+          {
+            "domain": "default",
+            "utterance": "berapa lama waktu pengerjaan",
+            "intent": "waktu pengerjaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "berapa lama waktu yang butuh untuk pengerjaan undang",
+            "intent": "waktu pengerjaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "saya ingin tahu berapa lama pengerjaan undang biasa",
+            "intent": "waktu pengerjaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "berapa waktu yang perlu untuk cetak undang nikah",
+            "intent": "waktu pengerjaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "lama waktu cetak",
+            "intent": "waktu pengerjaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "apa saja metode bayar yang dapat guna",
+            "intent": "pembayaran"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana saya dapat laku bayar",
+            "intent": "pembayaran"
+          },
+          {
+            "domain": "default",
+            "utterance": "apakah ada opsi bayar yang tersedia",
+            "intent": "pembayaran"
+          },
+          {
+            "domain": "default",
+            "utterance": "apa saja metode bayar yang dapat guna",
+            "intent": "pembayaran"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana saya dapat laku bayar",
+            "intent": "pembayaran"
+          },
+          {
+            "domain": "default",
+            "utterance": "apakah ada opsi bayar yang tersedia",
+            "intent": "pembayaran"
+          },
+          {
+            "domain": "default",
+            "utterance": "informasi custom",
+            "intent": "informasi custom"
+          },
+          {
+            "domain": "default",
+            "utterance": "apakah bisa laku custom undang",
+            "intent": "informasi custom"
+          },
+          {
+            "domain": "default",
+            "utterance": "kalau desain sendiri bisa",
+            "intent": "informasi custom"
+          },
+          {
+            "domain": "default",
+            "utterance": "informasi katalog",
+            "intent": "informasi katalog"
+          },
+          {
+            "domain": "default",
+            "utterance": "lihat katalog",
+            "intent": "informasi katalog"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana kirim",
+            "intent": "pengiriman"
+          },
+          {
+            "domain": "default",
+            "utterance": "bagaimana proses kirim",
+            "intent": "pengiriman"
+          },
+          {
+            "domain": "default",
+            "utterance": "salam",
+            "intent": "sapaan"
+          },
+          {
+            "domain": "default",
+            "utterance": "fasih",
+            "intent": "sapaan"
           }
         ],
         "domains": {
@@ -626,7 +1213,10 @@
               "sendir": 1,
               "katalog": 1,
               "kirim": 1,
-              "biaya": 1
+              "salam": 1,
+              "syalom": 1,
+              "kontol": 1,
+              "fasih": 1
             },
             "intents": {
               "sapaan": 1,
@@ -655,7 +1245,11 @@
                 "malam": 1,
                 "misi": 1,
                 "sore": 1,
-                "menu": 1
+                "menu": 1,
+                "salam": 1,
+                "syalom": 1,
+                "kontol": 1,
+                "fasih": 1
               },
               "lokasi": {
                 "mana": 1,
@@ -774,9 +1368,7 @@
               "pengiriman": {
                 "bagaimana": 1,
                 "kirim": 1,
-                "proses": 1,
-                "apa": 1,
-                "biaya": 1
+                "proses": 1
               }
             },
             "featuresToIntent": {
@@ -817,6 +1409,18 @@
                 "sapaan"
               ],
               "menu": [
+                "sapaan"
+              ],
+              "salam": [
+                "sapaan"
+              ],
+              "syalom": [
+                "sapaan"
+              ],
+              "kontol": [
+                "sapaan"
+              ],
+              "fasih": [
                 "sapaan"
               ],
               "mana": [
@@ -875,8 +1479,7 @@
                 "minimal order",
                 "waktu pengerjaan",
                 "pembayaran",
-                "informasi custom",
-                "pengiriman"
+                "informasi custom"
               ],
               "produk": [
                 "produk"
@@ -1040,9 +1643,6 @@
               ],
               "kirim": [
                 "pengiriman"
-              ],
-              "biaya": [
-                "pengiriman"
               ]
             },
             "neuralNetwork": {
@@ -1132,7 +1732,10 @@
                 "sendir",
                 "katalog",
                 "kirim",
-                "biaya"
+                "salam",
+                "syalom",
+                "kontol",
+                "fasih"
               ],
               "intents": [
                 "sapaan",
@@ -1149,238 +1752,247 @@
               ],
               "perceptrons": [
                 [
-                  4.870132923126221,
-                  4.903080463409424,
-                  4.895444869995117,
-                  4.886598110198975,
-                  4.876556396484375,
-                  4.865337371826172,
-                  1.0256577730178833,
-                  4.237991809844971,
-                  3.342585802078247,
-                  4.234208583831787,
-                  4.87556266784668,
-                  4.784013271331787,
-                  4.767721652984619,
-                  -3.106875419616699,
-                  -1.953747034072876,
-                  -4.5893425941467285,
-                  -1.970091700553894,
-                  -1.7917203903198242,
-                  -1.3739408254623413,
-                  -0.6983460783958435,
-                  -0.4675767421722412,
-                  -0.4675767421722412,
-                  -3.1170971393585205,
-                  -0.4878380000591278,
-                  -0.3723216652870178,
-                  -1.1196120977401733,
-                  -4.211601734161377,
-                  -4.523561000823975,
-                  -2.8545427322387695,
-                  -2.0004477500915527,
-                  -4.948342323303223,
-                  -4.445973873138428,
-                  -4.629718780517578,
-                  -5.709222793579102,
-                  -1.5215598344802856,
-                  -1.1619930267333984,
-                  -0.28343692421913147,
-                  -0.16530878841876984,
-                  -0.860794723033905,
-                  -0.37930169701576233,
-                  -0.20639750361442566,
-                  -6.716088771820068,
-                  -2.7952263355255127,
-                  -1.522106409072876,
-                  -0.8532319664955139,
-                  -0.645954430103302,
-                  -0.645954430103302,
-                  -0.8109591603279114,
-                  -0.25143927335739136,
-                  -0.8109591603279114,
-                  -0.5269761681556702,
+                  4.016294479370117,
+                  4.046411514282227,
+                  4.0451436042785645,
+                  4.042943000793457,
+                  4.03981351852417,
+                  4.035758018493652,
+                  0.7217985987663269,
+                  3.555156707763672,
+                  2.9093527793884277,
+                  3.5533552169799805,
+                  4.049818992614746,
+                  3.9868264198303223,
+                  3.97869873046875,
+                  -3.374922037124634,
+                  -2.133531093597412,
+                  -4.993208885192871,
+                  -2.328174591064453,
+                  -1.9622939825057983,
+                  -1.3685544729232788,
+                  -0.7779892683029175,
+                  -0.5352087020874023,
+                  -0.5352087020874023,
+                  -3.3931078910827637,
+                  -0.5281721353530884,
+                  -0.45648038387298584,
+                  -1.1875057220458984,
+                  -3.4749484062194824,
+                  -4.921748638153076,
+                  -3.235018253326416,
+                  -2.096921443939209,
+                  -5.389262676239014,
+                  -4.838178634643555,
+                  -4.995347023010254,
+                  -6.9579362869262695,
+                  -1.5720624923706055,
+                  -1.470733880996704,
+                  -0.298127681016922,
+                  -0.17559592425823212,
+                  -1.158731460571289,
+                  -0.4091147482395172,
+                  -0.2222433090209961,
+                  -7.305747985839844,
+                  -3.036198139190674,
+                  -1.5785645246505737,
+                  -0.8481141924858093,
+                  -0.66184401512146,
+                  -0.66184401512146,
+                  -1.1391386985778809,
+                  -0.30000126361846924,
+                  -1.1391386985778809,
+                  -0.7857613563537598,
                   0,
                   0,
                   0,
-                  -0.9172871708869934,
-                  -3.4417548179626465,
-                  -3.4417548179626465,
-                  -0.7385739684104919,
+                  -1.0805201530456543,
+                  -3.777966022491455,
+                  -3.777966022491455,
+                  -0.9284917116165161,
                   0,
                   0,
                   0,
-                  -2.599970817565918,
-                  -0.22824226319789886,
-                  -0.22824226319789886,
-                  -0.9172871708869934,
-                  -0.22824226319789886,
-                  -0.663772463798523,
+                  -2.7683827877044678,
+                  -0.4900076985359192,
+                  -0.4900076985359192,
+                  -1.0805201530456543,
+                  -0.4900076985359192,
+                  -0.5852207541465759,
                   0,
-                  -2.7499496936798096,
-                  -2.1228606700897217,
-                  -2.1228606700897217,
-                  -2.1228606700897217,
-                  -5.015285015106201,
-                  -3.748110055923462,
-                  -1.5457905530929565,
-                  9.48989794505969
+                  -2.997905731201172,
+                  -2.3114895820617676,
+                  -2.3114895820617676,
+                  -2.3114895820617676,
+                  -5.4617486000061035,
+                  -3.3382649421691895,
+                  4.070418357849121,
+                  3.2750210762023926,
+                  3.157489538192749,
+                  3.0662710666656494,
+                  10.369597499106176
                 ],
                 [
-                  -0.2619287669658661,
-                  -0.25402209162712097,
-                  -0.24968990683555603,
-                  -0.2447323203086853,
-                  -0.23975655436515808,
-                  -0.23507732152938843,
-                  -0.3372301757335663,
-                  -0.26813241839408875,
-                  -0.1080002635717392,
-                  -0.2531476616859436,
-                  -0.22638866305351257,
-                  -0.21995116770267487,
-                  -0.2176584154367447,
-                  3.852827310562134,
-                  2.5057930946350098,
-                  7.88618803024292,
-                  2.2597529888153076,
-                  2.328179359436035,
-                  0.5028597116470337,
-                  0.8251734375953674,
-                  1.0582693815231323,
-                  1.300032615661621,
-                  1.970839500427246,
-                  1.6709798574447632,
-                  1.0563790798187256,
-                  0.8620911240577698,
-                  -1.0143178701400757,
-                  -0.9068892002105713,
-                  -0.9559844732284546,
-                  -0.3680689334869385,
-                  -0.3719812035560608,
-                  -0.5769277215003967,
-                  -1.2713252305984497,
-                  -1.0305379629135132,
-                  -0.2645011246204376,
-                  -0.5873948335647583,
+                  -0.22320394217967987,
+                  -0.21598635613918304,
+                  -0.2089894860982895,
+                  -0.20646041631698608,
+                  -0.20024511218070984,
+                  -0.19683347642421722,
+                  -0.2953438460826874,
+                  -0.23085829615592957,
+                  -0.08416332304477692,
+                  -0.2154521644115448,
+                  -0.1869765669107437,
+                  -0.17884226143360138,
+                  -0.1759054809808731,
+                  3.8690502643585205,
+                  2.50369930267334,
+                  7.920026779174805,
+                  2.290576457977295,
+                  2.3419411182403564,
+                  0.5141385197639465,
+                  0.8345292806625366,
+                  1.065678596496582,
+                  1.307464599609375,
+                  1.9949634075164795,
+                  1.6865863800048828,
+                  1.0514004230499268,
+                  0.8604204654693604,
+                  -1.0003550052642822,
+                  -0.8962019085884094,
+                  -0.9474389553070068,
+                  -0.3679000437259674,
+                  -0.36899498105049133,
+                  -0.564603328704834,
+                  -1.267271876335144,
+                  -1.015758752822876,
+                  -0.26349765062332153,
+                  -0.5858775973320007,
                   -0.07360775023698807,
-                  -0.16641157865524292,
+                  -0.1654379814863205,
                   -0.06836380064487457,
                   -0.04510381817817688,
                   -0.12228237837553024,
-                  -0.5421680808067322,
-                  -0.20880648493766785,
-                  -0.2638351023197174,
-                  -0.0739692896604538,
-                  -0.1580992490053177,
-                  -0.1580992490053177,
-                  -0.2669142782688141,
+                  -0.5303314924240112,
+                  -0.20536641776561737,
+                  -0.26002922654151917,
+                  -0.0729658231139183,
+                  -0.156049445271492,
+                  -0.156049445271492,
+                  -0.2672833502292633,
                   -0.02999016083776951,
-                  -0.2669142782688141,
-                  -0.32868799567222595,
+                  -0.2672833502292633,
+                  -0.32905706763267517,
                   -0.019144287332892418,
                   -0.019144287332892418,
                   -0.04104863852262497,
-                  -0.25294309854507446,
-                  -0.4655269384384155,
-                  -0.218559131026268,
-                  -0.282732754945755,
+                  -0.2516879141330719,
+                  -0.46140700578689575,
+                  -0.214717298746109,
+                  -0.2820044755935669,
                   0,
-                  -0.195120707154274,
+                  -0.1951373666524887,
                   0,
-                  -0.1335582137107849,
+                  -0.13046130537986755,
                   0,
                   0,
-                  -0.2313934862613678,
+                  -0.22973810136318207,
                   0,
-                  -0.21359162032604218,
-                  -0.037185363471508026,
-                  -0.18413840234279633,
-                  -0.7222375273704529,
-                  -0.7222375273704529,
-                  -0.7222375273704529,
-                  -0.2354019582271576,
-                  -0.0207375381141901,
-                  -0.008466750383377075,
-                  0.20140729351448733
+                  -0.21195952594280243,
+                  -0.03701649233698845,
+                  -0.1811157613992691,
+                  -0.708556056022644,
+                  -0.708556056022644,
+                  -0.708556056022644,
+                  -0.22956158220767975,
+                  -0.008010986261069775,
+                  -0.2332318127155304,
+                  -0.142282634973526,
+                  -0.14000262320041656,
+                  -0.12718012928962708,
+                  0.13494346089183956
                 ],
                 [
-                  -0.4819171726703644,
-                  -0.4744216799736023,
-                  -0.4625281095504761,
-                  -0.45483875274658203,
-                  -0.4442300498485565,
-                  -0.43699806928634644,
-                  -0.4922950267791748,
-                  -0.4670692980289459,
-                  -0.1751149743795395,
-                  -0.447035551071167,
-                  -0.4214571416378021,
-                  -0.4056106507778168,
-                  -0.39838168025016785,
-                  -0.27028772234916687,
-                  -0.10994382947683334,
-                  -0.31511446833610535,
-                  -0.12389490753412247,
-                  -0.06278533488512039,
-                  -1.7735422849655151,
-                  -0.2323385626077652,
+                  -0.414816677570343,
+                  -0.4037347137928009,
+                  -0.392898291349411,
+                  -0.38657480478286743,
+                  -0.3769327402114868,
+                  -0.3704284429550171,
+                  -0.43437159061431885,
+                  -0.40056633949279785,
+                  -0.15446248650550842,
+                  -0.3817239999771118,
+                  -0.35557830333709717,
+                  -0.3391583263874054,
+                  -0.3321954607963562,
+                  -0.24316611886024475,
+                  -0.09042148292064667,
+                  -0.2779593765735626,
+                  -0.1011984646320343,
+                  -0.050508853048086166,
+                  -1.7926552295684814,
+                  -0.23190483450889587,
                   0,
                   0,
-                  -0.8032254576683044,
-                  -0.023775985464453697,
-                  -0.009080654010176659,
-                  -0.09526219964027405,
-                  -3.3690991401672363,
-                  7.278233051300049,
-                  4.802450656890869,
-                  4.638790130615234,
-                  7.793556213378906,
-                  1.8214956521987915,
-                  5.209510803222656,
-                  -2.6954729557037354,
-                  -0.90203857421875,
-                  -0.7733853459358215,
-                  -1.186008095741272,
-                  -0.2323385626077652,
-                  -1.371450424194336,
-                  -1.371450424194336,
-                  -1.9274524450302124,
-                  -0.8057281970977783,
-                  -0.41793137788772583,
-                  -0.09557629376649857,
+                  -0.8077098727226257,
+                  -0.019928663969039917,
+                  -0.004840761888772249,
+                  -0.08407675474882126,
+                  -3.2922000885009766,
+                  7.292595863342285,
+                  4.819424629211426,
+                  4.650489330291748,
+                  7.8611931800842285,
+                  1.8933895826339722,
+                  5.2852301597595215,
+                  -2.6739752292633057,
+                  -0.8889091610908508,
+                  -0.7703754305839539,
+                  -1.1916977167129517,
+                  -0.23190483450889587,
+                  -1.3649919033050537,
+                  -1.3649919033050537,
+                  -1.9380714893341064,
+                  -0.7801088094711304,
+                  -0.4105702042579651,
+                  -0.09512250125408173,
                   -0.020595306530594826,
-                  -0.059534505009651184,
-                  -0.059534505009651184,
-                  -0.34317082166671753,
-                  -0.22928644716739655,
-                  -2.177675247192383,
-                  -1.5580863952636719,
-                  -0.8427936434745789,
-                  -0.8427936434745789,
-                  -0.5988485813140869,
-                  -0.9203441143035889,
-                  -1.033753752708435,
-                  -1.8444563150405884,
-                  -0.9534496665000916,
-                  -0.9111400842666626,
+                  -0.05908071622252464,
+                  -0.05908071622252464,
+                  -0.34297287464141846,
+                  -0.22908850014209747,
+                  -2.195639133453369,
+                  -1.5780670642852783,
+                  -0.8455229997634888,
+                  -0.8455229997634888,
+                  -0.6161089539527893,
+                  -0.9360910654067993,
+                  -1.0404824018478394,
+                  -1.8607349395751953,
+                  -0.9612829685211182,
+                  -0.9199489951133728,
                   0,
-                  -0.8066822290420532,
-                  -0.8869860172271729,
-                  -0.24316009879112244,
-                  -0.24316009879112244,
-                  -3.2538747787475586,
-                  -0.24316009879112244,
-                  -0.48931798338890076,
-                  -2.932379722595215,
-                  -0.7159048914909363,
-                  -0.23552797734737396,
-                  -0.23552797734737396,
-                  -0.23552797734737396,
-                  -1.9587115049362183,
+                  -0.8162742257118225,
+                  -0.895473301410675,
+                  -0.24231232702732086,
+                  -0.24231232702732086,
+                  -3.261493682861328,
+                  -0.24231232702732086,
+                  -0.5127938389778137,
+                  -2.941511869430542,
+                  -0.7294020652770996,
+                  -0.22929584980010986,
+                  -0.22929584980010986,
+                  -0.22929584980010986,
+                  -1.9262332916259766,
                   0,
-                  0,
-                  0.2334616991530752
+                  -0.4382323920726776,
+                  -0.2373497039079666,
+                  -0.23571065068244934,
+                  -0.23098118603229523,
+                  0.12082544811538183
                 ],
                 [
                   0,
@@ -1397,117 +2009,120 @@
                   0,
                   0,
                   0,
-                  -0.05072328820824623,
-                  -0.05072328820824623,
-                  -0.33293551206588745,
+                  -0.050737809389829636,
+                  -0.050737809389829636,
+                  -0.33299800753593445,
                   0,
-                  -0.32092615962028503,
-                  1.5646814107894897,
-                  -0.7140820622444153,
-                  -0.05072328820824623,
-                  -0.2071506232023239,
-                  0,
-                  0,
-                  -0.6222845911979675,
-                  -2.7271409034729004,
-                  0,
-                  -2.422844648361206,
-                  -1.2149146795272827,
-                  -3.391281843185425,
-                  -0.015537474304437637,
-                  5.204113006591797,
-                  4.244259357452393,
-                  2.958962917327881,
-                  3.013611316680908,
-                  0.6419705748558044,
-                  2.332395076751709,
-                  1.749375581741333,
-                  4.795834541320801,
-                  3.5959510803222656,
-                  -0.20457065105438232,
-                  -0.17767031490802765,
-                  -3.0814852714538574,
-                  -2.374725580215454,
-                  -0.6222845911979675,
-                  -0.6222845911979675,
-                  -0.5781622529029846,
-                  -0.4711509346961975,
-                  -0.8600012063980103,
-                  -0.998567521572113,
-                  -0.5424755215644836,
-                  -0.5424755215644836,
-                  -0.24160432815551758,
-                  -1.2273184061050415,
-                  -0.7604490518569946,
-                  -0.2369546741247177,
-                  -0.7397178411483765,
-                  -0.07517524063587189,
-                  -0.6256352066993713,
-                  -0.10939157754182816,
-                  -0.12729519605636597,
+                  -0.3202848732471466,
+                  1.566072702407837,
+                  -0.7145163416862488,
+                  -0.050737809389829636,
+                  -0.2071506381034851,
                   0,
                   0,
-                  -0.8902317881584167,
+                  -0.6226263046264648,
+                  -2.7284204959869385,
                   0,
-                  -1.127082109451294,
+                  -2.423997163772583,
+                  -1.21552312374115,
+                  -3.4051549434661865,
+                  -0.0155234569683671,
+                  5.204860687255859,
+                  4.247434139251709,
+                  2.961298942565918,
+                  3.0099916458129883,
+                  0.6360124349594116,
+                  2.3341426849365234,
+                  1.7503105401992798,
+                  4.8069281578063965,
+                  3.6039669513702393,
+                  -0.20469269156455994,
+                  -0.17779234051704407,
+                  -3.0818846225738525,
+                  -2.3748371601104736,
+                  -0.6226263046264648,
+                  -0.6226263046264648,
+                  -0.5784485936164856,
+                  -0.4714372754096985,
+                  -0.8604756593704224,
+                  -0.9988625645637512,
+                  -0.5426499247550964,
+                  -0.5426499247550964,
+                  -0.24166680872440338,
+                  -1.227859616279602,
+                  -0.7608986496925354,
+                  -0.2371009737253189,
+                  -0.7401673793792725,
+                  -0.07519208639860153,
+                  -0.6260521411895752,
+                  -0.1095062866806984,
+                  -0.1274099051952362,
                   0,
-                  -0.198388934135437,
-                  -0.011456449516117573,
-                  -0.011456449516117573,
-                  -0.011456449516117573,
-                  -0.019817257300019264,
-                  -4.203575611114502,
                   0,
-                  -1.7479430790641282
+                  -0.89065021276474,
+                  0,
+                  -1.1275163888931274,
+                  0,
+                  -0.1984231323003769,
+                  -0.011438194662332535,
+                  -0.011438194662332535,
+                  -0.011438194662332535,
+                  -0.019803239032626152,
+                  -4.214154243469238,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1.7530168815241807
                 ],
                 [
-                  -0.2537977993488312,
-                  -0.2509646713733673,
-                  -0.24978280067443848,
-                  -0.24904797971248627,
-                  -0.2482539862394333,
-                  -0.24740196764469147,
-                  -0.24163205921649933,
-                  -0.24841620028018951,
-                  -0.08643598109483719,
-                  -0.24710889160633087,
-                  -0.24595896899700165,
-                  -0.24372272193431854,
-                  -0.24257344007492065,
-                  -0.058020222932100296,
-                  -0.04285310208797455,
-                  -0.5575686693191528,
-                  -0.12060245871543884,
-                  -0.5001896023750305,
-                  -0.854698121547699,
-                  -0.0628383457660675,
+                  -0.2186753898859024,
+                  -0.21560463309288025,
+                  -0.2125648707151413,
+                  -0.2098085731267929,
+                  -0.20787504315376282,
+                  -0.2063419073820114,
+                  -0.20001043379306793,
+                  -0.20897606015205383,
+                  -0.07866465300321579,
+                  -0.20613041520118713,
+                  -0.20445720851421356,
+                  -0.20251046121120453,
+                  -0.20176762342453003,
+                  -0.04194634035229683,
+                  -0.026981942355632782,
+                  -0.5477280020713806,
+                  -0.11988761276006699,
+                  -0.5057153105735779,
+                  -0.8522084951400757,
+                  -0.06183040142059326,
                   -0.0081810737028718,
                   0,
-                  -0.6404637694358826,
-                  -0.00602601608261466,
-                  -0.482159286737442,
-                  1.7162553071975708,
-                  -0.44285959005355835,
-                  -0.12442750483751297,
+                  -0.6091741323471069,
+                  -0.005462714936584234,
+                  -0.4896529018878937,
+                  1.710286021232605,
+                  -0.432829350233078,
+                  -0.10645394027233124,
                   -0.16793596744537354,
                   -0.0025262096896767616,
-                  -0.12442750483751297,
-                  -0.1155974343419075,
-                  -2.5182793140411377,
-                  1.5537251234054565,
-                  2.0589051246643066,
-                  -0.9356149435043335,
-                  -0.7870768308639526,
-                  -0.04852147027850151,
-                  -0.7319843769073486,
-                  -0.12445785105228424,
-                  -1.337640643119812,
-                  3.4070940017700195,
-                  10.309405326843262,
-                  6.3116044998168945,
-                  4.090890407562256,
-                  2.2199766635894775,
-                  2.2199766635894775,
+                  -0.10645394027233124,
+                  -0.111380435526371,
+                  -2.5181450843811035,
+                  1.5984220504760742,
+                  2.0588314533233643,
+                  -0.9392224550247192,
+                  -0.7921612858772278,
+                  -0.04751352220773697,
+                  -0.7327340245246887,
+                  -0.12383920699357986,
+                  -1.336097002029419,
+                  3.4393017292022705,
+                  10.36950969696045,
+                  6.315984725952148,
+                  4.092429161071777,
+                  2.222911834716797,
+                  2.222911834716797,
                   -0.11370647698640823,
                   -0.0487557016313076,
                   -0.17312727868556976,
@@ -1515,496 +2130,517 @@
                   -0.061876144260168076,
                   -0.061876144260168076,
                   -0.020832741633057594,
-                  -0.7012141346931458,
-                  -0.2739247977733612,
-                  -0.25963351130485535,
-                  -0.09452708065509796,
+                  -0.7115574479103088,
+                  -0.24925430119037628,
+                  -0.234935000538826,
+                  -0.08316454291343689,
                   -0.006466863676905632,
                   -0.0081810737028718,
                   -0.0010074174497276545,
-                  -0.16853465139865875,
+                  -0.15664522349834442,
                   -0.016173280775547028,
                   -0.016173280775547028,
-                  -0.6662157773971558,
+                  -0.6753481030464172,
                   -0.016173280775547028,
-                  -0.6276174783706665,
+                  -0.6376492381095886,
                   -0.0025262096896767616,
-                  -3.5365123748779297,
-                  -0.12120942771434784,
-                  -0.12120942771434784,
-                  -0.12120942771434784,
-                  -3.5158019065856934,
-                  -1.7987991571426392,
-                  0,
-                  0.24985666086472064
+                  -3.5414791107177734,
+                  -0.0931096076965332,
+                  -0.0931096076965332,
+                  -0.0931096076965332,
+                  -3.521545648574829,
+                  -1.7993545532226562,
+                  -0.23082561790943146,
+                  -0.16942450404167175,
+                  -0.16405612230300903,
+                  -0.15648742020130157,
+                  0.20062718896233778
                 ],
                 [
-                  -0.004022185690701008,
-                  -0.0038550712633877993,
-                  -0.003694899845868349,
-                  -0.00354138296097517,
-                  -0.003394243773072958,
-                  -0.003253217553719878,
-                  -0.011394212022423744,
-                  -0.0068609341979026794,
-                  -0.002751816064119339,
-                  -0.00597960501909256,
-                  -0.002779139205813408,
-                  -0.0024601046461611986,
-                  -0.0023578826803714037,
-                  -0.4022614657878876,
-                  -0.031565919518470764,
-                  -0.4640507400035858,
-                  0.9493580460548401,
+                  -0.010794797912240028,
+                  -0.010358985513448715,
+                  -0.009940746240317822,
+                  -0.00953937228769064,
+                  -0.009154184721410275,
+                  -0.008784531615674496,
+                  -0.020894259214401245,
+                  -0.015383735299110413,
+                  -0.0050656115636229515,
+                  -0.013587930239737034,
+                  -0.007589483633637428,
+                  -0.006764858495444059,
+                  -0.006491465959697962,
+                  -0.41488030552864075,
+                  -0.032592661678791046,
+                  -0.47740450501441956,
+                  0.8823794722557068,
                   0,
-                  1.777672529220581,
-                  -1.2135014533996582,
-                  -0.6081395149230957,
-                  -0.030920427292585373,
-                  -0.8652899265289307,
-                  0,
-                  0,
-                  0,
-                  2.1568667888641357,
-                  -0.3495211601257324,
-                  -0.22080321609973907,
-                  -0.9102455973625183,
-                  -0.7063923478126526,
-                  -0.2429170310497284,
-                  1.3932883739471436,
-                  -1.9263036251068115,
-                  -1.1035633087158203,
-                  0.17358160018920898,
-                  -1.1593260765075684,
-                  -0.5226536989212036,
-                  0,
-                  0,
-                  2.308931827545166,
-                  -0.026845809072256088,
+                  1.7654775381088257,
+                  -1.177691102027893,
+                  -0.6077910661697388,
+                  -0.03128846734762192,
+                  -0.9696709513664246,
                   0,
                   0,
                   0,
+                  2.49056077003479,
+                  -0.4909152090549469,
+                  -0.37624627351760864,
+                  -1.0737897157669067,
+                  -0.6962496042251587,
+                  -0.21842212975025177,
+                  1.2529217004776,
+                  -1.911073923110962,
+                  -1.0958104133605957,
+                  0.11251676082611084,
+                  -1.1857881546020508,
+                  -0.4840485751628876,
                   0,
                   0,
-                  4.716245174407959,
-                  3.8614470958709717,
-                  2.8266761302948,
-                  4.142910003662109,
-                  1.7014901638031006,
-                  1.7014901638031006,
-                  1.5873425006866455,
-                  0.864409327507019,
-                  -1.7137566804885864,
-                  -2.249694585800171,
-                  -1.7137566804885864,
-                  -0.5817969441413879,
-                  -0.525600016117096,
-                  -1.0356957912445068,
-                  -1.0356957912445068,
-                  -0.3674255907535553,
-                  -0.3674255907535553,
-                  -1.4639811515808105,
-                  -0.3674255907535553,
-                  -1.1308201551437378,
-                  -0.7358409762382507,
-                  -0.8885817527770996,
+                  2.299927234649658,
+                  -0.027690645307302475,
                   0,
                   0,
                   0,
-                  -0.015959950163960457,
-                  -0.7414306402206421,
-                  -0.7414306402206421,
-                  -0.6754951709441962
+                  0,
+                  0,
+                  4.580366611480713,
+                  3.7921934127807617,
+                  2.714353084564209,
+                  4.057522296905518,
+                  1.6725263595581055,
+                  1.6725263595581055,
+                  1.5973197221755981,
+                  0.864139199256897,
+                  -1.6985307931900024,
+                  -2.2269837856292725,
+                  -1.6985307931900024,
+                  -0.5579580664634705,
+                  -0.5246074795722961,
+                  -1.0598357915878296,
+                  -1.0598357915878296,
+                  -0.372405081987381,
+                  -0.372405081987381,
+                  -1.4833602905273438,
+                  -0.372405081987381,
+                  -1.2354885339736938,
+                  -0.7451378107070923,
+                  -0.9937958121299744,
+                  0,
+                  0,
+                  0,
+                  -0.01649392768740654,
+                  0,
+                  -0.011742044240236282,
+                  -0.0016361309681087732,
+                  -0.005374308675527573,
+                  -0.0007718774140812457,
+                  -0.5490740941552628
                 ],
                 [
-                  -0.049787331372499466,
-                  -0.04774824157357216,
-                  -0.04579262062907219,
-                  -0.043917056173086166,
-                  -0.042118269950151443,
-                  -0.04039312154054642,
-                  -0.1213814988732338,
-                  -0.07782085239887238,
-                  -0.031832221895456314,
-                  -0.06796547025442123,
-                  -0.034935224801301956,
-                  -0.031056124716997147,
-                  -0.02978331595659256,
-                  -0.035599496215581894,
-                  -0.8250595331192017,
-                  -0.8512765169143677,
-                  -0.7007562518119812,
-                  -0.013108516111969948,
-                  0.3737986087799072,
-                  1.0185256004333496,
-                  1.3347653150558472,
-                  -0.7950716018676758,
-                  -0.6002575755119324,
+                  -0.053343094885349274,
+                  -0.05115479230880737,
+                  -0.04905621334910393,
+                  -0.047043681144714355,
+                  -0.04511367157101631,
+                  -0.04326280206441879,
+                  -0.13065901398658752,
+                  -0.08358116447925568,
+                  -0.034163814038038254,
+                  -0.07297942042350769,
+                  -0.0373973585665226,
+                  -0.033236052840948105,
+                  -0.031871672719717026,
+                  -0.048199400305747986,
+                  -0.8195714950561523,
+                  -0.8472415804862976,
+                  -0.7368654012680054,
+                  -0.0207024198025465,
+                  0.3617783188819885,
+                  1.0195627212524414,
+                  1.3364492654800415,
+                  -0.788146436214447,
+                  -0.6124579906463623,
                   0,
                   0,
                   0,
-                  0.9792011380195618,
-                  -0.21561311185359955,
-                  -0.5959264636039734,
-                  -1.0446827411651611,
-                  -0.3288579285144806,
-                  -0.07756078988313675,
-                  0.3404254615306854,
-                  -0.9722536206245422,
-                  -0.28261664509773254,
-                  -0.6890347003936768,
-                  1.8181393146514893,
-                  -0.21518462896347046,
-                  -0.1161561831831932,
-                  -0.074222132563591,
-                  -0.4993715286254883,
-                  -0.15707319974899292,
+                  1.1177563667297363,
+                  -0.2405494600534439,
+                  -0.6120102405548096,
+                  -1.0724961757659912,
+                  -0.2877752184867859,
+                  -0.07581202685832977,
+                  0.30796289443969727,
+                  -0.9476579427719116,
+                  -0.24519576132297516,
+                  -0.6614264249801636,
+                  1.7849221229553223,
+                  -0.21564169228076935,
+                  -0.11669357866048813,
+                  -0.07475952804088593,
+                  -0.5093414783477783,
+                  -0.15639545023441315,
                   0,
                   0,
                   0,
                   0,
                   0,
-                  -1.1335424184799194,
-                  -0.9767869710922241,
-                  0.5865368247032166,
-                  -0.5963596701622009,
-                  -0.44516757130622864,
-                  -0.44516757130622864,
-                  0,
-                  -0.733152449131012,
-                  5.226656436920166,
-                  5.1807122230529785,
-                  3.152592182159424,
-                  -0.3092975616455078,
-                  2.130171775817871,
-                  2.0837643146514893,
-                  4.158306121826172,
+                  -1.1819655895233154,
+                  -1.0061581134796143,
+                  0.5629122853279114,
+                  -0.6217399835586548,
+                  -0.45016875863075256,
+                  -0.45016875863075256,
+                  -0.0005367712583392859,
+                  -0.7908579707145691,
+                  5.21787691116333,
+                  5.143064975738525,
+                  3.0691769123077393,
+                  -0.24918615818023682,
+                  2.124877452850342,
+                  2.0498530864715576,
+                  4.198773384094238,
                   -0.4584842026233673,
                   -0.4584842026233673,
                   -1.2886559963226318,
                   -0.4584842026233673,
-                  -0.6719897389411926,
+                  -0.6841902136802673,
                   -0.4107929468154907,
-                  -0.6470287442207336,
+                  -0.6589078903198242,
                   -0.028574710711836815,
                   -0.028574710711836815,
                   -0.028574710711836815,
-                  -0.13478875160217285,
-                  -0.43371596932411194,
-                  -0.3313772678375244,
-                  -0.27023102557310164
+                  -0.13385027647018433,
+                  -0.06656169891357422,
+                  -0.058061085641384125,
+                  -0.02956746146082878,
+                  -0.012568688951432705,
+                  0,
+                  -0.26966229144124854
                 ],
                 [
-                  -0.08036644756793976,
-                  -0.07708928734064102,
-                  -0.07394566386938095,
-                  -0.0709301307797432,
-                  -0.0680374875664711,
-                  -0.06526271998882294,
-                  -0.15878689289093018,
-                  -0.09288612008094788,
-                  -0.03689781576395035,
-                  -0.10520192980766296,
-                  -0.05586984008550644,
-                  -0.04966910555958748,
-                  -0.047642532736063004,
-                  -0.33664822578430176,
-                  -0.172879159450531,
-                  -0.5153027772903442,
-                  1.4504791498184204,
-                  -0.015457123517990112,
-                  1.0502327680587769,
-                  -0.3094843327999115,
-                  -0.12230286002159119,
-                  -0.12230286002159119,
-                  -0.5202175974845886,
+                  -0.07995906472206116,
+                  -0.07669688016176224,
+                  -0.07356768101453781,
+                  -0.07056605070829391,
+                  -0.0676867887377739,
+                  -0.06492491811513901,
+                  -0.16059081256389618,
+                  -0.09394124895334244,
+                  -0.03731642663478851,
+                  -0.08176756650209427,
+                  -0.05546170473098755,
+                  -0.049245435744524,
+                  -0.04723524674773216,
+                  -0.3172987997531891,
+                  -0.17241758108139038,
+                  -0.4936508238315582,
+                  1.4516924619674683,
+                  -0.0156705304980278,
+                  1.0843894481658936,
+                  -0.26660141348838806,
+                  -0.12127955257892609,
+                  -0.12127955257892609,
+                  -0.5244103670120239,
                   0,
                   0,
-                  -0.17557086050510406,
-                  0.4013708531856537,
-                  -2.0657570362091064,
-                  0.8231527209281921,
-                  1.4402594566345215,
-                  -0.0030879720579832792,
-                  -0.461675763130188,
-                  -2.489741325378418,
-                  1.407049536705017,
-                  -0.30508995056152344,
-                  -0.43360960483551025,
-                  -0.04055650904774666,
-                  -0.12933680415153503,
-                  -0.24477621912956238,
-                  -0.010420157574117184,
-                  -1.2874265909194946,
+                  -0.16598175466060638,
+                  0.5350458025932312,
+                  -2.078782320022583,
+                  0.7749823927879333,
+                  1.4097583293914795,
+                  -0.0029798238538205624,
+                  -0.44838443398475647,
+                  -2.507780075073242,
+                  1.3486840724945068,
+                  -0.28193238377571106,
+                  -0.41418081521987915,
+                  -0.04069919511675835,
+                  -0.08584673702716827,
+                  -0.2953995168209076,
+                  -0.010497636161744595,
+                  -1.305656909942627,
                   -0.20132312178611755,
                   0,
-                  -0.410676509141922,
-                  -0.21139146387577057,
-                  -0.17557086050510406,
-                  -0.17557086050510406,
-                  -0.2071867734193802,
-                  -0.021151678636670113,
-                  -0.2071867734193802,
-                  -1.525746464729309,
-                  -0.21013744175434113,
-                  -0.21013744175434113,
-                  -0.9778773188591003,
-                  2.8506081104278564,
-                  -0.03242665156722069,
-                  -0.03242665156722069,
-                  -0.03242665156722069,
+                  -0.3800045847892761,
+                  -0.18827101588249207,
+                  -0.16598175466060638,
+                  -0.16598175466060638,
+                  -0.23702295124530792,
+                  -0.028219960629940033,
+                  -0.23702295124530792,
+                  -1.571181058883667,
+                  -0.2233935445547104,
+                  -0.2233935445547104,
+                  -0.9768826365470886,
+                  2.8762271404266357,
+                  -0.06987843662500381,
+                  -0.06987843662500381,
+                  -0.06987843662500381,
                   0,
                   0,
                   0,
                   0,
-                  1.155485987663269,
-                  1.155485987663269,
-                  7.342502593994141,
-                  1.155485987663269,
-                  2.233710289001465,
-                  3.426135540008545,
-                  -0.5219306349754333,
+                  1.1312932968139648,
+                  1.1312932968139648,
+                  7.346245288848877,
+                  1.1312932968139648,
+                  2.2708394527435303,
+                  3.4085564613342285,
+                  -0.5261233448982239,
                   -0.06692760437726974,
                   -0.06692760437726974,
                   -0.06692760437726974,
                   -0.17080196738243103,
-                  -0.9525198340415955,
-                  -0.21824070811271667,
-                  -0.5983273166420758
+                  -0.7774507403373718,
+                  -0.08701066672801971,
+                  -0.05498865246772766,
+                  -0.0032851535361260176,
+                  0,
+                  -0.6406391100859821
                 ],
                 [
-                  -0.24014781415462494,
-                  -0.24011550843715668,
-                  -0.23232893645763397,
-                  -0.22478196024894714,
-                  -0.21746782958507538,
-                  -0.21037991344928741,
-                  -0.32912176847457886,
-                  -0.26128825545310974,
-                  -0.1060192808508873,
-                  -0.2380596101284027,
-                  -0.19875673949718475,
-                  -0.18393026292324066,
-                  -0.17824961245059967,
-                  -0.09891588240861893,
-                  -1.1121439933776855,
-                  -2.0101163387298584,
-                  -0.13511766493320465,
-                  -0.7833701968193054,
-                  -0.7747042775154114,
-                  -0.21472467482089996,
-                  -0.1395236998796463,
-                  -0.015109882690012455,
-                  3.2542645931243896,
-                  -1.0366240739822388,
-                  -0.7520077228546143,
-                  -0.7520077228546143,
-                  -0.2729548513889313,
-                  -0.1832149773836136,
-                  -0.6634534597396851,
-                  -0.29268109798431396,
-                  -0.5242854356765747,
-                  -0.14780442416667938,
-                  -0.4912419021129608,
-                  -0.9042702317237854,
-                  -0.15801988542079926,
-                  -0.2156718373298645,
-                  -0.14254380762577057,
-                  -0.054667238146066666,
-                  -0.19126003980636597,
-                  -0.09245605766773224,
-                  -0.28741708397865295,
-                  3.1805577278137207,
-                  -3.0162882804870605,
+                  -0.22736121714115143,
+                  -0.21947850286960602,
+                  -0.21186155080795288,
+                  -0.20450171828269958,
+                  -0.2046879082918167,
+                  -0.1980423778295517,
+                  -0.306784063577652,
+                  -0.24182066321372986,
+                  -0.08803229033946991,
+                  -0.22574768960475922,
+                  -0.18186737596988678,
+                  -0.171942800283432,
+                  -0.16666579246520996,
+                  -0.09691352397203445,
+                  -1.0788614749908447,
+                  -1.9763877391815186,
+                  -0.17218060791492462,
+                  -0.7761479616165161,
+                  -0.7819896936416626,
+                  -0.22066712379455566,
+                  -0.1535400003194809,
+                  -0.014790905639529228,
+                  3.2024497985839844,
+                  -1.0065299272537231,
+                  -0.7454465627670288,
+                  -0.7454465627670288,
+                  -0.09825532883405685,
+                  -0.20724520087242126,
+                  -0.7217925786972046,
+                  -0.28262782096862793,
+                  -0.4730291962623596,
+                  -0.14713744819164276,
+                  -0.585282027721405,
+                  -0.8669975996017456,
+                  -0.15227559208869934,
+                  -0.21646657586097717,
+                  -0.15764664113521576,
+                  -0.03440769761800766,
+                  -0.19332705438137054,
+                  -0.08866159617900848,
+                  -0.30844610929489136,
+                  3.2281270027160645,
+                  -3.0730831623077393,
                   0,
                   0,
                   0,
                   0,
-                  -0.48998650908470154,
-                  -0.44394341111183167,
-                  -0.6068708896636963,
-                  -0.2616227865219116,
-                  -0.12836883962154388,
-                  -0.12836883962154388,
-                  -0.05431218072772026,
-                  -0.3760463297367096,
-                  -0.33128243684768677,
-                  -0.2420191466808319,
-                  -0.33128243684768677,
-                  -0.04248518496751785,
-                  -0.11024829745292664,
-                  -0.029371188953518867,
-                  -0.029371188953518867,
-                  -0.0036181260365992785,
-                  -0.0036181260365992785,
-                  -0.2967836558818817,
-                  -0.0036181260365992785,
-                  1.1962381601333618,
+                  -0.5215557813644409,
+                  -0.4605408310890198,
+                  -0.661055862903595,
+                  -0.3018413484096527,
+                  -0.14166882634162903,
+                  -0.14166882634162903,
+                  -0.060645610094070435,
+                  -0.3784683644771576,
+                  -0.3903498351573944,
+                  -0.29962918162345886,
+                  -0.3903498351573944,
+                  -0.047493547201156616,
+                  -0.12488260865211487,
+                  -0.0460866242647171,
+                  -0.0460866242647171,
+                  -0.020534679293632507,
+                  -0.020534679293632507,
+                  -0.2906803488731384,
+                  -0.020534679293632507,
+                  1.1282987594604492,
                   0,
-                  10.612218856811523,
-                  3.645615816116333,
-                  3.645615816116333,
-                  3.645615816116333,
-                  -3.0750732421875,
-                  -0.6373313069343567,
-                  -0.40632569789886475,
-                  0.06012103818169898
+                  10.666945457458496,
+                  3.674424648284912,
+                  3.674424648284912,
+                  3.674424648284912,
+                  -3.1221728324890137,
+                  -0.20285342633724213,
+                  -0.24558381736278534,
+                  -0.11772454530000687,
+                  -0.10453099757432938,
+                  -0.08013830333948135,
+                  0.03139166408847219
                 ],
                 [
-                  -0.37414032220840454,
-                  -0.3628726303577423,
-                  -0.3580808937549591,
-                  -0.34805214405059814,
-                  -0.33826732635498047,
-                  -0.33282098174095154,
-                  -0.41898003220558167,
-                  -0.3726007044315338,
-                  -0.14242620766162872,
-                  -0.3517942428588867,
-                  -0.3142695426940918,
-                  -0.29845452308654785,
-                  -0.293695330619812,
-                  -0.17929424345493317,
-                  -0.1525009721517563,
-                  -0.31386980414390564,
-                  -1.2718371152877808,
-                  -0.09737225621938705,
-                  -0.04976987838745117,
-                  -0.04096338897943497,
-                  -0.03619832918047905,
-                  -0.03619832918047905,
-                  -0.1308469921350479,
-                  -0.030694473534822464,
-                  -0.03617999330163002,
-                  -0.04524504765868187,
-                  -0.24089807271957397,
-                  -1.3447718620300293,
-                  -1.284347653388977,
-                  -0.06073650345206261,
-                  -0.1911870539188385,
-                  3.022651195526123,
-                  -0.18037179112434387,
-                  -0.3650040328502655,
-                  -0.0316498801112175,
-                  -0.018855534493923187,
-                  -0.01089469250291586,
-                  -0.0020736781880259514,
-                  -0.11675965040922165,
-                  -0.0017203486058861017,
-                  -0.0034860624000430107,
-                  2.4255499839782715,
-                  -2.357719659805298,
-                  -0.017124218866229057,
-                  -0.009400401264429092,
-                  -0.004850999917834997,
-                  -0.004850999917834997,
-                  -0.018464921042323112,
-                  -0.014989780262112617,
-                  -0.018464921042323112,
-                  -0.0017374858725816011,
+                  -0.33175814151763916,
+                  -0.32186171412467957,
+                  -0.312233030796051,
+                  -0.30286622047424316,
+                  -0.2937554717063904,
+                  -0.2901315987110138,
+                  -0.38068079948425293,
+                  -0.32829850912094116,
+                  -0.12913836538791656,
+                  -0.3095075786113739,
+                  -0.2723196744918823,
+                  -0.25809040665626526,
+                  -0.2512218952178955,
+                  -0.16159406304359436,
+                  -0.1410994678735733,
+                  -0.2844191789627075,
+                  -1.2620333433151245,
+                  -0.08660371601581573,
+                  -0.03981286659836769,
+                  -0.03981286659836769,
+                  -0.03590672090649605,
+                  -0.03361933305859566,
+                  -0.11063134670257568,
+                  -0.028438381850719452,
+                  -0.028026629239320755,
+                  -0.036431025713682175,
+                  -0.12446562200784683,
+                  -1.3289495706558228,
+                  -1.2764308452606201,
+                  -0.05228948965668678,
+                  -0.16079533100128174,
+                  3.012877941131592,
+                  -0.16433626413345337,
+                  -0.38415005803108215,
+                  -0.0238333847373724,
+                  -0.022138765081763268,
+                  -0.009317876771092415,
+                  -0.001794384908862412,
+                  -0.1342969685792923,
+                  -0.0008233882253989577,
+                  -0.0032808752730488777,
+                  2.49236798286438,
+                  -2.3644797801971436,
+                  -0.010970234870910645,
+                  -0.005028138402849436,
+                  -0.0037306705489754677,
+                  -0.0037306705489754677,
+                  -0.03195914253592491,
+                  -0.022358840331435204,
+                  -0.03195914253592491,
+                  -0.005397490691393614,
                   0,
                   0,
                   0,
-                  -0.0031636462081223726,
-                  -0.1144440621137619,
-                  -0.1144440621137619,
-                  -0.02222549170255661,
+                  -0.0017280762549489737,
+                  -0.10624237358570099,
+                  -0.10485883802175522,
+                  -0.03860083967447281,
                   0,
+                  -0.0006880275323055685,
                   0,
+                  -0.058421216905117035,
+                  -0.0017280762549489737,
+                  -0.0017280762549489737,
+                  -0.0017280762549489737,
+                  -0.0017280762549489737,
+                  -0.0004148386069573462,
                   0,
-                  -0.08323521912097931,
-                  -0.0002343900123378262,
-                  -0.0002343900123378262,
-                  -0.0031636462081223726,
-                  -0.0002343900123378262,
-                  -0.0027095156256109476,
-                  0,
-                  -2.343362808227539,
-                  -0.04621577262878418,
-                  -0.04621577262878418,
-                  -0.04621577262878418,
-                  11.398032188415527,
-                  -0.4628722667694092,
-                  -0.1308150738477707,
-                  0.07343952182054081
+                  -2.3522465229034424,
+                  -0.03414971008896828,
+                  -0.03414971008896828,
+                  -0.03414971008896828,
+                  11.459394454956055,
+                  -0.34138038754463196,
+                  -0.3488437235355377,
+                  -0.16519565880298615,
+                  -0.1770937740802765,
+                  -0.15810027718544006,
+                  -0.004742885130714351
                 ],
                 [
-                  -0.2902316451072693,
-                  -0.28019392490386963,
-                  -0.28006547689437866,
-                  -0.27101564407348633,
-                  -0.26224279403686523,
-                  -0.25373920798301697,
-                  -0.39349791407585144,
-                  -0.3081362545490265,
-                  -0.11319634318351746,
-                  -0.28788286447525024,
-                  -0.23949429392814636,
-                  -0.22585253417491913,
-                  -0.22166958451271057,
-                  -0.18194206058979034,
-                  -0.14429670572280884,
-                  -0.31618642807006836,
-                  -0.31986385583877563,
-                  -0.08378151804208755,
-                  -1.01559317111969,
-                  -0.2274809330701828,
-                  -0.018978815525770187,
-                  -0.018978815525770187,
-                  -0.11890944093465805,
-                  -0.032061297446489334,
-                  -0.028433870524168015,
-                  -0.6978949308395386,
-                  1.0912251472473145,
-                  -0.5488819479942322,
-                  -0.6966592073440552,
-                  -0.5088137984275818,
-                  -0.09428032487630844,
-                  -0.10327469557523727,
-                  -2.644989252090454,
-                  3.2446200847625732,
-                  -1.2486664056777954,
-                  -0.7012636661529541,
-                  -0.19237853586673737,
-                  -0.19189566373825073,
-                  0.618023693561554,
-                  -1.7495754957199097,
-                  -0.2280420958995819,
-                  -0.14505770802497864,
-                  -0.08814555406570435,
-                  -1.4127873182296753,
-                  -0.7554982900619507,
-                  -0.6552073359489441,
-                  -0.6552073359489441,
-                  -0.2483225017786026,
-                  -0.04003133624792099,
-                  -0.24885134398937225,
-                  -0.21596558392047882,
-                  -0.017833760008215904,
-                  -0.017833760008215904,
-                  0,
-                  -0.8336168527603149,
-                  -0.5569459795951843,
-                  -0.5569459795951843,
-                  -0.5569459795951843,
-                  -0.00009645514364819974,
+                  -0.20660647749900818,
+                  -0.20074184238910675,
+                  -0.19716991484165192,
+                  -0.19198071956634521,
+                  -0.1884807050228119,
+                  -0.18485596776008606,
+                  -0.2486623078584671,
+                  -0.20925581455230713,
+                  -0.07963940501213074,
+                  -0.19620271027088165,
+                  -0.18054616451263428,
+                  -0.1793394237756729,
+                  -0.17883490025997162,
+                  -0.11148949712514877,
+                  -0.09168069809675217,
+                  -0.19878160953521729,
+                  -0.06983236968517303,
+                  -0.04864504933357239,
+                  -1.2714557647705078,
+                  -0.27298423647880554,
+                  -0.009380422532558441,
+                  -0.009380422532558441,
+                  -0.0882655531167984,
+                  -0.025784730911254883,
+                  -0.016261063516139984,
+                  -0.8227958679199219,
+                  -0.0631827712059021,
+                  -0.15602131187915802,
+                  -0.10008098185062408,
+                  -0.05857772007584572,
+                  -0.08451249450445175,
+                  -0.09875460714101791,
+                  -3.141951560974121,
+                  3.96756649017334,
+                  -1.4987242221832275,
+                  -0.5818286538124084,
+                  -0.26156097650527954,
+                  -0.2548096477985382,
+                  0.6208829879760742,
+                  -2.223825454711914,
+                  -0.24456429481506348,
+                  -0.12885530292987823,
+                  -0.06314226984977722,
+                  -1.715716004371643,
+                  -0.9168398380279541,
+                  -0.7972803711891174,
+                  -0.7972803711891174,
                   0,
                   0,
                   0,
-                  -0.11040762811899185,
-                  -0.11040762811899185,
-                  -0.8722454309463501,
-                  -0.11040762811899185,
-                  -0.70079505443573,
-                  -0.028987077996134758,
-                  -0.046057332307100296,
-                  -0.024860255420207977,
-                  -0.024860255420207977,
-                  -0.024860255420207977,
-                  -0.08746925741434097,
-                  10.44715404510498,
-                  2.59040904045105,
-                  0.19848610341069556
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.9539608359336853,
+                  -0.062950000166893,
+                  -0.062950000166893,
+                  -0.007796276826411486,
+                  0,
+                  0,
+                  0,
+                  -0.05457939952611923,
+                  0,
+                  0,
+                  -0.9539608359336853,
+                  0,
+                  -0.9539608359336853,
+                  0,
+                  -0.04939926415681839,
+                  -0.030530817806720734,
+                  -0.030530817806720734,
+                  -0.030530817806720734,
+                  -0.07917414605617523,
+                  9.754064559936523,
+                  -0.2182953953742981,
+                  -0.14950086176395416,
+                  -0.1535840630531311,
+                  -0.14160557091236115,
+                  0.18345273063590484
                 ]
               ]
             }
@@ -2236,7 +2872,467 @@
       ],
       [
         "id",
-        "berapa biaya kirim"
+        "salam"
+      ],
+      [
+        "id",
+        "syalom"
+      ],
+      [
+        "id",
+        "hi"
+      ],
+      [
+        "id",
+        "hai"
+      ],
+      [
+        "id",
+        "halo"
+      ],
+      [
+        "id",
+        "hallo"
+      ],
+      [
+        "id",
+        "assalamualaikum"
+      ],
+      [
+        "id",
+        "p"
+      ],
+      [
+        "id",
+        "selamat pagi"
+      ],
+      [
+        "id",
+        "selamat siang"
+      ],
+      [
+        "id",
+        "selamat malam"
+      ],
+      [
+        "id",
+        "permisi"
+      ],
+      [
+        "id",
+        "pagi"
+      ],
+      [
+        "id",
+        "malam"
+      ],
+      [
+        "id",
+        "sore"
+      ],
+      [
+        "id",
+        "menu"
+      ],
+      [
+        "id",
+        "mana alamat toko"
+      ],
+      [
+        "id",
+        "toko ada mana"
+      ],
+      [
+        "id",
+        "toko lokasi mana"
+      ],
+      [
+        "id",
+        "saya ingin tahu alamat lengkap toko"
+      ],
+      [
+        "id",
+        "bisa sharelock alamat toko"
+      ],
+      [
+        "id",
+        "bisa beritahu lokasi toko anda"
+      ],
+      [
+        "id",
+        "apa produk yang tersedia"
+      ],
+      [
+        "id",
+        "jenis produk"
+      ],
+      [
+        "id",
+        "lihat produk yang ada"
+      ],
+      [
+        "id",
+        "undang yang tersedia"
+      ],
+      [
+        "id",
+        "jenis undang"
+      ],
+      [
+        "id",
+        "bagaimana cara es undang nikah"
+      ],
+      [
+        "id",
+        "saya ingin es undang bagaimana langkah"
+      ],
+      [
+        "id",
+        "bagaimana proses mesan undang"
+      ],
+      [
+        "id",
+        "bagaimana cara pesan undang"
+      ],
+      [
+        "id",
+        "informasi kontak"
+      ],
+      [
+        "id",
+        "bagaimana cara hubung layan"
+      ],
+      [
+        "id",
+        "bagaimana hubung customer service anda"
+      ],
+      [
+        "id",
+        "apa minimal order untuk undang"
+      ],
+      [
+        "id",
+        "apakah ada jumlah minimal untuk es"
+      ],
+      [
+        "id",
+        "berapa jumlah minimum undang yang harus saya pesan"
+      ],
+      [
+        "id",
+        "apakah ada batas jumlah undang yang dapat saya pesan"
+      ],
+      [
+        "id",
+        "berapa jumlah minimum undang yang harus saya pesan"
+      ],
+      [
+        "id",
+        "berapa lama waktu pengerjaan"
+      ],
+      [
+        "id",
+        "berapa lama waktu yang butuh untuk pengerjaan undang"
+      ],
+      [
+        "id",
+        "saya ingin tahu berapa lama pengerjaan undang biasa"
+      ],
+      [
+        "id",
+        "berapa waktu yang perlu untuk cetak undang nikah"
+      ],
+      [
+        "id",
+        "lama waktu cetak"
+      ],
+      [
+        "id",
+        "apa saja metode bayar yang dapat guna"
+      ],
+      [
+        "id",
+        "bagaimana saya dapat laku bayar"
+      ],
+      [
+        "id",
+        "apakah ada opsi bayar yang tersedia"
+      ],
+      [
+        "id",
+        "apa saja metode bayar yang dapat guna"
+      ],
+      [
+        "id",
+        "bagaimana saya dapat laku bayar"
+      ],
+      [
+        "id",
+        "apakah ada opsi bayar yang tersedia"
+      ],
+      [
+        "id",
+        "informasi custom"
+      ],
+      [
+        "id",
+        "apakah bisa laku custom undang"
+      ],
+      [
+        "id",
+        "kalau desain sendiri bisa"
+      ],
+      [
+        "id",
+        "informasi katalog"
+      ],
+      [
+        "id",
+        "lihat katalog"
+      ],
+      [
+        "id",
+        "bagaimana kirim"
+      ],
+      [
+        "id",
+        "bagaimana proses kirim"
+      ],
+      [
+        "id",
+        "salam"
+      ],
+      [
+        "id",
+        "kontol"
+      ],
+      [
+        "id",
+        "hi"
+      ],
+      [
+        "id",
+        "hai"
+      ],
+      [
+        "id",
+        "halo"
+      ],
+      [
+        "id",
+        "hallo"
+      ],
+      [
+        "id",
+        "assalamualaikum"
+      ],
+      [
+        "id",
+        "p"
+      ],
+      [
+        "id",
+        "selamat pagi"
+      ],
+      [
+        "id",
+        "selamat siang"
+      ],
+      [
+        "id",
+        "selamat malam"
+      ],
+      [
+        "id",
+        "permisi"
+      ],
+      [
+        "id",
+        "pagi"
+      ],
+      [
+        "id",
+        "malam"
+      ],
+      [
+        "id",
+        "sore"
+      ],
+      [
+        "id",
+        "menu"
+      ],
+      [
+        "id",
+        "mana alamat toko"
+      ],
+      [
+        "id",
+        "toko ada mana"
+      ],
+      [
+        "id",
+        "toko lokasi mana"
+      ],
+      [
+        "id",
+        "saya ingin tahu alamat lengkap toko"
+      ],
+      [
+        "id",
+        "bisa sharelock alamat toko"
+      ],
+      [
+        "id",
+        "bisa beritahu lokasi toko anda"
+      ],
+      [
+        "id",
+        "apa produk yang tersedia"
+      ],
+      [
+        "id",
+        "jenis produk"
+      ],
+      [
+        "id",
+        "lihat produk yang ada"
+      ],
+      [
+        "id",
+        "undang yang tersedia"
+      ],
+      [
+        "id",
+        "jenis undang"
+      ],
+      [
+        "id",
+        "bagaimana cara es undang nikah"
+      ],
+      [
+        "id",
+        "saya ingin es undang bagaimana langkah"
+      ],
+      [
+        "id",
+        "bagaimana proses mesan undang"
+      ],
+      [
+        "id",
+        "bagaimana cara pesan undang"
+      ],
+      [
+        "id",
+        "informasi kontak"
+      ],
+      [
+        "id",
+        "bagaimana cara hubung layan"
+      ],
+      [
+        "id",
+        "bagaimana hubung customer service anda"
+      ],
+      [
+        "id",
+        "apa minimal order untuk undang"
+      ],
+      [
+        "id",
+        "apakah ada jumlah minimal untuk es"
+      ],
+      [
+        "id",
+        "berapa jumlah minimum undang yang harus saya pesan"
+      ],
+      [
+        "id",
+        "apakah ada batas jumlah undang yang dapat saya pesan"
+      ],
+      [
+        "id",
+        "berapa jumlah minimum undang yang harus saya pesan"
+      ],
+      [
+        "id",
+        "berapa lama waktu pengerjaan"
+      ],
+      [
+        "id",
+        "berapa lama waktu yang butuh untuk pengerjaan undang"
+      ],
+      [
+        "id",
+        "saya ingin tahu berapa lama pengerjaan undang biasa"
+      ],
+      [
+        "id",
+        "berapa waktu yang perlu untuk cetak undang nikah"
+      ],
+      [
+        "id",
+        "lama waktu cetak"
+      ],
+      [
+        "id",
+        "apa saja metode bayar yang dapat guna"
+      ],
+      [
+        "id",
+        "bagaimana saya dapat laku bayar"
+      ],
+      [
+        "id",
+        "apakah ada opsi bayar yang tersedia"
+      ],
+      [
+        "id",
+        "apa saja metode bayar yang dapat guna"
+      ],
+      [
+        "id",
+        "bagaimana saya dapat laku bayar"
+      ],
+      [
+        "id",
+        "apakah ada opsi bayar yang tersedia"
+      ],
+      [
+        "id",
+        "informasi custom"
+      ],
+      [
+        "id",
+        "apakah bisa laku custom undang"
+      ],
+      [
+        "id",
+        "kalau desain sendiri bisa"
+      ],
+      [
+        "id",
+        "informasi katalog"
+      ],
+      [
+        "id",
+        "lihat katalog"
+      ],
+      [
+        "id",
+        "bagaimana kirim"
+      ],
+      [
+        "id",
+        "bagaimana proses kirim"
+      ],
+      [
+        "id",
+        "salam"
+      ],
+      [
+        "id",
+        "fasih"
       ]
     ]
   },
@@ -2257,6 +3353,18 @@
         "sapaan": [
           {
             "answer": "Hallo! Selamat datang di Adithya Card. Berikut informasi yang tersedia :\r\n\r\n[1] Lokasi dan jam buka\r\n[2] Menu Produk\r\n[3] Cara Pemesanan\r\n[4] Minimal Order\r\n[5] Lama Proses Cetak\r\n[6] Pembayaran\r\n[7] Pengiriman\r\n[8] Informasi Kontak\r\n\r\nSilahkan beritahu s"
+          },
+          {
+            "answer": "selamat pagi"
+          },
+          {
+            "answer": "om swastiastu"
+          },
+          {
+            "answer": "babi"
+          },
+          {
+            "answer": "Jaya jaya jaya"
           }
         ],
         "lokasi": [

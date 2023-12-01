@@ -33,6 +33,7 @@
     "date-fns": "^2.30.0",
     "history": "^5.3.0",
     "lodash": "^4.17.21",
+    "moment": "^2.29.4",
     "numeral": "^2.0.6",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
@@ -61,5 +62,20 @@
     "vite": "^4.4.11",
     "vite-plugin-checker": "^0.6.2"
   },
-  "proxy": "http://localhost:3000"
+  "proxy": "http://localhost:3000",
+  "nodemonConfig": {
+    "ignore": [
+      "*.log",
+      "node_modules",
+      "session",
+      "state",
+      "src/**/*",
+      "public/**/*",
+      "build/**/*",
+      "dist/**/*",
+      "package.json",
+      "package-lock.json",
+      "*.tsx"
+    ]
+  }
 }

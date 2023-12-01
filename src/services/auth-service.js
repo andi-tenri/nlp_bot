@@ -1,29 +1,26 @@
 import service, { setToken } from ".";
 
 export const login = async (email, password) => {
-    try {
-        const response = await service.post('/auth/login', {
-            email,
-            password
-        });
+    const response = await service.post('/auth/login', {
+        email,
+        password
+    });
 
-        if (response.data.data) {
-            const data = response.data.data;
+    if (response.data.data) {
+        const data = response.data.data;
 
-            localStorage.setItem('token', data.token);
+        const token = data.token;
 
-            localStorage.setItem('user', JSON.stringify(data.user));
-            
-            setToken(token);
+        localStorage.setItem('token', token);
 
-            window.location.reload();
-        }
+        localStorage.setItem('user', JSON.stringify(data.user));
 
-        return response.data;
-    } catch (error) {
-        console.log(error);
-        return
+        setToken(token);
+
+        window.location.reload();
     }
+
+    return response.data;
 }
 
 export const logout = () => {
