@@ -75,10 +75,12 @@ export default function DatasetPage() {
   };
 
   const handleAddIntent = (data) => {
-    setGroupedDataset({
-      ...groupedDataset,
-      [data.intent]: []
-    });
+    if (!groupedDataset[data.intent]) {
+      setGroupedDataset({
+        ...groupedDataset,
+        [data.intent]: []
+      });
+    }
   };
 
   return (
