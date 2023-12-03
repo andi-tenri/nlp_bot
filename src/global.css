@@ -1,2 +1,9 @@
 /* scrollbar */
 @import 'simplebar-react/dist/simplebar.min.css';
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+}

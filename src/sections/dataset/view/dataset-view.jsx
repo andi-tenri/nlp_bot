@@ -1,5 +1,6 @@
 import { useEffect, useReducer, useState } from 'react';
 
+import LoadingButton from '@mui/lab/LoadingButton';
 import {
   Box,
   Button,
@@ -12,7 +13,6 @@ import {
   TablePagination,
   Typography,
 } from '@mui/material';
-import LoadingButton from '@mui/lab/LoadingButton';
 
 import Iconify from 'src/components/iconify';
 import Scrollbar from 'src/components/scrollbar';
@@ -20,6 +20,7 @@ import Scrollbar from 'src/components/scrollbar';
 import ConfirmationDialogProvider from 'src/components/dialog/confirm-dialog';
 import { getDataset, refreshModel } from 'src/services/dataset-service';
 import DeviceModalCreate from '../dataset-modal-create';
+import DeviceModalCreateIntent from '../dataset-modal-create-intent';
 import DatasetTableHead from '../dataset-table-head';
 import DatasetTableRow from '../dataset-table-row';
 import TableEmptyRows from '../table-empty-rows';
@@ -29,7 +30,101 @@ import { applyFilter, emptyRows, getComparator } from '../utils';
 // ----------------------------------------------------------------------
 
 export default function DatasetPage() {
-  const [dataset, setDataset] = useState([]);
+  const [groupedDataset, setGroupedDataset] = useState({});
+  const [currentDataset, setCurrentDataset] = useState(null);
+  const [openCreateModal, setOpenCreateModal] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
+
+  useEffect(() => {
+    fetchDataset();
+  }, []);
+
+  const fetchDataset = async () => {
+    const dataset = await getDataset();
+    const groupedDataset = groupDataset(dataset);
+    setGroupedDataset(groupedDataset);
+  };
+
+  const groupDataset = (dataset) => {
+    // group data set by intent
+    const groupedDataset = dataset.reduce((acc, item) => {
+      if (!acc[item.intent]) {
+        acc[item.intent] = [];
+      }
+      acc[item.intent].push(item);
+      return acc;
+    }, {});
+
+    return groupedDataset;
+  };
+
+  const handleRefreshModel = async () => {
+    try {
+      setRefreshing(true);
+      await refreshModel();
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setRefreshing(false);
+    }
+  };
+
+  const handleOpenCreateModal = () => {
+    setCurrentDataset(null);
+    setOpenCreateModal(true);
+  };
+
+  const handleAddIntent = (data) => {
+    setGroupedDataset({
+      ...groupedDataset,
+      [data.intent]: []
+    });
+  };
+
+  return (
+    <Container>
+      <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5} gap={2}>
+        <Typography variant="h4">Dataset</Typography>
+
+        <Box sx={{ flexGrow: 1 }} />
+
+        <LoadingButton
+          variant="contained"
+          color="inherit"
+          startIcon={<Iconify icon="eva:refresh-fill" />}
+          onClick={handleRefreshModel}
+          loading={refreshing}
+        >
+          Run Model
+        </LoadingButton>
+
+        <Button
+          variant="contained"
+          color="inherit"
+          startIcon={<Iconify icon="eva:plus-fill" />}
+          onClick={handleOpenCreateModal}
+        >
+          New Intent
+        </Button>
+      </Stack>
+
+      {Object.keys(groupedDataset).map((key) => (
+        <DatasetTable key={'dataset-' + key} intent={key} dataset={groupedDataset[key]} />
+      ))}
+
+      <DeviceModalCreateIntent
+        openCreateModal={openCreateModal}
+        setOpenCreateModal={setOpenCreateModal}
+        refresh={fetchDataset}
+        data={currentDataset}
+        handleAddIntent={handleAddIntent}
+      />
+    </Container>
+  );
+}
+
+function DatasetTable(props) {
+  const { dataset, fetchDataset, intent } = props;
 
   const [page, setPage] = useState(0);
 
@@ -47,18 +142,7 @@ export default function DatasetPage() {
 
   const [currentDataset, setCurrentDataset] = useState({});
 
-  const [refreshing, setRefreshing] = useState(false);
-
   const [, forceUpdate] = useReducer((x) => x + 1, 0);
-
-  useEffect(() => {
-    fetchDataset();
-  }, []);
-
-  const fetchDataset = async () => {
-    const dataset = await getDataset();
-    setDataset(dataset);
-  };
 
   const handleSort = (event, id) => {
     const isAsc = orderBy === id && order === 'asc';
@@ -109,28 +193,12 @@ export default function DatasetPage() {
     setFilterName(event.target.value);
   };
 
-  const handleOpenCreateModal = () => {
-    setCurrentDataset({});
-    setOpenCreateModal(true);
-  };
-
   const handleEdit = (id) => {
     setOpenCreateModal(true);
 
     const currentDataset = dataset.find((dataset) => dataset.id === id);
 
     setCurrentDataset(currentDataset);
-  };
-
-  const handleRefreshModel = async () => {
-    try {
-      setRefreshing(true);
-      await refreshModel();
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setRefreshing(false);
-    }
   };
 
   const dataFiltered = applyFilter({
@@ -140,35 +208,31 @@ export default function DatasetPage() {
   });
 
   const notFound = !dataFiltered.length && !!filterName;
+  const handleOpenCreateModal = () => {
+    setCurrentDataset({
+      intent
+    });
+    setOpenCreateModal(true);
+  };
 
   return (
     <ConfirmationDialogProvider>
-      <Container>
-        <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5} gap={2}>
-          <Typography variant="h4">Dataset</Typography>
-
-          <Box sx={{ flexGrow: 1 }} />
-
-          <LoadingButton
-            variant="contained"
-            color="inherit"
-            startIcon={<Iconify icon="eva:refresh-fill" />}
-            onClick={handleRefreshModel}
-            loading={refreshing}
-          >
-            Run Model
-          </LoadingButton>
-
+      <Card sx={{ p: 3, mb: 3 }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <Typography variant="h5" sx={{ mb: 2 }} gutterBottom>
+            {intent}
+          </Typography>
           <Button
+            size="small"
             variant="contained"
             color="inherit"
             startIcon={<Iconify icon="eva:plus-fill" />}
-            onClick={handleOpenCreateModal}
+            onClick={() => handleOpenCreateModal()}
+            sx={{ mb: 2 }}
           >
-            New Dataset
+            New
           </Button>
-        </Stack>
-
+        </Box>
         <Card>
           <Scrollbar>
             <TableContainer sx={{ overflow: 'unset' }}>
@@ -181,8 +245,7 @@ export default function DatasetPage() {
                   onRequestSort={handleSort}
                   onSelectAllClick={handleSelectAllClick}
                   headLabel={[
-                    { id: 'id', label: 'id' },
-                    { id: 'intent', label: 'Intent' },
+                    // { id: 'id', label: 'id' },
                     { id: 'utterance', label: 'Utterance' },
                     { id: 'answer', label: 'Answer' },
                     { id: 'updatedAt', label: 'Updated At' },
@@ -223,14 +286,14 @@ export default function DatasetPage() {
             onRowsPerPageChange={handleChangeRowsPerPage}
           />
         </Card>
+      </Card>
 
-        <DeviceModalCreate
-          openCreateModal={openCreateModal}
-          setOpenCreateModal={setOpenCreateModal}
-          refresh={fetchDataset}
-          data={currentDataset}
-        />
-      </Container>
+      <DeviceModalCreate
+        openCreateModal={openCreateModal}
+        setOpenCreateModal={setOpenCreateModal}
+        refresh={fetchDataset}
+        data={currentDataset}
+      />
     </ConfirmationDialogProvider>
   );
 }

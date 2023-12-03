@@ -62,13 +62,15 @@ export default function DatasetTableRow({
   return (
     <>
       <TableRow hover tabIndex={-1} role="checkbox" selected={selected}>
-        <TableCell>{id}</TableCell>
+        {/* <TableCell>{id}</TableCell> */}
 
-        <TableCell>{intent}</TableCell>
+        {/* <TableCell>{intent}</TableCell> */}
 
-        <TableCell>{utterance}</TableCell>
+        <TableCell width={250}>{utterance}</TableCell>
 
-        <TableCell>{answer}</TableCell>
+        <TableCell>
+          <div title={answer} className='line-clamp'>{answer}</div>
+        </TableCell>
 
         <TableCell>{updatedAt ? moment(updatedAt).format('DD/MM/YYYY HH:mm:ss') : ''}</TableCell>
 

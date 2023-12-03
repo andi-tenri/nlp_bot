@@ -12,25 +12,20 @@ import { useEffect } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { createDataset, updateDataset } from 'src/services/dataset-service';
 
-const DatasetModalCreate = (props) => {
+const DatasetModalCreateIntent = (props) => {
+  const { handleAddIntent } = props;
+
   const { control, handleSubmit, reset, setValue } = useForm();
 
   useEffect(() => {
     if (props.data) {
       setValue('intent', props.data.intent);
-      setValue('utterance', props.data.utterance);
-      setValue('answer', props.data.answer);
     }
   }, [props.data]);
 
   const onSubmit = async (data) => {
-    if (props.data) {
-      await updateDataset(props.data.id, data);
-    } else {
-      await createDataset(data);
-    }
+    handleAddIntent(data);
     handleClose();
-    props.refresh();
   };
 
   const handleClose = () => {
@@ -47,7 +42,7 @@ const DatasetModalCreate = (props) => {
       maxWidth="sm"
       fullWidth
     >
-      <DialogTitle>{props.data ? "Edit" : "Create New"} Dataset</DialogTitle>
+      <DialogTitle>Create New Intent</DialogTitle>
       <DialogContent>
         <DialogContentText>
           <Controller
@@ -63,56 +58,12 @@ const DatasetModalCreate = (props) => {
             render={({ field, fieldState: { error } }) => (
               <TextField
                 {...field}
-                disabled
                 autoFocus
                 margin="dense"
                 id="intent"
                 label="Intent"
                 type="text"
                 fullWidth
-                error={!!error}
-                helperText={error ? error.message : null}
-              />
-            )}
-          />
-          {/* utterance, answer */}
-          <Controller
-            name="utterance"
-            control={control}
-            rules={{
-              required: 'This field is required',
-            }}
-            render={({ field, fieldState: { error } }) => (
-              <TextField
-                {...field}
-                autoFocus
-                margin="dense"
-                id="utterance"
-                label="Utterance"
-                type="text"
-                fullWidth
-                error={!!error}
-                helperText={error ? error.message : null}
-              />
-            )}
-          />
-          <Controller
-            name="answer"
-            control={control}
-            rules={{
-              required: 'This field is required',
-            }}
-            render={({ field, fieldState: { error } }) => (
-              <TextField
-                {...field}
-                autoFocus
-                margin="dense"
-                id="answer"
-                label="Answer"
-                type="text"
-                fullWidth
-                multiline
-                rows={7}
                 error={!!error}
                 helperText={error ? error.message : null}
               />
@@ -127,11 +78,12 @@ const DatasetModalCreate = (props) => {
   );
 };
 
-DatasetModalCreate.propTypes = {
+DatasetModalCreateIntent.propTypes = {
   openCreateModal: PropTypes.bool,
   setOpenCreateModal: PropTypes.func,
   refresh: PropTypes.func,
   data: PropTypes.object,
+  handleAddIntent: PropTypes.func,
 };
 
-export default DatasetModalCreate;
+export default DatasetModalCreateIntent;
