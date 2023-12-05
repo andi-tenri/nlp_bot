@@ -32,6 +32,8 @@ const routes = createBrowserRouter([
       { path: 'device', element: <DevicePage /> },
       { path: 'device/:id', element: <DeviceDetailPage /> },
       { path: 'dataset', element: <DatasetPage /> },
+      { path: 'product', element: <ProductsPage /> },
+
     ],
   },
   {

@@ -21,6 +21,11 @@ const navConfig = [
     title: 'dataset',
     path: '/dataset',
     icon: icon('ic_dataset'),
+  },
+  {
+    title: 'product',
+    path: '/product',
+    icon: icon('ic_product'),
   }
 ];
 

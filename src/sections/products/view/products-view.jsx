@@ -1,21 +1,24 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Unstable_Grid2';
+import { Button } from '@mui/material';
 import Typography from '@mui/material/Typography';
 
-import { products } from 'src/_mock/products';
+// import { products } from 'src/_mock/products';
 
 import ProductCard from '../product-card';
-import ProductSort from '../product-sort';
-import ProductFilters from '../product-filters';
-import ProductCartWidget from '../product-cart-widget';
+import Iconify from 'src/components/iconify';
+import { getProducts } from 'src/services/product-service';
+import ProductModalCreate from '../product-modal-create';
 
 // ----------------------------------------------------------------------
 
 export default function ProductsView() {
   const [openFilter, setOpenFilter] = useState(false);
+  const [openCreateModal, setOpenCreateModal] = useState(false);
+  const [products, setProducts] = useState([]);
 
   const handleOpenFilter = () => {
     setOpenFilter(true);
@@ -23,6 +26,19 @@ export default function ProductsView() {
 
   const handleCloseFilter = () => {
     setOpenFilter(false);
+  };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  const fetchProducts = async () => {
+    const products = await getProducts();
+    setProducts(products);
+  };
+
+  const handleNewProduct = () => {
+    setOpenCreateModal(true);
   };
 
   return (
@@ -39,13 +55,21 @@ export default function ProductsView() {
         sx={{ mb: 5 }}
       >
         <Stack direction="row" spacing={1} flexShrink={0} sx={{ my: 1 }}>
-          <ProductFilters
+          {/* <ProductFilters
             openFilter={openFilter}
             onOpenFilter={handleOpenFilter}
             onCloseFilter={handleCloseFilter}
           />
 
-          <ProductSort />
+          <ProductSort /> */}
+          <Button
+            color="inherit"
+            variant="contained"
+            startIcon={<Iconify icon="eva:plus-fill" />}
+            onClick={handleNewProduct}
+          >
+            New Product
+          </Button>
         </Stack>
       </Stack>
 
@@ -57,7 +81,13 @@ export default function ProductsView() {
         ))}
       </Grid>
 
-      <ProductCartWidget />
+      <ProductModalCreate
+        openCreateModal={openCreateModal}
+        setOpenCreateModal={setOpenCreateModal}
+        refresh={fetchProducts}
+      />
+
+      {/* <ProductCartWidget /> */}
     </Container>
   );
 }

@@ -23,7 +23,8 @@ const app = express();
   app.use(express.urlencoded({ extended: false }));
   app.use(cookieParser());
   app.use(express.static(path.join(__dirname, "build")));
-
+  
+  app.use("/images", express.static(path.join(__dirname, "bot/images")));
   app.use("/api", indexRouter);
   app.use("/api/bot", bot.server.getRouter())
   app.get("*", (req, res) => {
