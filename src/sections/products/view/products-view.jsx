@@ -19,6 +19,7 @@ export default function ProductsView() {
   const [openFilter, setOpenFilter] = useState(false);
   const [openCreateModal, setOpenCreateModal] = useState(false);
   const [products, setProducts] = useState([]);
+  const [currentProduct, setCurrentProduct] = useState(null);
 
   const handleOpenFilter = () => {
     setOpenFilter(true);
@@ -38,6 +39,12 @@ export default function ProductsView() {
   };
 
   const handleNewProduct = () => {
+    setCurrentProduct(null);
+    setOpenCreateModal(true);
+  };
+
+  const handleProductEdit = (product) => {
+    setCurrentProduct(product);
     setOpenCreateModal(true);
   };
 
@@ -74,17 +81,23 @@ export default function ProductsView() {
       </Stack>
 
       <Grid container spacing={3}>
-        {products.map((product) => (
-          <Grid key={product.id} xs={12} sm={6} md={3}>
-            <ProductCard product={product} />
-          </Grid>
-        ))}
+        {products &&
+          products.map((product) => (
+            <Grid key={product.id} xs={12} sm={6} md={3}>
+              <ProductCard
+                product={product}
+                handleProductEdit={handleProductEdit}
+                refresh={fetchProducts}
+              />
+            </Grid>
+          ))}
       </Grid>
 
       <ProductModalCreate
         openCreateModal={openCreateModal}
         setOpenCreateModal={setOpenCreateModal}
         refresh={fetchProducts}
+        data={currentProduct}
       />
 
       {/* <ProductCartWidget /> */}

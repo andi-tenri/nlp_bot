@@ -10,27 +10,35 @@ import {
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
-import { createDataset, updateDataset } from 'src/services/dataset-service';
+import { createProduct, updateProduct } from 'src/services/product-service';
 
 const ProductModalCreate = (props) => {
-  const { control, handleSubmit, reset, setValue, getValues, setError, clearErrors } = useForm();
+  const {
+    control,
+    handleSubmit,
+    reset,
+    setValue,
+    register,
+    formState: { errors },
+  } = useForm();
+
+  const [imagePreview, setImagePreview] = useState(null);
 
   useEffect(() => {
     if (props.data) {
-      setValue('intent', props.data.intent);
-      setValue('utterance', props.data.utterance);
-      setValue('answer', props.data.answer);
+      setValue('name', props.data.name);
+      setImagePreview(props.data.cover);
+    } else {
+      reset();
+      setImagePreview(null);
     }
   }, [props.data]);
 
   const onSubmit = async (data) => {
-    if (!getValues('image')) {
-      return setError('image', { type: 'required', message: 'This field is required' });
-    }
     if (props.data) {
-      await updateDataset(props.data.id, data);
+      await updateProduct(props.data.id, data);
     } else {
-      await createDataset(data);
+      await createProduct(data);
     }
     handleClose();
     props.refresh();
@@ -42,17 +50,16 @@ const ProductModalCreate = (props) => {
   };
 
   const handleImageChange = (event) => {
-    const image = event.target.files[0];
-    if (!image) {
+    const file = event.target.files[0];
+    if (!file) {
       setError('image', { type: 'required', message: 'This field is required' });
       return;
     }
-    if (!image.name.match(/\.(jpg|jpeg|png|gif)$/)) {
+    if (!file.name.match(/\.(jpg|jpeg|png|gif)$/)) {
       setError('image', { type: 'pattern', message: 'Only image files are allowed' });
       return;
     }
-    clearErrors('image');
-    console.log(image);
+    setImagePreview(URL.createObjectURL(file));
   };
 
   return (
@@ -92,31 +99,21 @@ const ProductModalCreate = (props) => {
               />
             )}
           />
-          <Controller
-            name="image"
-            control={control}
-            render={({ field, fieldState: { error } }) => (
-              <TextField
-                {...field}
-                onChange={handleImageChange}
-                autoFocus
-                margin="dense"
-                id="image"
-                label="Image"
-                type="file"
-                fullWidth
-                error={!!error}
-                helperText={error ? error.message : null}
-              />
-            )}
+          <TextField
+            {...register('image', { required: 'This field is required' })}
+            onChange={handleImageChange}
+            autoFocus
+            margin="dense"
+            id="image"
+            label="Image"
+            type="file"
+            fullWidth
+            helperText={errors.image  ? errors.image.message : null}
+            error={!!errors.image}
           />
           {/* image preview */}
-          {getValues('image') && (
-            <img
-              src={URL.createObjectURL(image)}
-              alt="Preview"
-              style={{ maxWidth: '100%', height: 'auto' }}
-            />
+          {imagePreview && (
+            <img src={imagePreview} alt="Preview" style={{ maxWidth: '100%', height: 'auto' }} />
           )}
         </DialogContentText>
       </DialogContent>
