@@ -10,7 +10,7 @@ import {
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
-import { createDataset, updateDataset, updateIntent } from 'src/services/dataset-service';
+import { createDataset, createIntent, updateDataset, updateIntent } from 'src/services/dataset-service';
 
 const DatasetModalCreateIntent = (props) => {
   const { handleAddIntent } = props;
@@ -30,7 +30,7 @@ const DatasetModalCreateIntent = (props) => {
     if (props.data) {
       await updateIntent(data.intent, oldIntent);
     } else {
-      await handleAddIntent(data);
+      await createIntent(data.intent);
     }
     handleClose();
     props.refresh();

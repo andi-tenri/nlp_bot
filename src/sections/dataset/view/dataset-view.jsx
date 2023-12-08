@@ -31,8 +31,7 @@ import DatasetTableHead from '../dataset-table-head';
 import DatasetTableRow from '../dataset-table-row';
 import TableEmptyRows from '../table-empty-rows';
 import TableNoData from '../table-no-data';
-import { applyFilter, emptyRows, getComparator } from '../utils';
-import { debounce } from 'lodash';
+import { applyFilter, debounce, emptyRows, getComparator } from '../utils';
 
 // ----------------------------------------------------------------------
 
@@ -68,27 +67,20 @@ export default function DatasetPage() {
   };
 
   const handleSearch = (text) => {
-    // debounce
-    if (!text) {
-      setGroupedDataset(groupDataset(dataset));
-      return;
-    }
-
-    const handleFilter = (text) => {
-      const filteredDataset = [...dataset].filter(
-        (item) =>
-          item.intent.toLowerCase().includes(text.toLowerCase()) ||
-          item.answer.toLowerCase().includes(text.toLowerCase()) ||
-          item.utterance.toLowerCase().includes(text.toLowerCase())
-      );
-      const groupedDataset = groupDataset(filteredDataset);
-      setGroupedDataset(groupedDataset);
-    };
-
-    // debounce
     debounce(() => {
       handleFilter(text);
-    }, 500);
+    }, 500)();
+  };
+
+  const handleFilter = (text) => {
+    const filteredDataset = JSON.parse(JSON.stringify(dataset)).filter(
+      (item) =>
+        item.intent.toLowerCase().includes(text.toLowerCase()) ||
+        item.answer.toLowerCase().includes(text.toLowerCase()) ||
+        item.utterance.toLowerCase().includes(text.toLowerCase())
+    );
+    const groupedDataset = groupDataset(filteredDataset);
+    setGroupedDataset(groupedDataset);
   };
 
   const handleRefreshModel = async () => {
@@ -164,7 +156,6 @@ export default function DatasetPage() {
             </InputAdornment>
           ),
         }}
-        dense
       />
 
       <Grid container spacing={3}>

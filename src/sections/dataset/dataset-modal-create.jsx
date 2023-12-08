@@ -63,7 +63,6 @@ const DatasetModalCreate = (props) => {
             render={({ field, fieldState: { error } }) => (
               <TextField
                 {...field}
-                disabled
                 autoFocus
                 margin="dense"
                 id="intent"

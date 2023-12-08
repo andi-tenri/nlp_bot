@@ -78,6 +78,19 @@ export const deleteIntent = async (intent) => {
 }
 
 /**
+ * Create intent
+ */
+export const createIntent = async (intent) => {
+    try {
+        const response = await service.post(`/dataset`, { intent });
+        return response.data
+    } catch (error) {
+        console.log(error);
+        return
+    }
+}
+
+/**
  * Update intent
  */
 export const updateIntent = async (newIntent, oldIntent) => {
