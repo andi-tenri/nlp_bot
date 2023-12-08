@@ -31,7 +31,6 @@ export default function DatasetTableHead({
             key={headCell.id}
             align={headCell.align || 'left'}
             sortDirection={orderBy === headCell.id ? order : false}
-            sx={{ width: headCell.width, minWidth: headCell.minWidth }}
           >
             <TableSortLabel
               hideSortIcon

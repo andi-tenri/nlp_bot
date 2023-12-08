@@ -6,31 +6,39 @@ import {
   Button,
   Card,
   Container,
+  Grid,
   Stack,
   Table,
   TableBody,
   TableContainer,
   TablePagination,
   Typography,
+  IconButton,
+  TextField,
+  InputAdornment,
 } from '@mui/material';
 
 import Iconify from 'src/components/iconify';
 import Scrollbar from 'src/components/scrollbar';
 
-import ConfirmationDialogProvider from 'src/components/dialog/confirm-dialog';
-import { getDataset, refreshModel } from 'src/services/dataset-service';
-import DeviceModalCreate from '../dataset-modal-create';
-import DeviceModalCreateIntent from '../dataset-modal-create-intent';
+import ConfirmationDialogProvider, {
+  useConfirmationDialog,
+} from 'src/components/dialog/confirm-dialog';
+import { deleteIntent, getDataset, refreshModel } from 'src/services/dataset-service';
+import DatasetModalCreate from '../dataset-modal-create';
+import DatasetModalCreateIntent from '../dataset-modal-create-intent';
 import DatasetTableHead from '../dataset-table-head';
 import DatasetTableRow from '../dataset-table-row';
 import TableEmptyRows from '../table-empty-rows';
 import TableNoData from '../table-no-data';
 import { applyFilter, emptyRows, getComparator } from '../utils';
+import { debounce } from 'lodash';
 
 // ----------------------------------------------------------------------
 
 export default function DatasetPage() {
   const [groupedDataset, setGroupedDataset] = useState({});
+  const [dataset, setDataset] = useState([]);
   const [currentDataset, setCurrentDataset] = useState(null);
   const [openCreateModal, setOpenCreateModal] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
@@ -40,8 +48,9 @@ export default function DatasetPage() {
   }, []);
 
   const fetchDataset = async () => {
-    const dataset = await getDataset();
-    const groupedDataset = groupDataset(dataset);
+    const dt = await getDataset();
+    setDataset(dt);
+    const groupedDataset = groupDataset(dt);
     setGroupedDataset(groupedDataset);
   };
 
@@ -56,6 +65,30 @@ export default function DatasetPage() {
     }, {});
 
     return groupedDataset;
+  };
+
+  const handleSearch = (text) => {
+    // debounce
+    if (!text) {
+      setGroupedDataset(groupDataset(dataset));
+      return;
+    }
+
+    const handleFilter = (text) => {
+      const filteredDataset = [...dataset].filter(
+        (item) =>
+          item.intent.toLowerCase().includes(text.toLowerCase()) ||
+          item.answer.toLowerCase().includes(text.toLowerCase()) ||
+          item.utterance.toLowerCase().includes(text.toLowerCase())
+      );
+      const groupedDataset = groupDataset(filteredDataset);
+      setGroupedDataset(groupedDataset);
+    };
+
+    // debounce
+    debounce(() => {
+      handleFilter(text);
+    }, 500);
   };
 
   const handleRefreshModel = async () => {
@@ -78,9 +111,14 @@ export default function DatasetPage() {
     if (!groupedDataset[data.intent]) {
       setGroupedDataset({
         ...groupedDataset,
-        [data.intent]: []
+        [data.intent]: [],
       });
     }
+  };
+
+  const handleEditIntent = (intent) => {
+    setCurrentDataset({ intent });
+    setOpenCreateModal(true);
   };
 
   return (
@@ -91,7 +129,7 @@ export default function DatasetPage() {
         <Box sx={{ flexGrow: 1 }} />
 
         <LoadingButton
-          variant="contained"
+          variant="outlined"
           color="inherit"
           startIcon={<Iconify icon="eva:refresh-fill" />}
           onClick={handleRefreshModel}
@@ -110,11 +148,39 @@ export default function DatasetPage() {
         </Button>
       </Stack>
 
-      {Object.keys(groupedDataset).map((key) => (
-        <DatasetTable key={'dataset-' + key} intent={key} dataset={groupedDataset[key]} />
-      ))}
+      <TextField
+        sx={{
+          marginBottom: 2,
+        }}
+        id="outlined-select-currency"
+        fullWidth
+        onChange={(e) => handleSearch(e.target.value)}
+        size="small"
+        placeholder="Search dataset..."
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <Iconify icon="eva:search-fill" sx={{ color: 'text.disabled' }} />
+            </InputAdornment>
+          ),
+        }}
+        dense
+      />
 
-      <DeviceModalCreateIntent
+      <Grid container spacing={3}>
+        {Object.keys(groupedDataset).map((key) => (
+          <Grid item xs={6} key={key}>
+            <DatasetTable
+              intent={key}
+              dataset={groupedDataset[key]}
+              fetchDataset={fetchDataset}
+              handleEditIntent={handleEditIntent}
+            />
+          </Grid>
+        ))}
+      </Grid>
+
+      <DatasetModalCreateIntent
         openCreateModal={openCreateModal}
         setOpenCreateModal={setOpenCreateModal}
         refresh={fetchDataset}
@@ -145,6 +211,8 @@ function DatasetTable(props) {
   const [currentDataset, setCurrentDataset] = useState({});
 
   const [, forceUpdate] = useReducer((x) => x + 1, 0);
+
+  const { showConfirmation } = useConfirmationDialog();
 
   const handleSort = (event, id) => {
     const isAsc = orderBy === id && order === 'asc';
@@ -212,9 +280,30 @@ function DatasetTable(props) {
   const notFound = !dataFiltered.length && !!filterName;
   const handleOpenCreateModal = () => {
     setCurrentDataset({
-      intent
+      intent,
     });
     setOpenCreateModal(true);
+  };
+
+  const onDelete = async () => {
+    if (!dataset.length) {
+      return await fetchDataset();
+    }
+
+    try {
+      await deleteIntent(intent);
+      await fetchDataset();
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const handleDeleteIntent = () => {
+    showConfirmation({
+      title: 'Delete Intent',
+      text: `Are you sure you want to delete intent "${intent}"?`,
+      callback: onDelete,
+    });
   };
 
   return (
@@ -223,22 +312,40 @@ function DatasetTable(props) {
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <Typography variant="h5" sx={{ mb: 2 }} gutterBottom>
             {intent}
+            <IconButton
+              size="large"
+              color="inherit"
+              onClick={() => props.handleEditIntent(intent)}
+              sx={{ ml: 1 }}
+            >
+              <Iconify icon="eva:edit-fill" />
+            </IconButton>
           </Typography>
-          <Button
-            size="small"
-            variant="contained"
-            color="inherit"
-            startIcon={<Iconify icon="eva:plus-fill" />}
-            onClick={() => handleOpenCreateModal()}
-            sx={{ mb: 2 }}
-          >
-            New
-          </Button>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+            <Button
+              size="small"
+              color="secondary"
+              startIcon={<Iconify icon="eva:trash-2-outline" />}
+              onClick={handleDeleteIntent}
+              sx={{ mb: 2 }}
+            >
+              Delete
+            </Button>
+            <Button
+              size="small"
+              color="inherit"
+              startIcon={<Iconify icon="eva:plus-fill" />}
+              onClick={() => handleOpenCreateModal()}
+              sx={{ mb: 2 }}
+            >
+              New
+            </Button>
+          </Box>
         </Box>
         <Card>
           <Scrollbar>
             <TableContainer sx={{ overflow: 'unset' }}>
-              <Table sx={{ minWidth: 800 }}>
+              <Table>
                 <DatasetTableHead
                   order={order}
                   orderBy={orderBy}
@@ -250,7 +357,7 @@ function DatasetTable(props) {
                     // { id: 'id', label: 'id' },
                     { id: 'utterance', label: 'Utterance' },
                     { id: 'answer', label: 'Answer' },
-                    { id: 'updatedAt', label: 'Updated At' },
+                    // { id: 'updatedAt', label: 'Updated At' },
                     { id: '' },
                   ]}
                 />
@@ -290,7 +397,7 @@ function DatasetTable(props) {
         </Card>
       </Card>
 
-      <DeviceModalCreate
+      <DatasetModalCreate
         openCreateModal={openCreateModal}
         setOpenCreateModal={setOpenCreateModal}
         refresh={fetchDataset}

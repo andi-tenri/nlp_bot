@@ -112,6 +112,57 @@ exports.delete = async (req, res) => {
 
 }
 
+exports.updateIntent = async (req, res) => {
+    try {
+        const { oldIntent, newIntent } = req.body;
+
+        const dataset = await db.Dataset.update({
+            intent: newIntent
+        }, {
+            where: {
+                intent: oldIntent
+            }
+        });
+
+        res.send({
+            success: true,
+            data: dataset,
+            message: "Dataset updated successfully",
+        })
+
+    } catch (error) {
+        res.status(400).send({
+            success: false,
+            message: error.message,
+        });
+    }
+}
+
+exports.deleteIntent = async (req, res) => {
+    try {
+        const { intent } = req.body;
+
+        const dataset = await db.Dataset.destroy({
+            where: {
+                intent
+            }
+        });
+
+        res.send({
+            success: true,
+            data: dataset,
+            message: "Dataset deleted successfully",
+        })
+
+    } catch (error) {
+        res.status(400).send({
+            success: false,
+            message: error.message,
+        });
+    }
+
+}
+
 exports.refreshModel = async (req, res) => {
     try {
         await fetchDataFromDatabase();

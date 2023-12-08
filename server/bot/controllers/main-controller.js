@@ -2,6 +2,7 @@ const { Controller, Response } = require("pepesan");
 const { processMessage } = require("../../nlp");
 const fs = require("fs");
 const path = require("path");
+const db = require("../../models/index");
 
 class MainControlller extends Controller {
 
@@ -30,6 +31,11 @@ class MainControlller extends Controller {
         }
 
         if (!response.answer) {
+            await db.Dataset.create({
+                intent: "_",
+                answer: "_",
+                utterance: text
+            })
             return "Maaf, sepertinya saya kesulitan memahami pertanyaan Anda. Mohon coba lagi sampaikan pertanyaan Anda dengan lebih jelas. Jika ada yang bisa saya bantu, beri tahu saya. Terima kasih."
         }
 

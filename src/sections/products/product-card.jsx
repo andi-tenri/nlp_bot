@@ -8,11 +8,14 @@ import Stack from '@mui/material/Stack';
 
 import Iconify from 'src/components/iconify';
 import { deleteProduct } from 'src/services/product-service';
+import { useConfirmationDialog } from 'src/components/dialog/confirm-dialog';
 
 // ----------------------------------------------------------------------
 
 export default function ShopProductCard(props) {
   const { product } = props;
+
+  const { showConfirmation } = useConfirmationDialog();
 
   const renderImg = (
     <Box
@@ -33,9 +36,17 @@ export default function ShopProductCard(props) {
     props.handleProductEdit(product);
   };
 
-  const handleProductRemove = () => {
+  const onDelete = () => {
     deleteProduct(product.name);
-    props.refresh()
+    props.refresh();
+  };
+
+  const handleProductRemove = () => {
+    showConfirmation({
+      title: 'Delete product',
+      text: `Are you sure want to delete product "${product.name}"?`,
+      callback: onDelete,
+    });
   };
 
   return (
@@ -45,7 +56,6 @@ export default function ShopProductCard(props) {
         <Box sx={{ position: 'absolute', top: 14, right: 14, zIndex: 9 }}>
           <Button
             onClick={handleProductEdit}
-            variant="contained"
             size="x-small"
             color="inherit"
             sx={{ px: 0, py: 1, minWidth: 40, mr: 1 }}
@@ -55,7 +65,6 @@ export default function ShopProductCard(props) {
 
           <Button
             onClick={handleProductRemove}
-            variant="contained"
             size="x-small"
             color="secondary"
             sx={{ px: 0, py: 1, minWidth: 40 }}
@@ -77,5 +86,5 @@ export default function ShopProductCard(props) {
 ShopProductCard.propTypes = {
   product: PropTypes.object,
   handleProductEdit: PropTypes.func,
-  refresh: PropTypes.func
+  refresh: PropTypes.func,
 };

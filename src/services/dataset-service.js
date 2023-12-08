@@ -63,3 +63,29 @@ export const refreshModel = async () => {
         return
     }
 }
+
+/**
+ * Delete intent
+ */
+export const deleteIntent = async (intent) => {
+    try {
+        const response = await service.post(`/dataset/delete-intent`, { intent });
+        return response.data
+    } catch (error) {
+        console.log(error);
+        return
+    }
+}
+
+/**
+ * Update intent
+ */
+export const updateIntent = async (newIntent, oldIntent) => {
+    try {
+        const response = await service.post(`/dataset/update-intent`, { newIntent, oldIntent });
+        return response.data
+    } catch (error) {
+        console.log(error);
+        return
+    }
+}

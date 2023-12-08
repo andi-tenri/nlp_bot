@@ -66,13 +66,15 @@ export default function DatasetTableRow({
 
         {/* <TableCell>{intent}</TableCell> */}
 
-        <TableCell width={250}>{utterance}</TableCell>
+        <TableCell>
+          <div title={utterance} className='line-clamp'>{utterance}</div>
+        </TableCell>
 
         <TableCell>
           <div title={answer} className='line-clamp'>{answer}</div>
         </TableCell>
 
-        <TableCell>{updatedAt ? moment(updatedAt).format('DD/MM/YYYY HH:mm:ss') : ''}</TableCell>
+        {/* <TableCell>{updatedAt ? moment(updatedAt).format('DD/MM/YYYY HH:mm:ss') : ''}</TableCell> */}
 
         <TableCell align="right">
           <IconButton onClick={handleOpenMenu}>

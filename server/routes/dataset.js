@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const DatasetController = require('../controllers/dataset-controller');
 
+router.post('/update-intent', DatasetController.updateIntent)
+router.post('/delete-intent', DatasetController.deleteIntent)
 router.get('/', DatasetController.getAll)
 router.post('/', DatasetController.create)
 router.put('/:id', DatasetController.update)

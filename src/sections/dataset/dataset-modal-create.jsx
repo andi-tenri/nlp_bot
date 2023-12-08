@@ -24,7 +24,7 @@ const DatasetModalCreate = (props) => {
   }, [props.data]);
 
   const onSubmit = async (data) => {
-    if (props.data) {
+    if (props.data.id) {
       await updateDataset(props.data.id, data);
     } else {
       await createDataset(data);
