@@ -34,6 +34,28 @@ exports.getAll = async (req, res) => {
 
 }
 
+exports.getUnanswered = async (req, res) => {
+    try {
+        const dataset = await db.Dataset.findAll({
+            where: {
+                answer: ""
+            }
+        });
+
+        res.send({
+            success: true,
+            data: dataset,
+            message: "Dataset retrieved successfully",
+        })
+
+    } catch (error) {
+        res.status(400).send({
+            success: false,
+            message: error.message,
+        });
+    }
+}
+
 exports.create = async (req, res) => {
     try {
         const { intent, utterance, answer } = req.body;

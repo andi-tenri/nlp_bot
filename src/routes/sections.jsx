@@ -4,6 +4,7 @@ import { Navigate, Outlet, createBrowserRouter } from 'react-router-dom';
 import DashboardLayout from 'src/layouts/dashboard';
 import AuthenticatedRoute from './components/authenticated-route';
 import DeviceDetailPage from 'src/sections/device/view/device-detail-view';
+import UnansweredPage from 'src/sections/unanswered/view/dataset-view';
 
 export const LoadingPage = lazy(() => import('src/pages/loading'));
 export const IndexPage = lazy(() => import('src/pages/app'));
@@ -32,6 +33,7 @@ const routes = createBrowserRouter([
       { path: 'device', element: <DevicePage /> },
       { path: 'device/:id', element: <DeviceDetailPage /> },
       { path: 'dataset', element: <DatasetPage /> },
+      {path: 'unanswered', element: <UnansweredPage />},
       { path: 'product', element: <ProductsPage /> },
 
     ],

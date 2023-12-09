@@ -3,7 +3,16 @@ import service from ".";
 export const getDataset = async () => {
     try {
         const response = await service.get('/dataset');
-        console.log(response);
+        return response.data.data;
+    } catch (error) {
+        console.log(error);
+        return
+    }
+}
+
+export const getUnansweredDataset = async () => {
+    try {
+        const response = await service.get('/dataset/unanswered');
         return response.data.data;
     } catch (error) {
         console.log(error);

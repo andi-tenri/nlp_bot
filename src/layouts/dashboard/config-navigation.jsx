@@ -23,10 +23,15 @@ const navConfig = [
     icon: icon('ic_dataset'),
   },
   {
+    title: 'unanswered',
+    path: '/unanswered',
+    icon: icon('ic_question'),
+  },
+  {
     title: 'product',
     path: '/product',
     icon: icon('ic_product'),
-  }
+  },
 ];
 
 export default navConfig;
