@@ -296,31 +296,6 @@ function DatasetTable(props) {
   return (
     <ConfirmationDialogProvider>
       <Card sx={{ p: 3, mb: 3 }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <Typography variant="h5" sx={{ mb: 2 }} gutterBottom>
-            {intent}
-          </Typography>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-            <Button
-              size="small"
-              color="secondary"
-              startIcon={<Iconify icon="eva:trash-2-outline" />}
-              onClick={handleDeleteIntent}
-              sx={{ mb: 2 }}
-            >
-              Delete
-            </Button>
-            <Button
-              size="small"
-              color="inherit"
-              startIcon={<Iconify icon="eva:plus-fill" />}
-              onClick={() => handleOpenCreateModal()}
-              sx={{ mb: 2 }}
-            >
-              New
-            </Button>
-          </Box>
-        </Box>
         <Card>
           <Scrollbar>
             <TableContainer sx={{ overflow: 'unset' }}>
@@ -335,7 +310,7 @@ function DatasetTable(props) {
                   headLabel={[
                     // { id: 'id', label: 'id' },
                     { id: 'utterance', label: 'Utterance' },
-                    { id: 'answer', label: 'Answer' },
+                    // { id: 'answer', label: 'Answer' },
                     // { id: 'updatedAt', label: 'Updated At' },
                     { id: '' },
                   ]}

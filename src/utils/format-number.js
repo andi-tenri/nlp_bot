@@ -7,9 +7,9 @@ export function fNumber(number) {
 }
 
 export function fCurrency(number) {
-  const format = number ? numeral(number).format('$0,0.00') : '';
+  const format = number ? numeral(number).format('0,0.00') : '';
 
-  return result(format, '.00');
+  return 'Rp' + result(format, '.00');
 }
 
 export function fPercent(number) {
@@ -34,4 +34,20 @@ function result(format, key = '.00') {
   const isInteger = format.includes(key);
 
   return isInteger ? format.replace(key, '') : format;
+}
+
+export function formatRupiah(amount) {
+  let numberString = amount.toString();
+  let split = numberString.split('.');
+  let remainder = split[0].length % 3;
+  let rupiah = split[0].substr(0, remainder);
+  let thousands = split[0].substr(remainder).match(/\d{1,3}/gi);
+
+  if (thousands) {
+    let separator = remainder ? '.' : '';
+    rupiah += separator + thousands.join('.');
+  }
+
+  rupiah = split[1] !== undefined ? rupiah + ',' + split[1] : rupiah;
+  return 'Rp' + rupiah;
 }

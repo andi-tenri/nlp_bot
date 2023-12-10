@@ -9,7 +9,7 @@ import TableRow from '@mui/material/TableRow';
 
 import { useConfirmationDialog } from 'src/components/dialog/confirm-dialog';
 import Iconify from 'src/components/iconify';
-import { deleteDataset } from 'src/services/dataset-service';
+import { deleteDataset, deleteUnanswered } from 'src/services/dataset-service';
 
 import moment from 'moment';
 
@@ -41,15 +41,15 @@ export default function DatasetTableRow({
   };
 
   const onDelete = async () => {
-    await deleteDataset(id);
+    await deleteUnanswered(id);
     refresh();
     handleCloseMenu();
   };
 
   const handleDelete = () => {
     showConfirmation({
-      title: 'Delete Dataset',
-      text: `Are you sure you want to delete dataset "${id}"?`,
+      title: 'Delete Unanswered',
+      text: `Are you sure you want to delete unanswered "${id}"?`,
       callback: onDelete,
     });
   };
@@ -67,12 +67,14 @@ export default function DatasetTableRow({
         {/* <TableCell>{intent}</TableCell> */}
 
         <TableCell>
-          <div title={utterance} className='line-clamp'>{utterance}</div>
+          <div title={utterance} className="line-clamp">
+            {utterance}
+          </div>
         </TableCell>
 
-        <TableCell>
+        {/* <TableCell>
           <div title={answer} className='line-clamp'>{answer}</div>
-        </TableCell>
+        </TableCell> */}
 
         {/* <TableCell>{updatedAt ? moment(updatedAt).format('DD/MM/YYYY HH:mm:ss') : ''}</TableCell> */}
 
@@ -94,8 +96,8 @@ export default function DatasetTableRow({
         }}
       >
         <MenuItem onClick={handleOpenEdit} sx={{ color: 'primary.main' }}>
-          <Iconify icon="solar:pen-2-linear" sx={{ mr: 2 }} />
-          Edit
+          <Iconify icon="solar:diskette-line-outline" sx={{ mr: 2 }} />
+          Save to Dataset
         </MenuItem>
 
         <MenuItem onClick={handleDelete} sx={{ color: 'error.main' }}>

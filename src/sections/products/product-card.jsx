@@ -5,10 +5,12 @@ import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
 
 import Iconify from 'src/components/iconify';
 import { deleteProduct } from 'src/services/product-service';
 import { useConfirmationDialog } from 'src/components/dialog/confirm-dialog';
+import { formatRupiah } from 'src/utils/format-number';
 
 // ----------------------------------------------------------------------
 
@@ -21,7 +23,7 @@ export default function ShopProductCard(props) {
     <Box
       component="img"
       alt={product.name}
-      src={product.cover}
+      src={'/images' + product.image}
       sx={{
         top: 0,
         width: 1,
@@ -37,7 +39,7 @@ export default function ShopProductCard(props) {
   };
 
   const onDelete = () => {
-    deleteProduct(product.name);
+    deleteProduct(product.id);
     props.refresh();
   };
 
@@ -48,6 +50,12 @@ export default function ShopProductCard(props) {
       callback: onDelete,
     });
   };
+
+  const renderPrice = (
+    <Typography variant="subtitle1">
+      {formatRupiah(product.price)}
+    </Typography>
+  );
 
   return (
     <Card>
@@ -78,6 +86,11 @@ export default function ShopProductCard(props) {
         <Link color="inherit" underline="hover" variant="subtitle2" noWrap>
           {product.name}
         </Link>
+
+        <Stack direction="row" alignItems="center" justifyContent="space-between">
+          Stok: {product.stock}
+          {renderPrice}
+        </Stack>
       </Stack>
     </Card>
   );

@@ -12,7 +12,7 @@ export const getDataset = async () => {
 
 export const getUnansweredDataset = async () => {
     try {
-        const response = await service.get('/dataset/unanswered');
+        const response = await service.get('/unanswered');
         return response.data.data;
     } catch (error) {
         console.log(error);
@@ -66,6 +66,16 @@ export const deleteDataset = async (id) => {
 export const refreshModel = async () => {
     try {
         const response = await service.post('/dataset/refresh-model');
+        return response.data
+    } catch (error) {
+        console.log(error);
+        return
+    }
+}
+
+export const deleteUnanswered = async (id) => {
+    try {
+        const response = await service.delete('/unanswered/' + id);
         return response.data
     } catch (error) {
         console.log(error);

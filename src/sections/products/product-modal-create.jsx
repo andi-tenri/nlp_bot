@@ -26,8 +26,10 @@ const ProductModalCreate = (props) => {
 
   useEffect(() => {
     if (props.data) {
-      setValue('name', props.data.name);
-      setImagePreview(props.data.cover);
+      for (const key in props.data) {
+        setValue(key, props.data[key]);
+      }
+      setImagePreview("/images/" + props.data.image);
     } else {
       reset();
       setImagePreview(null);
@@ -99,8 +101,65 @@ const ProductModalCreate = (props) => {
               />
             )}
           />
+
+          <Controller
+            name="stock"
+            control={control}
+            render={({ field, fieldState: { error } }) => (
+              <TextField
+                {...field}
+                autoFocus
+                margin="dense"
+                id="stock"
+                label="Stock"
+                type="number"
+                fullWidth
+                error={!!error}
+                helperText={error ? error.message : null}
+              />
+            )}
+          />
+
+          <Controller
+            name="price"
+            control={control}
+            render={({ field, fieldState: { error } }) => (
+              <TextField
+                {...field}
+                autoFocus
+                margin="dense"
+                id="price"
+                label="Price"
+                type="number"
+                fullWidth
+                error={!!error}
+                helperText={error ? error.message : null}
+              />
+            )}
+          />
+
+          <Controller
+            name="description"
+            control={control}
+            render={({ field, fieldState: { error } }) => (
+              <TextField
+                {...field}
+                autoFocus
+                margin="dense"
+                id="description"
+                label="Description"
+                type="text"
+                multiline
+                rows={2}
+                fullWidth
+                error={!!error}
+                helperText={error ? error.message : null}
+              />
+            )}
+          />
+
           <TextField
-            {...register('image', { required: 'This field is required' })}
+            {...register('image', { required: props.data ? false : 'This field is required' })}
             onChange={handleImageChange}
             autoFocus
             margin="dense"
@@ -108,7 +167,7 @@ const ProductModalCreate = (props) => {
             label="Image"
             type="file"
             fullWidth
-            helperText={errors.image  ? errors.image.message : null}
+            helperText={errors.image ? errors.image.message : null}
             error={!!errors.image}
           />
           {/* image preview */}

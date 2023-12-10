@@ -31,9 +31,7 @@ class MainControlller extends Controller {
         }
 
         if (!response.answer) {
-            await db.Dataset.create({
-                intent: "",
-                answer: "",
+            await db.Unanswered.create({
                 utterance: text
             })
             return "Maaf, sepertinya saya kesulitan memahami pertanyaan Anda. Mohon coba lagi sampaikan pertanyaan Anda dengan lebih jelas. Jika ada yang bisa saya bantu, beri tahu saya. Terima kasih."

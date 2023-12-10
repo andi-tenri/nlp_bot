@@ -47,7 +47,7 @@ const DatasetModalCreate = (props) => {
       maxWidth="sm"
       fullWidth
     >
-      <DialogTitle>{props.data ? "Edit" : "Create New"} Dataset</DialogTitle>
+      <DialogTitle>Save to Dataset</DialogTitle>
       <DialogContent>
         <DialogContentText>
           <Controller
