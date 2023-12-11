@@ -58,5 +58,6 @@ module.exports = {
     fetchDataFromDatabase,
     processMessage,
     modelPath,
+    manager
 };
 

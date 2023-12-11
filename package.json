@@ -67,15 +67,16 @@
     "ignore": [
       "*.log",
       "node_modules",
-      "session",
-      "state",
+      "server/bot/session",
+      "server/bot/states",
       "src/**/*",
       "public/**/*",
       "build/**/*",
       "dist/**/*",
       "package.json",
       "package-lock.json",
-      "*.tsx"
+      "*.tsx",
+      "*.nlp"
     ]
   }
 }

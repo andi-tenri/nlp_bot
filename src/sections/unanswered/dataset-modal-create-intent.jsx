@@ -58,10 +58,6 @@ const DatasetModalCreateIntent = (props) => {
             control={control}
             rules={{
               required: 'This field is required',
-              pattern: {
-                value: /^[^\s]+$/,
-                message: 'This field should not contain spaces',
-              },
             }}
             render={({ field, fieldState: { error } }) => (
               <TextField
