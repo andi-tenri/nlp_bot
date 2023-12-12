@@ -346,7 +346,7 @@ function DatasetTable(props) {
                   onSelectAllClick={handleSelectAllClick}
                   headLabel={[
                     // { id: 'id', label: 'id' },
-                    { id: 'utterance', label: 'Utterance' },
+                    { id: 'utterance', label: 'Question' },
                     { id: 'answer', label: 'Answer' },
                     // { id: 'updatedAt', label: 'Updated At' },
                     { id: '' },

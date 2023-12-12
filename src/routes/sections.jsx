@@ -29,7 +29,7 @@ const routes = createBrowserRouter([
       </AuthenticatedRoute>
     ),
     children: [
-      { element: <IndexPage />, index: true },
+      { element: <DevicePage />, index: true },
       { path: 'device', element: <DevicePage /> },
       { path: 'device/:id', element: <DeviceDetailPage /> },
       { path: 'dataset', element: <DatasetPage /> },

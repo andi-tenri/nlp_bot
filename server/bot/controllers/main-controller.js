@@ -3,12 +3,17 @@ const { processMessage } = require("../../nlp");
 const fs = require("fs");
 const path = require("path");
 const db = require("../../models/index");
+const { formatRupiah } = require("../../utils/formatter")
 
 class MainControlller extends Controller {
 
     async getCatalog(fileName) {
-        const file = fs.readFileSync(path.resolve(__basedir, `images/${fileName}.jpeg`));
-        return Response.image.fromBuffer(file);
+        try {
+            const file = fs.readFileSync(path.resolve(__basedir, `images/${fileName}.jpeg`));
+            return Response.image.fromBuffer(file);
+        } catch (e) {
+            return "Gambar tidak ditemukan";
+        }
     }
 
     async getAdditionalMessage(intent) {
@@ -34,7 +39,7 @@ class MainControlller extends Controller {
             await db.Unanswered.create({
                 utterance: text
             })
-            return "Maaf, sepertinya saya kesulitan memahami pertanyaan Anda. Mohon coba lagi sampaikan pertanyaan Anda dengan lebih jelas. Jika ada yang bisa saya bantu, beri tahu saya. Terima kasih."
+            return "Mohon maaf, sepertinya saya kesulitan memahami pertanyaan Anda.\nCoba sampaikan lagi pertanyaan Anda.\n\nJika Anda memerlukan bantuan segera atau pertanyaan yang lebih kompleks, silakan hubungi Admin kami di:\n\n📞 081258052309\n\nTerima kasih atas pengertian dan kesabaran Anda."
         }
 
         return response.answer;
@@ -46,7 +51,17 @@ class MainControlller extends Controller {
 
         productId = productId.toUpperCase()
 
-        const response = `Berikut detail produk ${productId}`;
+        const product = await db.Product.findOne({
+            where: {
+                name: productId
+            }
+        })
+
+        if (!product) {
+            return `Produk ${productId} tidak ditemukan`
+        }
+
+        const response = `Berikut detail produk ${productId}\nHarga: ${formatRupiah(product.price)}\nStok: ${product.stock}\nDeskripsi:\n${product.description}`;
 
         const catalog = await this.getCatalog(productId);
 
