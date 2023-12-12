@@ -22,6 +22,7 @@ function processUserInput(text) {
 async function fetchDataFromDatabase() {
     try {
         const intentsData = await db.Dataset.findAll();
+        fs.unlinkSync(modelPath);
         if (intentsData && intentsData.length > 0) {
             intentsData.forEach((item) => {
                 const { intent, utterance, answer } = item;
