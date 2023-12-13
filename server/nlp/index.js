@@ -3,10 +3,11 @@ const { NlpManager } = require('node-nlp');
 const Sastrawi = require('sastrawijs');
 const fs = require('fs');
 const db = require("../models");
+const path = require("path");
 
 const manager = new NlpManager({ languages: ['id'], autoSave: true, threshold: 0.3 });
 const stemmer = new Sastrawi.Stemmer();
-const modelPath = __basedir + '/' + 'model.nlp';
+const modelPath = path.resolve(__basedir, "model.nlp")
 
 // Normalisasi, Case Folding, Tokenisasi, dan Stemming
 function processUserInput(text) {
