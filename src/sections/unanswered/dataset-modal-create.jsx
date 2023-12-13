@@ -25,6 +25,7 @@ const DatasetModalCreate = (props) => {
 
   const onSubmit = async (data) => {
     await createDataset(data);
+    console.log("delete", props.data)
     await deleteUnanswered(props.data.id);
     handleClose();
     props.refresh();
