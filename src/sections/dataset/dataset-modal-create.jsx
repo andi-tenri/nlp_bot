@@ -87,7 +87,7 @@ const DatasetModalCreate = (props) => {
                 autoFocus
                 margin="dense"
                 id="utterance"
-                label="Utterance"
+                label="Question"
                 type="text"
                 fullWidth
                 error={!!error}

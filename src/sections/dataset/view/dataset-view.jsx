@@ -160,7 +160,7 @@ export default function DatasetPage() {
 
       <Grid container spacing={3}>
         {Object.keys(groupedDataset).map((key) => (
-          <Grid item xs={6} key={key}>
+          <Grid item xs={12} key={key}>
             <DatasetTable
               intent={key}
               dataset={groupedDataset[key]}
