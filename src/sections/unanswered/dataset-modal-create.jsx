@@ -10,7 +10,7 @@ import {
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { Controller, useForm } from 'react-hook-form';
-import { createDataset, updateDataset } from 'src/services/dataset-service';
+import { createDataset, deleteUnanswered, updateDataset } from 'src/services/dataset-service';
 
 const DatasetModalCreate = (props) => {
   const { control, handleSubmit, reset, setValue } = useForm();
@@ -25,6 +25,8 @@ const DatasetModalCreate = (props) => {
 
   const onSubmit = async (data) => {
     await createDataset(data);
+    console.log("delete", props.data)
+    await deleteUnanswered(props.data.id);
     handleClose();
     props.refresh();
   };
@@ -50,11 +52,7 @@ const DatasetModalCreate = (props) => {
             name="intent"
             control={control}
             rules={{
-              required: 'This field is required',
-              pattern: {
-                value: /^[^\s]+$/,
-                message: 'This field should not contain spaces',
-              },
+              required: 'This field is required'
             }}
             render={({ field, fieldState: { error } }) => (
               <TextField

@@ -37,6 +37,7 @@ function result(format, key = '.00') {
 }
 
 export function formatRupiah(amount) {
+  if (!amount) return ""
   let numberString = amount.toString();
   let split = numberString.split('.');
   let remainder = split[0].length % 3;
