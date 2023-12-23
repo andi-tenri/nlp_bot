@@ -3,7 +3,7 @@ const { uploadImage, deleteImage } = require("../services/image");
 const { pickProperties } = require("../utils/collection");
 
 exports.getAll = async (req, res) => {
-    const products = await db.Product.findAll();
+    const products = await db.Product.orderBy("id", "asc").findAll();
 
     return res.send({ success: true, data: products });
 }
