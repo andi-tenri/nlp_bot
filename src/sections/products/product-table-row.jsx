@@ -73,7 +73,7 @@ export default function ProductTableRow({
         </TableCell>
 
         <TableCell>
-          <img src={'/images/' + image} alt={name} width={100} />
+          <img src={import.meta.env.VITE_BASE_URL + '/images/' + image} alt={name} width={100} />
         </TableCell>
 
         <TableCell>

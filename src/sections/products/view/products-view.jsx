@@ -149,7 +149,7 @@ function ProductTable(props) {
 
   const [selected, setSelected] = useState([]);
 
-  const [orderBy, setOrderBy] = useState('name');
+  const [orderBy, setOrderBy] = useState('id');
 
   const [filterName, setFilterName] = useState('');
 
