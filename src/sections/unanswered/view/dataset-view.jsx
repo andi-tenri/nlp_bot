@@ -128,7 +128,7 @@ export default function UnansweredPage() {
         fullWidth
         onChange={(e) => handleSearch(e.target.value)}
         size="small"
-        placeholder="Search unanswered dataset..."
+        placeholder="Cari unanswered dataset..."
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
@@ -288,7 +288,7 @@ function DatasetTable(props) {
   const handleDeleteIntent = () => {
     showConfirmation({
       title: 'Delete Intent',
-      text: `Are you sure you want to delete intent "${intent}"?`,
+      text: `Apa kamu yakin akan menghapus data intent "${intent}"?`,
       callback: onDelete,
     });
   };

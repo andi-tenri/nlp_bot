@@ -95,7 +95,7 @@ export default function ProductsView() {
     <ConfirmationDialogProvider>
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5} gap={2}>
-          <Typography variant="h4">Products</Typography>
+          <Typography variant="h4">Produk</Typography>
 
           <Box sx={{ flexGrow: 1 }} />
 
@@ -105,7 +105,7 @@ export default function ProductsView() {
             startIcon={<Iconify icon="eva:plus-fill" />}
             onClick={handleNewProduct}
           >
-            New Product
+            Tambah produk
           </Button>
         </Stack>
 
@@ -117,7 +117,7 @@ export default function ProductsView() {
           fullWidth
           onChange={(e) => handleSearch(e.target.value)}
           size="small"
-          placeholder="Search products..."
+          placeholder="Cari produk..."
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
@@ -249,8 +249,8 @@ function ProductTable(props) {
 
   const handleDeleteIntent = () => {
     showConfirmation({
-      title: 'Delete Product',
-      text: `Are you sure you want to delete product "${id}"?`,
+      title: 'Delete Produk',
+      text: `Apa kamu yakin akan menghapus data produk?`,
       callback: onDelete,
     });
   };
@@ -271,11 +271,11 @@ function ProductTable(props) {
                   onSelectAllClick={handleSelectAllClick}
                   headLabel={[
                     { id: 'id', label: 'id' },
-                    { id: 'name', label: 'Name' },
-                    { id: 'image', label: 'Image' },
-                    { id: 'description', label: 'Description' },
-                    { id: 'stock', label: 'Stock' },
-                    { id: 'price', label: 'Price' },
+                    { id: 'name', label: 'Nama' },
+                    { id: 'image', label: 'Gambar' },
+                    { id: 'description', label: 'Deskripsi' },
+                    { id: 'stock', label: 'Stok' },
+                    { id: 'price', label: 'Harga' },
                     { id: '', label: '' },
                   ]}
                 />

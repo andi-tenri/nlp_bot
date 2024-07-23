@@ -49,7 +49,7 @@ export default function DatasetTableRow({
   const handleDelete = () => {
     showConfirmation({
       title: 'Delete Dataset',
-      text: `Are you sure you want to delete dataset "${id}"?`,
+      text: `Apa kamu yakin akan menghapus dataset?`,
       callback: onDelete,
     });
   };

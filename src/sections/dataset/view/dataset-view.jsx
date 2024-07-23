@@ -292,7 +292,7 @@ function DatasetTable(props) {
   const handleDeleteIntent = () => {
     showConfirmation({
       title: 'Delete Intent',
-      text: `Are you sure you want to delete intent "${intent}"?`,
+      text: `Apa kamu yakin akan menghapus intent "${intent}"?`,
       callback: onDelete,
     });
   };
@@ -346,8 +346,8 @@ function DatasetTable(props) {
                   onSelectAllClick={handleSelectAllClick}
                   headLabel={[
                     // { id: 'id', label: 'id' },
-                    { id: 'utterance', label: 'Question' },
-                    { id: 'answer', label: 'Answer' },
+                    { id: 'utterance', label: 'Pertanyaan' },
+                    { id: 'answer', label: 'Jawaban' },
                     // { id: 'updatedAt', label: 'Updated At' },
                     { id: '' },
                   ]}

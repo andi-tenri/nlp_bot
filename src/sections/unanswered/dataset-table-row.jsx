@@ -49,7 +49,7 @@ export default function DatasetTableRow({
   const handleDelete = () => {
     showConfirmation({
       title: 'Delete Unanswered',
-      text: `Are you sure you want to delete unanswered "${id}"?`,
+      text: `Apa kamu yakin akan menghapus data unanswered?`,
       callback: onDelete,
     });
   };

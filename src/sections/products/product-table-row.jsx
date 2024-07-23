@@ -50,8 +50,8 @@ export default function ProductTableRow({
 
   const handleDelete = () => {
     showConfirmation({
-      title: 'Delete Product',
-      text: `Are you sure you want to delete product "${id}"?`,
+      title: 'Delete Produk',
+      text: `Apa kamu yakin akan menghapus data produk?`,
       callback: onDelete,
     });
   };

@@ -83,7 +83,7 @@ const DatasetModalCreate = (props) => {
                 autoFocus
                 margin="dense"
                 id="utterance"
-                label="Question"
+                label="Pertanyaan"
                 type="text"
                 fullWidth
                 error={!!error}
@@ -103,7 +103,7 @@ const DatasetModalCreate = (props) => {
                 autoFocus
                 margin="dense"
                 id="answer"
-                label="Answer"
+                label="Jawaban"
                 type="text"
                 fullWidth
                 multiline
@@ -116,6 +116,7 @@ const DatasetModalCreate = (props) => {
         </DialogContentText>
       </DialogContent>
       <DialogActions>
+        <Button onClick={handleClose} style={{ color: 'red' }}>Close</Button>
         <Button onClick={handleSubmit(onSubmit)}>Save</Button>
       </DialogActions>
     </Dialog>

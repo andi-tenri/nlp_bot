@@ -45,8 +45,8 @@ export default function ShopProductCard(props) {
 
   const handleProductRemove = () => {
     showConfirmation({
-      title: 'Delete product',
-      text: `Are you sure want to delete product "${product.name}"?`,
+      title: 'Delete produk',
+      text: `Apa kamu yakin akan menghapus produk "${product.name}"?`,
       callback: onDelete,
     });
   };

@@ -9,13 +9,13 @@
   "test": {
     "username": "root",
     "password": null,
-    "database": "database_test",
+    "database": "nlp_bot",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": "dewabot5758!",
+    "password": "",
     "database": "nlp_bot",
     "host": "localhost",
     "dialect": "mysql"

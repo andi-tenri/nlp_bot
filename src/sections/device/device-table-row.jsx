@@ -48,7 +48,7 @@ export default function DeviceTableRow({
   const handleDelete = () => {
     showConfirmation({
       title: 'Delete Device',
-      text: `Are you sure you want to delete device "${id}"?`,
+      text: `Apa kamu yakin akan menghapus device?`,
       callback: onDelete,
     });
   };

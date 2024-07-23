@@ -29,7 +29,11 @@ const ProductModalCreate = (props) => {
       for (const key in props.data) {
         setValue(key, props.data[key]);
       }
-      setImagePreview("/images/" + props.data.image);
+      if (props.data.image) {
+        setImagePreview("/images/" + props.data.image);
+      } else {
+        setImagePreview(null); // Clear image preview if no image is available
+      }
     } else {
       reset();
       setImagePreview(null);
@@ -73,7 +77,7 @@ const ProductModalCreate = (props) => {
       maxWidth="sm"
       fullWidth
     >
-      <DialogTitle>{props.data ? 'Edit' : 'Create New'} Product</DialogTitle>
+      <DialogTitle>{props.data ? 'Edit' : 'Create New'} Produk</DialogTitle>
       <DialogContent>
         <DialogContentText>
           <Controller
@@ -93,7 +97,7 @@ const ProductModalCreate = (props) => {
                 autoFocus
                 margin="dense"
                 id="name"
-                label="Name"
+                label="Nama"
                 type="text"
                 fullWidth
                 error={!!error}
@@ -111,7 +115,7 @@ const ProductModalCreate = (props) => {
                 autoFocus
                 margin="dense"
                 id="stock"
-                label="Stock"
+                label="Stok"
                 type="number"
                 fullWidth
                 error={!!error}
@@ -129,7 +133,7 @@ const ProductModalCreate = (props) => {
                 autoFocus
                 margin="dense"
                 id="price"
-                label="Price"
+                label="Harga"
                 type="number"
                 fullWidth
                 error={!!error}
@@ -147,10 +151,10 @@ const ProductModalCreate = (props) => {
                 autoFocus
                 margin="dense"
                 id="description"
-                label="Description"
+                label="Deskripsi"
                 type="text"
                 multiline
-                rows={2}
+                rows={5}
                 fullWidth
                 error={!!error}
                 helperText={error ? error.message : null}
@@ -164,7 +168,7 @@ const ProductModalCreate = (props) => {
             autoFocus
             margin="dense"
             id="image"
-            label="Image"
+            label="Gambar"
             type="file"
             fullWidth
             helperText={errors.image ? errors.image.message : null}
@@ -172,11 +176,12 @@ const ProductModalCreate = (props) => {
           />
           {/* image preview */}
           {imagePreview && (
-            <img src={imagePreview} alt="Preview" style={{ maxWidth: '100%', height: 'auto' }} />
+            <img src={imagePreview} alt="" style={{ maxWidth: '50%', height: '50%' }} />
           )}
         </DialogContentText>
       </DialogContent>
       <DialogActions>
+        <Button onClick={handleClose} style={{ color: 'red' }}>Close</Button>
         <Button onClick={handleSubmit(onSubmit)}>Save</Button>
       </DialogActions>
     </Dialog>

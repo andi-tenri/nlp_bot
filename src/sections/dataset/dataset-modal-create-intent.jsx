@@ -76,6 +76,7 @@ const DatasetModalCreateIntent = (props) => {
         </DialogContentText>
       </DialogContent>
       <DialogActions>
+        <Button onClick={handleClose} style={{ color: 'red' }}>Close</Button>
         <Button onClick={handleSubmit(onSubmit)}>Save</Button>
       </DialogActions>
     </Dialog>
