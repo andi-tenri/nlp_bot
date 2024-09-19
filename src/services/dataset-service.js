@@ -99,25 +99,25 @@ export const deleteIntent = async (intent) => {
 /**
  * Create intent
  */
-export const createIntent = async (intent) => {
+export const createIntent = async (intent, utterance, answer) => {
     try {
-        const response = await service.post(`/dataset`, { intent });
-        return response.data
+        const response = await service.post('/dataset', { intent, utterance, answer });
+        return response.data;
     } catch (error) {
         console.log(error);
-        return
+        return;
     }
 }
 
 /**
  * Update intent
  */
-export const updateIntent = async (newIntent, oldIntent) => {
+export const updateIntent = async (newIntent, newUtterance, newAnswer, oldIntent) => {
     try {
-        const response = await service.post(`/dataset/update-intent`, { newIntent, oldIntent });
-        return response.data
+        const response = await service.post('/dataset/update-intent', { newIntent, newUtterance, newAnswer, oldIntent });
+        return response.data;
     } catch (error) {
         console.log(error);
-        return
+        return;
     }
 }

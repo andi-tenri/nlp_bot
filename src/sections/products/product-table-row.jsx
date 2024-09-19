@@ -17,7 +17,8 @@ import moment from 'moment';
 
 export default function ProductTableRow({
   selected,
-  id,
+  id,           // ID asli produk
+  index,        // Nomor urut tampilan
   name,
   description,
   image,
@@ -43,7 +44,7 @@ export default function ProductTableRow({
   };
 
   const onDelete = async () => {
-    await deleteProduct(id);
+    await deleteProduct(id);  // Menggunakan ID asli produk untuk delete
     refresh();
     handleCloseMenu();
   };
@@ -57,14 +58,15 @@ export default function ProductTableRow({
   };
 
   const handleOpenEdit = () => {
-    handleEdit(id);
+    handleEdit(id);   // Menggunakan ID asli produk untuk edit
     handleCloseMenu();
   };
 
   return (
     <>
       <TableRow hover tabIndex={-1} role="checkbox" selected={selected}>
-        <TableCell>{id}</TableCell>
+        {/* Menampilkan nomor urut berdasarkan index */}
+        <TableCell>{index}</TableCell>  
 
         <TableCell>
           <div title={name} className="line-clamp">

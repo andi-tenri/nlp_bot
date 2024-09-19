@@ -282,13 +282,15 @@ function ProductTable(props) {
                 <TableBody>
                   {dataFiltered
                     .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                    .map((row) => (
+                    .map((row, index) => (
                       <ProductTableRow
-                        {...row}
-                        selected={selected.indexOf(row.name) !== -1}
-                        handleClick={(event) => handleClick(event, row.name)}
-                        refresh={fetchProducts}
-                        handleEdit={handleEdit}
+                      {...row}
+                      id={row.id}  // Gunakan ID asli untuk operasi edit dan delete
+                      index={page * rowsPerPage + index + 1}  // Ini adalah nomor urut tampilan
+                      selected={selected.indexOf(row.name) !== -1}
+                      handleClick={(event) => handleClick(event, row.name)}
+                      refresh={fetchProducts}
+                      handleEdit={() => handleEdit(row.id)}  // Operasi edit menggunakan ID asli
                       />
                     ))}
 

@@ -65,7 +65,7 @@ export default function LoginView() {
           render={({ field, fieldState: { error } }) => (
             <TextField
               {...field}
-              label="Email address"
+              label="Username"
               error={Boolean(error)}
               helperText={error?.message}
             />
@@ -152,7 +152,7 @@ export default function LoginView() {
           }}
         >
           <Typography variant="h4" marginBottom={3}>
-            Sign in
+            Silahkan Masuk
           </Typography>
 
           {renderForm}

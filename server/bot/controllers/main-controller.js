@@ -27,7 +27,14 @@ class MainController extends Controller {
 
     async getAdditionalMessage(intent) {
         if (intent === "informasi katalog") {
-            return await this.getCatalog("Daftar harga");
+            return await this.getCatalog("ADHITYA CARD HARGA BLANGKO");
+        }
+        return "";
+    }
+
+    async getAdditionalMessage1(intent) {
+        if (intent === "pricelist") {
+            return await this.getProduct("Daftar harga");
         }
         return "";
     }
@@ -82,6 +89,10 @@ class MainController extends Controller {
         if (additionalMessage) {
             await this.reply(additionalMessage);
         }
+        const additionalMessage1 = await this.getAdditionalMessage1(response.intent);
+        if (additionalMessage1) {
+            await this.reply(additionalMessage1);
+        }
     
         if (!response.answer) {
             await db.Unanswered.create({
@@ -91,19 +102,16 @@ class MainController extends Controller {
             await this.reply('ketik *MENU* untuk memilih menu yang tersedia pada sistem');
             return;
         }
-    
+
         const productEntity = response.entities.find(entity => entity.entity === 'produk');
-        if (productEntity) {
-            console.log('Product entity option:', productEntity.option);
+        if (response.intent === 'detail' && productEntity) {
             const productName = String(productEntity.option).toLowerCase();
             const productResponse = await this.getProductOnly(productName);
-            return productResponse;
+            await this.reply(productResponse);
+            return; 
         }
     
         await this.reply(response.answer);
-        if (response.intent !== 'sapaan') {
-            await this.reply('ketik *MENU* untuk kembali ke menu utama');
-        }
     }    
 }
 

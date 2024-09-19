@@ -8,57 +8,63 @@ import {
   TextField,
 } from '@mui/material';
 import PropTypes from 'prop-types';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Controller, useForm } from 'react-hook-form';
-import { createDataset, createIntent, updateDataset, updateIntent } from 'src/services/dataset-service';
+import { createIntent, updateIntent } from 'src/services/dataset-service';
 
 const DatasetModalCreateIntent = (props) => {
-  const { handleAddIntent } = props;
-
-  const [oldIntent, setOldIntent] = useState('');
+  const { openCreateModal, setOpenCreateModal, refresh, data } = props;
 
   const { control, handleSubmit, reset, setValue } = useForm();
 
   useEffect(() => {
-    if (props.data) {
-      setValue('intent', props.data.intent);
-      setOldIntent(props.data.intent);
-    }
-  }, [props.data]);
-
-  const onSubmit = async (data) => {
-    if (props.data) {
-      await updateIntent(data.intent, oldIntent);
+    if (data) {
+      // Set form values if editing an existing intent
+      setValue('intent', data.intent);
     } else {
-      await createIntent(data.intent);
+      // Clear form if creating a new intent
+      reset();
     }
-    handleClose();
-    props.refresh();
+  }, [data, openCreateModal, reset, setValue]);
+
+  const onSubmit = async (formData) => {
+    try {
+      if (data) {
+        // Update existing intent
+        await updateIntent(formData.intent, data.utterance, data.answer, data.intent);
+      } else {
+        // Create new intent
+        await createIntent(formData.intent, formData.utterance, formData.answer);
+      }
+      handleClose();
+      refresh();
+    } catch (error) {
+      console.error('Error saving intent:', error);
+      // Optionally show an error message to the user
+    }
   };
 
   const handleClose = () => {
-    reset();
-    props.setOpenCreateModal(false);
+    reset(); // Ensure the form is reset when closing the modal
+    setOpenCreateModal(false);
   };
 
   return (
     <Dialog
-      open={props.openCreateModal}
+      open={openCreateModal}
       onClose={handleClose}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
       maxWidth="sm"
       fullWidth
     >
-      <DialogTitle>{props.data ? 'Edit' : 'Create New'} Intent</DialogTitle>
+      <DialogTitle>{data ? 'Edit Intent' : 'Create New Intent'}</DialogTitle>
       <DialogContent>
         <DialogContentText>
           <Controller
             name="intent"
             control={control}
-            rules={{
-              required: 'This field is required',
-            }}
+            rules={{ required: 'This field is required' }}
             render={({ field, fieldState: { error } }) => (
               <TextField
                 {...field}
@@ -73,6 +79,44 @@ const DatasetModalCreateIntent = (props) => {
               />
             )}
           />
+          {!data && (
+            <>
+              <Controller
+                name="utterance"
+                control={control}
+                rules={{ required: 'This field is required' }}
+                render={({ field, fieldState: { error } }) => (
+                  <TextField
+                    {...field}
+                    margin="dense"
+                    id="utterance"
+                    label="Question"
+                    type="text"
+                    fullWidth
+                    error={!!error}
+                    helperText={error ? error.message : null}
+                  />
+                )}
+              />
+              <Controller
+                name="answer"
+                control={control}
+                rules={{ required: 'This field is required' }}
+                render={({ field, fieldState: { error } }) => (
+                  <TextField
+                    {...field}
+                    margin="dense"
+                    id="answer"
+                    label="Answer"
+                    type="text"
+                    fullWidth
+                    error={!!error}
+                    helperText={error ? error.message : null}
+                  />
+                )}
+              />
+            </>
+          )}
         </DialogContentText>
       </DialogContent>
       <DialogActions>
@@ -84,11 +128,10 @@ const DatasetModalCreateIntent = (props) => {
 };
 
 DatasetModalCreateIntent.propTypes = {
-  openCreateModal: PropTypes.bool,
-  setOpenCreateModal: PropTypes.func,
-  refresh: PropTypes.func,
+  openCreateModal: PropTypes.bool.isRequired,
+  setOpenCreateModal: PropTypes.func.isRequired,
+  refresh: PropTypes.func.isRequired,
   data: PropTypes.object,
-  handleAddIntent: PropTypes.func,
 };
 
 export default DatasetModalCreateIntent;
